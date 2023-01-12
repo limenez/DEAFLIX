@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEAFLIX - Documentário</title>
+    <link rel="icon" href="img/logo deafilx.svg" />
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/jquery-1.11.0.min.js"></script>
+    <script src="JS/jquery-migrate-1.2.1.min.js"></script>
+    <script src="JS/slick.min.js"></script>
+    <link rel="stylesheet" href="css/imdbRating.css">
+    <link rel="stylesheet" type="text/css" href="CSS/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background: rgb(27,20,100);
+        background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%);
+    }
+
+    .tabelagrid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, 150px);
+        grid-template-rows: repeat(3, 210px);
+    }
+
+    .tabelagrid>div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tabelagrid img {
+        width: 400px;
+        height: 400px;
+        padding: 30px;
+    }
+
+    h4 {
+        color: #fff;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #1B1464;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="img/logo-deafilx.png" alt="" width="200" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.html">INÍCIO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">FILMES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acao.html">AÇÃO</a></li>
+                            <li><a class="dropdown-item" href="comedia.html">COMÉDIA</a></li>
+                            <li><a class="dropdown-item" href="documentario.html">DOCUMENTÁRIOS</a></li>
+                            <li><a class="dropdown-item" href="drama.html">DRAMA</a></li>
+                            <li><a class="dropdown-item" href="ficcao.html">FICÇÃO</a></li>
+                            <li><a class="dropdown-item" href="romance.html">ROMANCE</a></li>
+                            <li><a class="dropdown-item" href="suspense.html">SUSPENSE</a></li>
+                            <li><a class="dropdown-item" href="terror.html">TERROR</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="series.html">SÉRIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="infantil.html">INFANTIL</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">PERFIL</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="conta.html">CONTA</a></li>
+                            <li><a class="dropdown-item" href="centrodeajuda.html">CENTRAL DA AJUDA</a></li>
+                            <li><a class="dropdown-item" href="login.html">SAIR</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="icons">
+                    <div class="notification">
+                        <a href="#">
+                            <div class="notBtn" href="#">
+                                <div class="number">3</div>
+                                <i class="fas fa-bell" style="color: #fff; font-size: 40px;"></i>
+                                <div class="box">
+                                    <div class="display">
+                                        <div class="nothing">
+                                            <i class="fas fa-child stick"></i>
+                                            <div class="cont">
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/strangerthings4.png">
+                                                        </div>
+                                                        <div class="txt">Stranger Things estreia novas temporadas</div>
+                                                        <div class="txt sub">27/05 - 1 Volume e 01/07 - 2 Volume</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/batman.png">
+                                                        </div>
+                                                        <div class="txt">The Batman novo lançamento</div>
+                                                        <div class="txt sub">03/03</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/la_casa_de_papel.png">
+                                                        </div>
+                                                        <div class="txt">La Casa de Papel chegou nova temporada</div>
+                                                        <div class="txt sub">03/12</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/the-mandalorian.png">
+                                                        </div>
+                                                        <div class="txt">O Mandaloriano resgata um criança que realiza à guerra galáxia.</div>
+                                                        <div class="txt sub">12/11</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/lupin.png">
+                                                        </div>
+                                                        <div class="txt">Lupin estreie no terceiro ou quarto trimestre de 2022</div>
+                                                        <div class="txt sub">08/08</div>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="d-flex">
+                    <div class="search-input">
+                        <a href="" target="_blank" hidden></a>
+                        <input type="text" placeholder="Faça sua busca aqui">
+                        <div class="autocom-box"></div>
+                        <div class="icon"><i class="fas fa-search" style="color: #1B1464;"></i></div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="scale-down">
+        <h4 style="margin-top: 30px;">Documentário</h4>
+
+        <div class="tabelagrid">
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/georgina.jpg" data-bs-toggle="modal" data-bs-target="#georgina" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/arquivosdeumserialkiller.jpg" data-bs-toggle="modal" data-bs-target="#arquivosdeumserialkiller" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/tonyrobbins.jpg" data-bs-toggle="modal" data-bs-target="#tonyrobbins" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/neymar.jpg" data-bs-toggle="modal" data-bs-target="#neymar" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/ucraniainvernodefogo.jpg" data-bs-toggle="modal" data-bs-target="#ucraniainvernodefogo" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/ogolpistadotinder.jpg" data-bs-toggle="modal" data-bs-target="#ogolpistadotinder" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/forumla1.jpg" data-bs-toggle="modal" data-bs-target="#formula1" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/schumacher.jpg" data-bs-toggle="modal" data-bs-target="#schumacher" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/privacidadehackeada.jpg" data-bs-toggle="modal" data-bs-target="#privacidadehackeada" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/pele.jpg" data-bs-toggle="modal" data-bs-target="#pele" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/senna.jpg" data-bs-toggle="modal" data-bs-target="#senna" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/elizematsunaga.jpg" data-bs-toggle="modal" data-bs-target="#elizematsunaga" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/ovins.jpg" data-bs-toggle="modal" data-bs-target="#ovins" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/billgates.jpg" data-bs-toggle="modal" data-bs-target="#billgates" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/mundomisterio.jpg" data-bs-toggle="modal" data-bs-target="#mundomisterio" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/magosdocubo.jpg" data-bs-toggle="modal" data-bs-target="#magosdocubo" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/segundaguerra.jpg" data-bs-toggle="modal" data-bs-target="#segundaguerra" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/abstract.jpg" data-bs-toggle="modal" data-bs-target="#abstract" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/tedbundy.jpg" data-bs-toggle="modal" data-bs-target="#tedbundy" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/elvispresley.jpg" data-bs-toggle="modal" data-bs-target="#elvispresley" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/imperioromano.jpg" data-bs-toggle="modal" data-bs-target="#imperioromano" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/downfall.jpg" data-bs-toggle="modal" data-bs-target="#downfall" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/odilemadasredes.jpg" data-bs-toggle="modal" data-bs-target="#odilemadasredes" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/hotelcecil.jpg" data-bs-toggle="modal" data-bs-target="#hotelcecil" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/chefesdotrafico.jpg" data-bs-toggle="modal" data-bs-target="#chefesdotrafico" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/terroremparis.jpg" data-bs-toggle="modal" data-bs-target="#terroremparis" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/lcptoquioaberlim.jpg" data-bs-toggle="modal" data-bs-target="#lcptoquioaberlim" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/kanye.jpg" data-bs-toggle="modal" data-bs-target="#kanye" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/themovies.jpg" data-bs-toggle="modal" data-bs-target="#themovies" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/sequestrada.jpg" data-bs-toggle="modal" data-bs-target="#sequestrada" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/polvo.jpg" data-bs-toggle="modal" data-bs-target="#polvo" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/democracia.jpg" data-bs-toggle="modal" data-bs-target="#democracia" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/saqqara.jpg" data-bs-toggle="modal" data-bs-target="#saqqara" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/streetfood.jpg" data-bs-toggle="modal" data-bs-target="#streetfood" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/podioparatodos.jpg" data-bs-toggle="modal" data-bs-target="#podioparatodos" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/peaks.jpg" data-bs-toggle="modal" data-bs-target="#peaks" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/icaro.jpg" data-bs-toggle="modal" data-bs-target="#icaro" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/visitaaoinferno.jpg" data-bs-toggle="modal" data-bs-target="#visitaaoinferno" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/tylerhenry.jpg" data-bs-toggle="modal" data-bs-target="#tylerhenry" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/windsor.jpg" data-bs-toggle="modal" data-bs-target="#windsor" /></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="georgina" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Eu, Georgina</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/upR4il0ztcE"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2022 | Documentário Reality | 40m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt15494864" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt15494864/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Eu, Georgina(2022) on IMDb" /></a></span></p>
+                    <p>Elenco: Georgina Rodríguez, Cristiano Ronaldo</p>
+                    <p>Uma mulher do Cristiano Ronaldo</p>
+                    <p>Acompanhe a vida de Georgina Rodríguez, mãe, influenciadora, empresária e companheira de
+                        Cristiano Ronaldo nesse retrato profundo e emocionante do seu dia a dia.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="arquivosdeumserialkiller" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Arquivos de um Serial Killer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/xT0GxjNfoek" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Documentário Policial | 1h 25m | <span class="imdbRatingPlugin"
+                            data-user="ur150695547" data-title="tt15085784" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt15085784/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Arquivos de um Serial Killer(2021) on IMDb" /></a></span></p>
+                    <p>Confira as macabras fitas gravadas na prisão pelo serial killer Dennis Nilsen.</p>
+                    <p>O serial killer Dennis Nilsen narra sua vida e os crimes brutais que cometeu em fitas
+                        assustadoras gravadas na cela da prisão.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tonyrobbins" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tony Robbins: Eu não Sou Seu Guru</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/EvnwGxH32wU" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2016 | Documentário | 1h 56m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt5151716" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt5151716/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Tony Robbins: Eu não Sou Seu Guru(2016) on IMDb" /></a></span></p>
+                    <p>Toda a nossa vida muda em um momento.</p>
+                    <p>Os clientes são fãs incondicionais das técnicas de coaching nada ortodoxas de Tony Robbins.
+                        Conheça os bastidores do megaevento anual que atrai milhares de participantes.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="neymar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Neymar - O Caos Perfeito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/HSC6htNW9co" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2022 | Documentário | 51m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt16428640" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt16428640/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Neymar - O Caos Perfeito(2022) on IMDb" /></a></span></p>
+                    <p>Dos títulos às controvérsias. Acompanhe a jornada do craque Neymar, desde sua ascensão à fama no
+                        Santos, sua jornada na seleção brasileira até sua carreira em clubes europeus. Conheça também um
+                        lado pouco explorado da vida pessoal do atleta.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ucraniainvernodefogo" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Inverno em chamas: a luta pela liberdade da Ucrânia
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/yzNxLzFfR5w" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2015 | Documentários políticos | 1h 38min | <span class="imdbRatingPlugin"
+                            data-user="ur150695547" data-title="tt4908644" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt4908644/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Inverno em chamas: a luta pela liberdade da Ucrânia(2015) on IMDb" /></a></span>
+                    </p>
+                    <p>A próxima geração da revolução.</p>
+                    <p>O que era uma manifestação pacífica de estudantes se converte em noventa e três violentos dias de
+                        revolução na luta pelos direitos civis na Ucrânia.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ogolpistadotinder" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Golpista do Tinder</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/_LxaB9Wyloo" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2022 | Documentários crimes reais | 1h 54min | <span class="imdbRatingPlugin"
+                            data-user="ur150695547" data-title="tt14992922" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt14992922/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="O Golpista do Tinder(2022) on IMDb" /></a></span></p>
+                    <p>O amor moderno é um jogo perigoso.</p>
+                    <p>Ele se passava por um magnata do ramo dos diamantes, conquistava mulheres na internet e roubava
+                        milhões de dólares delas. Agora, algumas vítimas querem vingança.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="formula1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Fórmula 1: Dirigir para Viver</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/PjvrIRSDTlA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2019 | Documentário | 4 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt8289930" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt8289930/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Fórmula 1: Dirigir para Viver(2019) on IMDb" /></a></span></p>
+                    <p>Em cada temporada implacável de Fórmula 1, pilotos, gestores e donos de equipes vivem grandes
+                        emoções nas pistas e fora delas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="schumacher" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Schumacher</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/98OykDbVGzk" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2021 | Documentário | 1h 52m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt10322274" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt10322274/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Schumacher(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Michael Schumacher </p>
+                    <p>Ascensão e brilho do Barão Vermelho.</p>
+                    <p>Schumacher é um documentário esportivo alemão de 2021, co-dirigido por Hanns-Bruno Kammertöns,
+                        Vanessa Nöcker e Michael Wech, sobre o piloto de Fórmula 1 alemão Michael Schumacher,
+                        distribuído internacionalmente pela Netflix</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="privacidadehackeada" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Privacidade Hackeada</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/wjXYCrxRWqc" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2019 | Documentário | 1h 54m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt4736550" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt4736550/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Privacidade Hackeada(2019) on IMDb" /></a></span></p>
+                    <p>Eles pegaram os seus dados. E assumiram o controle.</p>
+                    <p>The Great Hack é um documentário de 2019 sobre o escândalo de dados do Facebook – Cambridge
+                        Analytica, produzido e dirigido por Jehane Noujaim e Karim Amer, ambos os documentários
+                        indicados ao Oscar. A música do filme foi composta pelo compositor indicado ao Emmy Gil Talmi.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="pele" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Pelé</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/8t1p3mWVUu4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2021 | Documentário | 1h 48m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt13842562" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt13842562/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Pelé(2021) on IMDb" /></a></span></p>
+                    <p>Da busca pela perfeição à condição de mito.</p>
+                    <p>Tendo como pano de fundo uma era turbulenta da história do Brasil, este documentário mostra a
+                        trajetória extraordinária de Pelé, de jovem craque a herói nacional.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="senna" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Senna - O brasileiro, o herói, o campeão</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Ucymp8tT2Rs" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2010 | Documentário | 1h 45m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt1424432" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt1424432/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Senna(2010) on IMDb" /></a></span></p>
+                    <p>Elenco: Ayrton Senna </p>
+                    <p>O brasileiro, o herói, o campeão.</p>
+                    <p>Um documentário sobre o maior piloto brasileiro de Fórmula 1, Ayrton Senna, que ganhou o
+                        campeonato mundial três vezes antes de morrer tragicamente aos 34 anos de idade.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="elizematsunaga" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Elize Matsunaga: Era Uma Vez Um Crime</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/g-E-ZSEFk_s" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Documentários crimes reais | 50m <span class="imdbRatingPlugin"
+                            data-user="ur150695547" data-title="tt14856998" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt14856998/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Elize Matsunaga: Era Uma Vez Um Crime(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Elize Matsunaga</p>
+                    <p>O presidente da empresa alimentícia Yoki, foi assassinado brutalmente pela esposa Elize </p>
+                    <p>Em um crime que chocou o Brasil, Elize Matsunaga mata e esquarteja o marido. Agora, ela dá sua
+                        primeira entrevista nesta série documental que explora o caso.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ovins" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Top Secret: OVNIS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/PKqujexw7Ds"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="modal-body">
+                        <p>10 | 2021 | Documentário | 1 Temporada | <span class="imdbRatingPlugin"
+                                data-user="ur150695547" data-title="tt14992232" data-style="p3"><a
+                                    href="https://www.imdb.com/title/tt14992232/?ref_=ext_shr_lnk"><img
+                                        src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                        alt="Top Secret: OVNIS(2021) on IMDb" /></a></span></p>
+                        <p>Há muitos anos, as histórias de contatos extraterrestres são desmentidas. Porém, muitos
+                            acreditam que a existência de OVNIs não só é provável, como também real.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="billgates" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O código Bill Gates</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/yOCjrGevsdo" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2019 | Documentário | 1 Temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt10837476" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt10837476/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="O código Bill Gate(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Bill Gates </p>
+                    <p>Em uma jornada pela mente de Bill Gates, descubra quem o influenciou e quais são as metas que o
+                        bilionário ainda pretende alcançar.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mundomisterio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Mundo Mistério</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/2pr2RQEUMZU" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2020 | Documentário | 1 temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt12723962" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt12723962/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Mundo Mistério(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Felipe Castanhari, Lilian Regina, Bruno Miranda </p>
+                    <p>O apresentador Felipe Castanhari e seus assistentes exploram mistérios e maravilhas da ciência e
+                        da história. Prepare-se para descobertas alucinantes!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="magosdocubo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Magos do Cubo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/ywxj3SmQfCI" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2020 | Documentário | 40m <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt12038300" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt12038300/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Magos do Cubo(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Max Park, Feliks Zemdegs, Philipp Weyer</p>
+                    <p>Este documentário captura as voltas e reviravoltas extraordinárias nas viagens dos campeões de resolução de cubos de Rubik, Max Park e Feliks Zemdegs.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="segundaguerra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Grandes Momentos da Segunda Guerra em Cores</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/kGRmSGSlvvI" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2019 | Documentário | 50m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt9103932" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt9103932/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Grandes Momentos da Segunda Guerra em Cores(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Derek Jacobi, Geoffrey Wawro, James Holland</p>
+                    <p>Do ataque a Pearl Harbor ao Dia D, os acontecimentos marcantes da Segunda Guerra Mundial ganham vida nesta série documental com imagens coloridas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="abstract" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Abstract: The Art of Design</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/IEDaZv7TNW0" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2017 | Documentário | 1 temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt6333098" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt6333098/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Abstract: The Art of Design(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Platon, Cas Holman, Ian Spalter</p>
+                    <p>Conheça oito das mentes mais criativas e visionárias da arte e do design contemporâneos em Abstract: The Art of Design, a nova série documental original Netflix</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tedbundy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Conversando com um Serial Killer: Ted Bundy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/YbkB9hjJviI" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2019 | Documentário | 3h 56m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt9425132" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt9425132/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Conversando com um Serial Killer: Ted Bundy(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Stephen Michaud, Bob Keppel, Kathleen McChesney </p>
+                    <p>Conversas com um assassino: The Ted Bundy Tapes é um documentário americano que estreou no Netflix em 24 de janeiro de 2019, o trigésimo aniversário da execução de Bundy.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="elvispresley" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Elvis Presley: O Rei do Rock</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/bzHlrwcP-Z8" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2018 | Documentário | 3h 25m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt6244196" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt6244196/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Elvis Presley: O Rei do Rock(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Steve Allen, Ann-Margret, Chet Atkins</p>
+                    <p>Apaixonado por Elvis? Então conheça a jornada criativa integral desde a infância até as últimas sessões de gravação deste grande artista do rock!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="imperioromano" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Império Romano</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/aOOKeYQs4w0" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2016 | Documentário | 3 temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt6233538" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt6233538/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Império Romano(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Aaron Irvin, Corey Brennan, Jerry Toner</p>
+                    <p>Roman Empire: Reign of Blood é uma série/documentário baseada em fatos históricos, produzida nos Estados Unidos e no Canadá. A minissérie de seis episódios baseia-se no Império Romano e conta a história de Cômodo. Jeremiah Murphy e Peter Sherman colaboraram na escrita da minissérie, e Richard Lopez a dirigiu</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="downfall" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Queda Livre: A Tragédia do Caso Boeing</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/vt-IJkUbAxY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2022 | Documentário | 1h 29m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt11893274" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt11893274/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Downfall(2022) on IMDb" /></a></span></p>
+                    <p>Elenco: Donald Trump, Lester Holt, Maria Bartiromo</p>
+                    <p>Investigadores revelam como a Boeing pode ter sido responsável por dois acidentes catastróficos seguidos ao priorizar o lucro em detrimento da segurança.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="odilemadasredes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Dilema das Redes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/uaaC57tcci0" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2020 | Documentário/Drama | 1h 29m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt11464826" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt11464826/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="O Dilema das Redes(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Tristan Harris, Jeff Seibert, Bailey Richardson </p>
+                    <p>Especialistas em tecnologia do Vale do Silício soam o alarme do perigoso impacto das redes sociais na democracia e na humanidade como um todo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="hotelcecil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cena do Crime - Mistério e Morte no Hotel Cecil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/4enFrSbgRfE" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Documentário | 3h 40m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt13837672" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt13837672/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Cena do Crime - Mistério e Morte no Hotel Cecil(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Tim Marcia, Amy Price, Greg Kading</p>
+                    <p>Conheça o intrigante e misterioso caso do desaparecimento de Elisa Lam no Hotel Cecil.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="chefesdotrafico" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Chefes do Tráfico</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/32ET8hUJesk" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>+18 | 2018 | Documentário | 1 temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt7935522" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt7935522/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Chefes do Tráfico(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Quinn Dalton, Jordan Lawson, Maximo Pain </p>
+                    <p>Drug Lords é uma série documental americana de 2018 que explora cartéis e chefões do tráfico de drogas da vida real, como Pablo Escobar, o Cartel de Cali, Frank Lucas e a família Pettingill.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="terroremparis" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">13 de Novembro - Terror em Paris</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/LBhlCf_rayk" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2018 | Documentário | 1 temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt8194716" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt8194716/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="13 de Novembro - Terror em Paris(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: François Hollande, Grégory Reibenberg, Barouyr </p>
+                    <p>Sobreviventes e integrantes das equipes de emergência relembram os momentos de angústia, bravura e compaixão durante os ataques a Paris em novembro de 2015.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="lcptoquioaberlim" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">La Casa de Papel: De Tokyo à Berlin</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/doEPatuzkQ8" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2021 | Documentário | 53m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt15384346" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt15384346/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="La Casa de Papel: De Tokyo à Berlin(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Jesús Colmenar, Rodrigo de la Serna, Pedro Alonso</p>
+                    <p>A equipe de La Casa de Papel, responsável por dar vida a personagens como Tóquio e o Professor, fala sobre o emocionante processo de gravação da série.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="kanye" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">jeen-yuhs: Uma Trilogia Kanye</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/gWquWwag59g" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2022 | Documentário | 1h 30m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt14599438" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt14599438/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="jeen-yuhs: Uma Trilogia Kanye(2022) on IMDb" /></a></span></p>
+                    <p>Elenco: Ye, Kid Cudi, Justin Bieber </p>
+                    <p>Um astro em ascensão e um cineasta visionário. Duas vidas que se cruzam em uma série documental intensa e intimista que mostra a carreira de Kanye West, filmada durante duas décadas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="themovies" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">BlackPink - O Filme</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/jaImnQkQcTo" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2021 | Documentário | 1h 39m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt14880612" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt14880612/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="BlackPink - O Filme(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: BlackPink, Jennie Kim, Jisoo Kim </p>
+                    <p>Blackpink: The Movie é um documentário sul-coreano de 2021 dirigido por Oh Yoon-dong e Jung Su-yee, com o grupo feminino sul-coreano Blackpink. Foi lançado em 4 de agosto de 2021, na Coreia do Sul e em todo o mundo. Também está disponível para streaming no Disney+ e no Disney+ Hotstar</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="sequestrada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sequestrada à Luz do Dia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/NLC-Fgfz6n4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2017 | Documentários sobre crimes reais | 1h 30m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt3444312" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt3444312/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Sequestrada à Luz do Dia(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Jan Broberg, Bob Broberg, Mary Ann Broberg </p>
+                    <p>O documentário relata a história verídica de uma família que tem a filha adolescente sequestrada duas vezes pelo vizinho aparentemente inofensivo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="polvo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Professor Polvo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/4va7CuH6K2w" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2020 | Documentário | 1h 25m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt12888462" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt12888462/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Professor Polvo(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Craig Foster, Tom Foster </p>
+                    <p>Um cineasta desenvolve uma amizade improvável com um polvo em uma floresta de algas na África do Sul e descobre mais sobre os mistérios do mundo marinho.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="democracia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Democracia em Vertigem</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/vwZ5m10y1rQ" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2019 | Documentário | 2h 1m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt6016744" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt6016744/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Democracia em Vertigem(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Dilma Rousseff, Luiz Inácio Lula da Silva, Marisa Letícia Lula da Silva </p>
+                    <p>A segunda destituição na historia do Brasil, protagonizada por Dilma Rousseff do Partido dos Trabalhadores.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="saqqara" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Os Segredos de Saqqara</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/EfxSWrejzrM" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2020 | Documentário | 1h 53m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt13150630" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt13150630/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Os Segredos de Saqqara(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Ahmed Zikrey Abdellhak, Ghareeb Ali Mohammed Abushousha, Nabil Eldaleel </p>
+                    <p>Secrets of the Saqqara Tomb é um documentário britânico de 2020 dirigido por James Tovell. O filme segue uma equipe de arqueólogos egípcios que descobrem uma tumba do século 25 aC na necrópole de Saqqara, nos arredores do Cairo, que permaneceu intocada por 4.400 anos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="streetfood" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Street Food: América Latina</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/bmzcIC3lbsQ" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2020 | Documentário | 1 temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt12742136" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt12742136/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Street Food: América Latina(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Adin Rudd, Linda Kerr, Marsia Taha </p>
+                    <p>Viaje por seis países da América Latina e conheça a cultura gastronômica das ruas de Oaxaca (México), Salvador (Brasil), Buenos Aires (Argentina), Lima (Peru), Bogotá (Colômbia) e La Paz (Bolívia).</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="podioparatodos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Pódio para Todos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/TBWzSqFrQK4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2020 | Documentário | 1h 45m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt10851618" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt10851618/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Pódio para Todos(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Jean-Baptiste Alaize, Ryley Batt, Ellie Cole</p>
+                    <p>Atletas de elite, dirigentes e ativistas refletem sobre os Jogos Paralímpicos e o seu impacto global na forma como vemos a deficiência, diversidade e excelência.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="peaks" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">14 Montanhas, 8 Mil Metros e 7 Meses</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/WnH7UmMf2Zs" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Documentário | 1h 41m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt14079374" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt14079374/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="14 Montanhas, 8 Mil Metros e 7 Meses(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Nirmal Purja, Suchi Purja, Klára Kolouchová</p>
+                    <p>Nimsdai Purja, um destemido montanhista nepalês, embarca numa jornada aparentemente impossível: conquistar, em sete meses, todos os 14 picos de 8.000 metros do mundo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="icaro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ícaro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/qXoRdSTrR-4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2017 | Documentário | 2h 1m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt6333060" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt6333060/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Ícaro(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Bryan Fogel, Grigory Rodchenkov</p>
+                    <p>Neste documentário vencedor do Oscar, um ciclista norte-americano mergulha em um gigantesco escândalo de doping envolvendo um cientista russo caçado por Putin.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="visitaaoinferno" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Visita ao Inferno</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/6uMsFhxcMgw" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2016 | Documentário | 1h 47m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt4846318" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt4846318/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Visita ao Inferno(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Werner Herzog, Katia Krafft, Clive Oppenheimer</p>
+                    <p>Com incríveis imagens de erupções e rios de lava, Werner Herzog captura a força brutal dos vulcões e sua relação com ritos religiosos indígenas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tylerhenry" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;"> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Vida Após a Morte com Tyler Henry</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/KQwV4oUjIp4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2022 | Documentário | 1 temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt18217272" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt18217272/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Vida Após a Morte com Tyler Henry(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Tyler Henry, Kathryn Sermak, Theresa Koelewyn </p>
+                    <p>O médium Tyler Henry traz respostas e consolo do mundo dos espíritos enquanto investiga o passado da própria família em um reality intimista.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="windsor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">The Royal House of Windsor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/pNILDb-wXW8" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2017 | Documentário | 1 temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt6596634" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt6596634/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="The Royal House of Windsor(2017) on IMDb" /></a></span></p>
+                    <p>Saiba como a família real britânica sobreviveu aos últimos cem anos de brigas pelo poder, manobras políticas e muito mais.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-link">
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>Copyright@ 2022 SUPERFLIX</p>
+    </footer>
+<script src="JS/main.js"></script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="img/logo deafilx.svg" />
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <title>DEAFLIX</title>
+    <link href="CSS/login.css" rel="stylesheet" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        background-color: #1B1464;
+        padding: 15px 30px;
+}
+a{
+    color:#fff;
+    font-size: 14px;
+}
+</style>
+
+<body>
+    
+    <div id="root">
+        <div class="main">
+            <div class="container-fluid">
+                <img class="logo" src="img/logo-deafilx.png" alt="" width="180" height="50">
+            </div>
+            <div class="login-body">
+                <div class="login-body__form">
+                    <h1>ENTRAR</h1>
+                    <form method="POST" action="login.php"></form>
+                    <div class="login-body__input mb-16">
+                        <input type="text" placeholder="Email ou número de telefone" />
+                    </div>
+                    <div class="login-body__input">
+                        <input type="password" placeholder="Senha" />
+                    </div>
+                    <input class="login-body__submit-btn" type="button" onclick="parent.location='index.html'" value="ENTRAR">
+                    <div class="login-body__options">
+                        <span>Lembre-se de mim</span>
+                        <a class="login-body__need-help" href="centrodeajuda.html">Precisa ajuda?</a>
+                    </div>
+                    <div class="login-body__new-to-nl">
+                        <span>Cria a conta?</span>
+                        <a class="login-body__sign-up" href="forms.html">Inscreva-se agora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer>
+<div class="social-link">
+    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+</div>
+<p>Copyright@ 2022 SUPERFLIX</p>
+<ul class="list-inline">
+            <li class="list-inline-item"><a href="privacidade.html">Privacidade</a></li>
+            <li class="list-inline-item"><a href="termosdeuso.html">Termos de Uso</a></li>
+</ul>
+</footer>
+
+
+</body>
+
+</html>

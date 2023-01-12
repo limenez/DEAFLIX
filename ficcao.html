@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEAFLIX - Ficção</title>
+    <link rel="icon" href="img/logo deafilx.svg" />
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/jquery-1.11.0.min.js"></script>
+    <script src="JS/jquery-migrate-1.2.1.min.js"></script>
+    <script src="JS/slick.min.js"></script>
+    <link rel="stylesheet" href="css/imdbRating.css">
+    <link rel="stylesheet" type="text/css" href="CSS/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background: rgb(27,20,100);
+        background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%);
+    }
+
+    .tabelagrid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, 150px);
+        grid-template-rows: repeat(3, 210px);
+    }
+
+    .tabelagrid>div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tabelagrid img {
+        width: 400px;
+        height: 400px;
+        padding: 30px;
+    }
+
+    h4 {
+        color: #fff;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #1B1464;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="img/logo-deafilx.png" alt="" width="200" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.html">INÍCIO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">FILMES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acao.html">AÇÃO</a></li>
+                            <li><a class="dropdown-item" href="comedia.html">COMÉDIA</a></li>
+                            <li><a class="dropdown-item" href="documentario.html">DOCUMENTÁRIOS</a></li>
+                            <li><a class="dropdown-item" href="drama.html">DRAMA</a></li>
+                            <li><a class="dropdown-item" href="ficcao.html">FICÇÃO</a></li>
+                            <li><a class="dropdown-item" href="romance.html">ROMANCE</a></li>
+                            <li><a class="dropdown-item" href="suspense.html">SUSPENSE</a></li>
+                            <li><a class="dropdown-item" href="terror.html">TERROR</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="series.html">SÉRIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="infantil.html">INFANTIL</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">PERFIL</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="conta.html">CONTA</a></li>
+                            <li><a class="dropdown-item" href="centrodeajuda.html">CENTRAL DA AJUDA</a></li>
+                            <li><a class="dropdown-item" href="login.html">SAIR</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="icons">
+                    <div class="notification">
+                        <a href="#">
+                            <div class="notBtn" href="#">
+                                <div class="number">3</div>
+                                <i class="fas fa-bell" style="color: #fff; font-size: 40px;"></i>
+                                <div class="box">
+                                    <div class="display">
+                                        <div class="nothing">
+                                            <i class="fas fa-child stick"></i>
+                                            <div class="cont">
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/strangerthings4.png">
+                                                        </div>
+                                                        <div class="txt">Stranger Things estreia novas temporadas</div>
+                                                        <div class="txt sub">27/05 - 1 Volume e 01/07 - 2 Volume</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/batman.png">
+                                                        </div>
+                                                        <div class="txt">The Batman novo lançamento</div>
+                                                        <div class="txt sub">03/03</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/la_casa_de_papel.png">
+                                                        </div>
+                                                        <div class="txt">La Casa de Papel chegou nova temporada</div>
+                                                        <div class="txt sub">03/12</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/the-mandalorian.png">
+                                                        </div>
+                                                        <div class="txt">O Mandaloriano resgata um criança que realiza à guerra galáxia.</div>
+                                                        <div class="txt sub">12/11</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/lupin.png">
+                                                        </div>
+                                                        <div class="txt">Lupin estreie no terceiro ou quarto trimestre de 2022</div>
+                                                        <div class="txt sub">08/08</div>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="d-flex">
+                    <div class="search-input">
+                        <a href="" target="_blank" hidden></a>
+                        <input type="text" placeholder="Faça sua busca aqui">
+                        <div class="autocom-box"></div>
+                        <div class="icon"><i class="fas fa-search" style="color: #1B1464;"></i></div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="scale-down">
+        <h4 style="margin-top: 30px;">Ficção</h4>
+
+        <div class="tabelagrid">
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/matrix4.jpg" data-bs-toggle="modal"
+                    data-bs-target="#matrix" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/starwarsrogueone.jpg"
+                    data-bs-toggle="modal" data-bs-target="#rogueone" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/starwars9.jpg" data-bs-toggle="modal"
+                    data-bs-target="#starwars9" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/passageiros.jpg" data-bs-toggle="modal"
+                    data-bs-target="#passageiros" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/independenceday.jpg" data-bs-toggle="modal"
+                    data-bs-target="#independenceday" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/oceudameianoite.jpg" data-bs-toggle="modal"
+                    data-bs-target="#oceudameianoite" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/vida.jpg" data-bs-toggle="modal"
+                    data-bs-target="#vida" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/robocop.jpg" data-bs-toggle="modal"
+                    data-bs-target="#robocop" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/startrek.jpg" data-bs-toggle="modal"
+                    data-bs-target="#startrek" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/tempestadeplanetaemfuria.jpg"
+                    data-bs-toggle="modal" data-bs-target="#tempestadeplanetaemfuria" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/godzillavskong.jpg" data-bs-toggle="modal"
+                    data-bs-target="#godzillavskong" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/avigilantedoamanha.jpg"
+                    data-bs-toggle="modal" data-bs-target="#avigilantedoamanha" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/elysium.jpg" data-bs-toggle="modal"
+                    data-bs-target="#elysium" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/ultravioleta.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ultravioleta" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/hansolo.jpg" data-bs-toggle="modal"
+                    data-bs-target="#hansolo" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/mundoemcaos.jpg" data-bs-toggle="modal"
+                    data-bs-target="#mundoemcaos" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/achegada.jpg" data-bs-toggle="modal"
+                    data-bs-target="#achegada" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/perdidoemmarte.jpg" data-bs-toggle="modal"
+                    data-bs-target="#perdidoemmarte" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/prometheus.jpg" data-bs-toggle="modal"
+                    data-bs-target="#prometheus" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/jurassicworld.jpg" data-bs-toggle="modal"
+                    data-bs-target="#jurassicworld" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/aquintaonda.jpg" data-bs-toggle="modal"
+                    data-bs-target="#aquintaonda" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/ahospedeira.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ahospedeira" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/io.jpg" data-bs-toggle="modal"
+                    data-bs-target="#io" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/planetadosmacacos.jpg" data-bs-toggle="modal"
+                    data-bs-target="#planetadosmacacos" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/oespaçoentrenos.jpg" data-bs-toggle="modal"
+                    data-bs-target="#oespaçoentrenos" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/extincao.jpg" data-bs-toggle="modal"
+                    data-bs-target="#extincao" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/powerrangers.jpg" data-bs-toggle="modal"
+                    data-bs-target="#powerrangers" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/oexterminadordofuturogenesis.jpg" data-bs-toggle="modal"
+                    data-bs-target="#oexterminadordofuturogenesis" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/mib.jpg" data-bs-toggle="modal"
+                    data-bs-target="#mib" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/jumper.jpg" data-bs-toggle="modal"
+                    data-bs-target="#jumper" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/mentessombrias.jpg" data-bs-toggle="modal"
+                    data-bs-target="#mentessombrias" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/circulodefogo.jpg" data-bs-toggle="modal"
+                    data-bs-target="#circulodefogo" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/guerradosmundos.jpg" data-bs-toggle="modal"
+                    data-bs-target="#guerradosmundos" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/nolimitedoamanha.jpg" data-bs-toggle="modal"
+                    data-bs-target="#nolimitedoamanha" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/iammother.jpg" data-bs-toggle="modal"
+                    data-bs-target="#iammother" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/swodespertardaforca.jpg" data-bs-toggle="modal"
+                    data-bs-target="#swodespertardaforca" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/swosultimosjedi.jpg" data-bs-toggle="modal"
+                    data-bs-target="#swosultimosjedi" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/spectral.jpg" data-bs-toggle="modal"
+                    data-bs-target="#spectral" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/apocalipse.jpg" data-bs-toggle="modal"
+                    data-bs-target="#apocalipse" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/avatar.jpg" data-bs-toggle="modal"
+                    data-bs-target="#avatar" /></div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="matrix" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Matrix Resurrections</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Wg7V2_OBXwQ"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Ficção científica, Ação, Aventura | 2h 28m | <span class="imdbRatingPlugin"
+                            data-user="ur150695547" data-title="tt10838180" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt10838180/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" Matrix Resurrections
+                        (2021) on IMDb" />
+                            </a></span></p>
+                    <p>Elenco: Keanu Reeves, Carrie-Anne Moss, Yahya Abdul-Mateen II</p>
+                    <p>Retorne à fonte.</p>
+                    <p>Em um mundo de duas realidades — a vida cotidiana e o que está por trás dela —, Thomas Anderson
+                        terá que escolher seguir o coelho branco mais uma vez. A escolha, embora seja uma ilusão, ainda
+                        é a única maneira de entrar ou sair da Matrix, que é mais forte, mais segura e mais perigosa do
+                        que nunca.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="rogueone" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Rogue One: Uma História Star Wars</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/9oISQcXuki0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2016 | Ficção científica, Aventura, Ação | 2h 13min | <span class="imdbRatingPlugin"
+                            data-user="ur150695547" data-title="tt3748528" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt3748528/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" Rogue One: Uma História Star Wars
+                        (2016) on IMDb" />
+                            </a></span> </p>
+                    <p>Elenco: Felicity Jones, Diego Luna, Ben Mendelsohn</p>
+                    <p>Uma rebelião formada pela esperança</p>
+                    <p>Em busca de uma nova esperança para a galáxia, a Aliança Rebelde enfrenta uma arriscada missão:
+                        roubar os planos que revelam uma falha na construção da Estrela da Morte. Para isso, eles contam
+                        com a ajuda de Jyn Erso, filha do criador da arma mais poderosa do império.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="starwars9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">STAR WARS: A Ascensão Skywalker</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Cmgv3fwoxQw"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2019 | Ficção/Ação | 2h 21min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt2527338" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt2527338/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" Star Wars: A Ascensão Skywalker
+                        (2019) on IMDb" />
+                            </a></span></p>
+                    <p>Elenco: Daisy Ridley, Adam Driver, Oscar Isaac</p>
+                    <p>Toda geração tem uma lenda.</p>
+                    <p>Com o retorno do Imperador Palpatine, a Resistência toma a frente da batalha. Treinando para ser
+                        uma completa Jedi, Rey se encontra em conflito com passado e futuro, e teme pelas respostas que
+                        pode conseguir com Kylo Ren.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="passageiros" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Passageiros</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/7BWWWQzTpNU" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2016 | Ficção/Romance | 1h 56m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1355644" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1355644/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Passageiros(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Chris Pratt, Jennifer Lawrence, Michael Sheen</p>
+                    <p>Há uma razão pela qual eles acordaram.</p>
+                    <p>Dois passageiros acordam 90 anos antes do tempo programado durante uma viagem de rotina no espaço
+                        devido a um mau funcionamento de suas cabines. Sozinhos, Jim e Aurora começam a estreitar o seu
+                        relacionamento. Entretanto, a paz é ameaçada quando eles descobrem que a nave está correndo um
+                        sério risco e que eles são os únicos capazes de salvar os mais de cinco mil colegas em sono
+                        profundo</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="independenceday" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Independence Day: O Ressurgimento</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/LwgF3bmQ1rE" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2016 | Ficção/Ação | 2h | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1628841" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1628841/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Independence Day: O Ressurgimento(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Liam Hemsworth, Jeff Goldblum, Bill Pullman</p>
+                    <p>Nós sempre soubemos que eles iriam voltar.</p>
+                    <p>Duas décadas depois do devastador ataque alienígena do Dia da Independência, a Terra enfrenta uma
+                        nova ameaça que vem diretamente do espaço. Uma nova geração de pilotos é convocada para combater
+                        os inimigos e garantir a liberdade da humanidade.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="oceudameianoite" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Céu da Meia-Noite</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/zCSjjmQz9-o" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2020 | Ficção/Drama | 2h 2m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt10539608" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt10539608/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Céu da Meia-Noite(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: George Clooney, Felicity Jones, David Oyelowo </p>
+                    <p>Juntos somos um universo.</p>
+                    <p>Um cientista solitário no Ártico corre contra o tempo para impedir que um grupo de astronautas
+                        volte à Terra depois de uma catástrofe global.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="vida" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Vida</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/UpblEy1oWsM" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2017 | Ficção/Terror | 1h 50m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt5442430" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt5442430/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Vida(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Jake Gyllenhaal, Rebecca Ferguson, Ryan Reynolds</p>
+                    <p>Era melhor quando estávamos sozinhos.</p>
+                    <p>Uma equipe de seis astronautas da Estação Espacial Internacional descobre sinais de vida
+                        inteligente em Marte e a investigação do fato gera consequências inimagináveis.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="robocop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">RoboCop</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/OSCyZOQFq0U" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2014 | Ficção\Ação | 2h 1m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1234721" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1234721/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="RoboCop(2014) on IMDb" /></a></span></p>
+                    <p>Elenco: Joel Kinnaman, Gary Oldman, Michael Keaton</p>
+                    <p>Nós temos o futuro sob controle.</p>
+                    <p>Na trama, o conglomerado multinacional OmniCorp lidera a tecnologia robótica. Seus androides
+                        estão vencendo as guerras dos Estados Unidos ao redor do globo e agora eles pretendem aplicar
+                        essa tecnologia em solo americano. Quando Alex Murphy, um bom policial, é salvo por um milagre
+                        de uma explosão premeditada, ele se torna a cobaia perfeita para ser o primeiro ciborgue da
+                        OmniCorp, a maneira de combater o crime com máquinas sem abrir mão da consciência humana.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="startrek" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Star Trek: Sem Fronteiras</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/CwJqtCLwUKk" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2016 | Ficção/Ação | 2h 2m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2660888" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2660888/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Star Trek: Sem Fronteiras(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Chris Pine, Zachary Quinto, Simon Pegg</p>
+                    <p>Atravessando as fronteiras do desconhecido.</p>
+                    <p>Em uma missão de resgate, a nave USS Enterprise é atacada por Krall, um chefe militar que jurou
+                        vingança contra a Federação. Após uma aterrissagem forçada, a tripulação precisa deter uma raça
+                        alienígena hostil e o início de uma guerra galáctica.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tempestadeplanetaemfuria" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tempestade: Planeta em Fúria</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/lNAC9wVUaqY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2017 | Ficção/Ação | 1h 49m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1981128" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1981128/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Tempestade: Planeta em Fúria(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Gerard Butler, Jim Sturgess, Abbie Cornish</p>
+                    <p>Enfrente a tempestade.</p>
+                    <p>A ocorrência cada vez mais frequente de eventos climáticos capazes de ameaçar a existência da
+                        humanidade faz com que seja criada uma extensa rede de satélites, ao redor de todo o planeta, de
+                        forma a controlar o próprio clima. Apelidado de Dutch Boy, este sistema construído a partir da
+                        cooperação de 17 países é coordenado pelo engenheiro Jake Lawson. Após anos de dedicação, ele é
+                        afastado da função devido a questões políticas e, em seu lugar, é nomeado seu irmão caçula, Max.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="godzillavskong" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Godzilla vs Kong</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/ZLKYpWCu3tE" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Ficção/Ação | 1h 45m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt5034838" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt5034838/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Godzilla vs Kong(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Alexander Skarsgård, Millie Bobby Brown, Eiza González </p>
+                    <p>Um dos dois cairá</p>
+                    <p>Kong e seus protetores embarcam em uma jornada perigosa para encontrar seu verdadeiro lar. Jia,
+                        uma garota órfã que tem um vínculo único e poderoso com a poderosa besta, acompanha a aventura.
+                        No entanto, eles logo se encontram no caminho de Godzilla, completamente enfurecido, deixando um
+                        rastro de destruição em todo o mundo. O confronto inicial entre os dois titãs, instigado por
+                        forças misteriosas, é apenas o começo do enigma que reside nas profundezas do planeta.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="avigilantedoamanha" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Vigilante do Amanhã</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/8d2EmV46mmo" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2017 | Ficção/Ação | 1h 47m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1219827" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1219827/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Vigilante do Amanhã(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Scarlett Johansson, Pilou Asbæk, Takeshi Kitano</p>
+                    <p>Uma criação incontrolável em busca de sua humanidade.</p>
+                    <p>Em um mundo pós-2029, cérebros se fundem facilmente a computadores e a tecnologia está em todos
+                        os lugares. Motoko Kusanagi é uma ciborgue com experiência militar que comanda um esquadrão de
+                        elite especializado em combater crimes cibernéticos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="elysium" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Elysium</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/GmsmrHdomRo" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2013 | Ficção /Ação | 1h 49m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1535108" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1535108/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Elysium(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Matt Damon, Jodie Foster, Sharlto Copley</p>
+                    <p>Sem probreza, sem guerra, sem doença... Mas tudo vai mudar.</p>
+                    <p>No ano de 2154, os mais ricos vivem em uma estação espacial enquanto o resto da população mora em
+                        uma Terra arruinada. Um homem assume a missão de tentar trazer igualdade aos mundos polarizados.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ultravioleta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ultravioleta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/lzJfZqXsKMA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2006 | Ficção/Ação | 1h 28m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0370032" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0370032/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Ultravioleta(2006) on IMDb" /></a></span></p>
+                    <p>Elenco: Milla Jovovich, Cameron Bright, Nick Chinlund</p>
+                    <p>A guerra de sangue continua.</p>
+                    <p>Uma mulher com superpoderes tenta proteger um menino considerado uma ameaça a humanidade. Ela
+                        luta contra aqueles que buscam acabar com a geração de super-humanos criados no fim do século
+                        21.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="hansolo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Han Solo: Uma História Star Wars</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/EQpr5HXTvmg" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2018 | Ficção/Aventura | 2h 15m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3778644" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt3778644/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Han Solo: Uma História Star Wars(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Alden Ehrenreich, Woody Harrelson, Emilia Clarke</p>
+                    <p>Nunca fale sobre probabilidades.</p>
+                    <p>Em dificuldade financeira, o piloto Han Solo e sua namorada Qi'ra buscam trabalho. Eles colocam
+                        as mãos em uma substância valiosa, mas perigosa, e que acaba levando à perseguição do Império e
+                        à separação entre os dois. Preocupado, Han usa toda a sua esperteza para se infiltrar em um
+                        plano arriscado, mas que pode render a oportunidade de voltar à terra natal e reencontrar a sua
+                        amada. No caminho, o piloto encontra parceiros importantes, como Chewbacca e Lando Calrissian.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mundoemcaos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Mundo em Caos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/3OMjzghu_Jw" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2021 | Ficção | 1h 49m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2076822" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2076822/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Mundo em Caos(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Tom Holland, Daisy Ridley, Demian Bichir</p>
+                    <p>Ninguém escapa do ruído.</p>
+                    <p>Em um futuro não muito distante, em um mundo onde as mulheres desapareceram e os homens foram afetados pelo "ruído" – uma força que deixa seus pensamentos audíveis - Todd Hewitt encontra Viola, uma jovem misteriosa que aterrissou em seu planeta. Com Viola correndo perigo, Todd jura protegê-la e colocá-la fora de perigo. Para salvá-la, Todd terá que controlar seu "ruído", descobrir sua própria força e desvendar todos os segredos sombrios que seu planeta e sua comunidade guardam.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="achegada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Chegada</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/rNciXGzYZms" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2016 | Ficção/Suspense | 1h 56m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2543164" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2543164/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Chegada(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Amy Adams, Jeremy Renner, Forest Whitaker</p>
+                    <p>Por que eles estão aqui?</p>
+                    <p>Naves alienígenas chegaram às principais cidades do mundo. Com a intenção de se comunicar com os visitantes, uma linguista e um militar são chamados para decifrar as estranhas mensagens dos visitantes.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="perdidoemmarte" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Perdido em Marte</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/OjojQ-20Eu4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2015 | Ficção/Drama | 2h 24m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3659388" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt3659388/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Perdido em Marte(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Matt Damon, Jessica Chastain, Kristen Wiig</p>
+                    <p>Tragam-no para casa.</p>
+                    <p>O astronauta Mark Watney é enviado a uma missão para Marte, mas após uma severa tempestade, ele é dado como morto, abandonado pelos colegas e acorda sozinho no planeta inóspito com escassos suprimentos e sem saber como reencontrar os companheiros ou retornar à Terra. Ele inicia então uma dura luta pela própria sobrevivência, utilizando de todo o seu conhecimento científico para fazer contato e retornar para casa.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="prometheus" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Prometheus</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/SYQ8g09L9MU" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2012 | Ficção/Terror | 2h 4m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1446714" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1446714/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Prometheus(2012) on IMDb" /></a></span></p>
+                    <p>Elenco: Noomi Rapace, Michael Fassbender, Charlize Theron</p>
+                    <p>A busca por nossas origens pode nos levar ao fim.</p>
+                    <p>Este prelúdio do filme Alien conta a história de uma equipe de cientistas que embarca em uma jornada espacial para descobrir a verdade sobre a origem da raça humana. No planeta de destino, eles encontram criaturas poderosas e revelações assustadoras.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="jurassicworld" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Jurassic World: O Mundo dos Dinossauros</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/S2_aWPGZwhs" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2015 | Ficção | 2h 4m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0369610" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0369610/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Jurassic World: O Mundo dos Dinossauros(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Chris Pratt, Bryce Dallas Howard, Nick Robinson</p>
+                    <p>O parque está aberto.</p>
+                    <p>O Parque dos Dinossauros está aberto para visitação, e o público tem a chance de ver de perto as mais diversas espécies. Porém, um desses animais, resultado de experiência genética, desenvolve alta inteligência e se torna uma ameaça para todos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="aquintaonda" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A 5ª Onda</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/DxCntPIs38U" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2016 | Ficção/Ação | 1h 52m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2304933" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2304933/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A 5ª Onda(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Chloë Grace Moretz, Nick Robinson, Alex Roe</p>
+                    <p>Nós revidamos.</p>
+                    <p>Uma série de ataques alienígenas ameaça a raça humana. Separada da família, uma adolescente está disposta a fazer de tudo para encontrar o irmão antes que a quinta onda extermine a humanidade.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ahospedeira" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Hospedeira</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/jFOL6VGkvSg" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2013 | Ficção/Romance | 2h 5m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1517260" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1517260/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Hospedeira(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Saoirse Ronan, Max Irons, Jake Abel</p>
+                    <p>Você será um de nós.</p>
+                    <p>A Terra foi colonizada por uma raça alienígena que controla a mente dos humanos e usa seus corpos como hospedeiros. A maioria da humanidade foi erradicada, mas quando Melanie se recusa a aceitar sua nova alma, uma caçada se inicia.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="io" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">IO – O Último na Terra</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/hjI6Eanjdwc" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2019 | Ficção | 1h 36m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3256226" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt3256226/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="IO – O Último na Terra(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Margaret Qualley, Anthony Mackie, Danny Huston</p>
+                    <p>Num futuro próximo, devemos salvar a Terra ou deixá-la.</p>
+                    <p>Quando um jovem cientista procura uma maneira de salvar uma Terra agonizante, ela encontra uma conexão com um homem que está correndo para pegar o último ônibus espacial do planeta.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="planetadosmacacos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Planeta dos Macacos: O Confronto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/HkPr32MMx_o" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2014 | Ficção/Ação | 2h 11m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3450958" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt3450958/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Planeta dos Macacos: O Confronto(2014) on IMDb" /></a></span></p>
+                    <p>Elenco: Andy Serkis, Jason Clarke, Gary Oldman</p>
+                    <p>Uma última chance para a paz.</p>
+                    <p>Dez anos após seu último embate, um grupo de humanos sobrevivente de uma praga mortal ameaça a crescente nação de macacos geneticamente evoluídos de César. Ambos os lados são levados a uma guerra que pode determinar definitivamente a espécie dominante da Terra.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="oespaçoentrenos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Espaço Entre Nós</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/k-uAkldkHVI" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2017 | Ficção/Romance | 2h 1m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3922818" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt3922818/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Espaço Entre Nós(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Asa Butterfield, Britt Robertson, Gary Oldman</p>
+                    <p>Do que você mais gosta na Terra?</p>
+                    <p>O adolescente Gardner Elliot é o primeiro humano nascido em solo marciano. Mas ele deseja fazer uma viagem à Terra para conhecer a verdade sobre seu pai biológico, e sobre seu nascimento. Nesta jornada, ele tem o apoio de Tulsa.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="extincao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Extinção</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Y8amhmZ9rAQ" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2018 | Ficção/Drama | 1h 35m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3201640" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt3201640/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Extinção(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Michael Peña, Lizzy Caplan, Israel Broussard</p>
+                    <p>Não estivemos aqui primeiro.</p>
+                    <p>Atormentado por sonhos com uma invasão alienígena, um homem vê seu pesadelo se tornar realidade quando uma força extraterrestre ataca o planeta Terra.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="powerrangers" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Power Rangers</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/PkjKyh92fEk" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2017 | Ficção/Ação | 2h 4m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3717490" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt3717490/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Power Rangers(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Dacre Montgomery, RJ Cyler, Naomi Scott</p>
+                    <p>É hora de morfar!</p>
+                    <p>A jornada de cinco adolescentes que devem buscar algo extraordinário quando eles tomam consciência que a sua pequena cidade Angel Grove - e o mundo - estão à beira de sofrer um ataque alienígena. Escolhidos pelo destino, eles irão descobrir que são os únicos que poderão salvar o planeta. Mas para isso, eles devem superar seus problemas pessoais e juntarem sua forças, antes que seja tarde demais.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="oexterminadordofuturogenesis" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Exterminador do Futuro: Gênesis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/B2IGusucyIA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2015 | Ficção/Ação | 2h 6m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1340138" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1340138/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="JO Exterminador do Futuro: Gênesis(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Arnold Schwarzenegger, Emilia Clarke, Jai Courtney</p>
+                    <p>Nova missão. Novo destino.</p>
+                    <p>John Connor, líder da resistência humana contra Skynet, envia Kyle Reese de volta a 1984 para proteger sua mãe, Sarah. Porém, Reese se surpreende ao encontrá-la com um exterminador que age como seu protetor, e descobre que o passado foi alterado.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mib" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">MIB: Homens de Preto Internacional</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/J6S2ckBMe4U" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2019 | Ficção/Ação | 1h 55m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2283336" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2283336/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="MIB: Homens de Preto Internacional(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Chris Hemsworth, Tessa Thompson, Rebecca Ferguson</p>
+                    <p>O mundo não vai se salvar sozinho.</p>
+                    <p>Os agentes H e M usam armas de alta tecnologia para combater alienígenas que podem assumir a forma de qualquer ser humano.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="jumper" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Jumper</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/DtacNQkFHvo" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2008 | Ficção/Ação | 1h 30m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0489099" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0489099/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Jumper(2008) on IMDb" /></a></span></p>
+                    <p>Elenco: Hayden Christensen, Jamie Bell, Rachel Bilson</p>
+                    <p>Qualquer lugar é possível.</p>
+                    <p>Um jovem descobre que tem o poder de se teletransportar, despertando a atenção de um inimigo poderoso.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mentessombrias" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Mentes Sombrias</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/fir63ujRQxQ" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2018 | Ficção/Ação | 1h 45m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt4073790" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt4073790/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Mentes Sombrias(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Amandla Stenberg, Harris Dickinson, Miya Cech</p>
+                    <p>Os que mudaram vão mudar tudo.</p>
+                    <p>Em um mundo apocalíptico, onde uma pandemia mata a maioria das crianças e adolescentes da América, alguns sobreviventes desenvolvem poderes sobrenaturais. Eles então são tirados pelo governo de suas famílias e enviados para campos de custódia. Ruby, uma das sobreviventes, consegue escapar com outras crianças e sua vida muda para sempre.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="circulodefogo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Círculo de Fogo: A Revolta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/CVwG8htrRYI" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2018 | Ficção | 1h 51m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2557478" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2557478/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Círculo de Fogo: A Revolta(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: John Boyega, Scott Eastwood, Cailee Spaeny</p>
+                    <p>O piloto rebelde Jake Pentecost e sua irmã distante lideram uma nova geração de guerreiros corajosos contra monstros de outro mundo que querem destruir a humanidade.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="guerradosmundos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Guerra dos Mundos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/2qZUxly1634" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2005 | Ficção/Ação | 1h 56m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0407304" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0407304/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Guerra dos Mundos(2005) on IMDb" /></a></span></p>
+                    <p>Elenco: Tom Cruise, Dakota Fanning, Justin Chatwin</p>
+                    <p>Eles já estão aqui.</p>
+                    <p>Ray Ferrier é um estivador divorciado, afastado de seus filhos, que vivem com a mãe. Quando sua ex-esposa deixa as crianças para ele cuidar durante alguns dias, o planeta é atacado por alienígenas que surgem do chão conduzindo tripods e destruindo tudo que encontram pelo caminho. Ray tenta proteger os seus filhos e fugir para Boston para se juntar a sua ex-esposa. Durante o trajeto, enfrenta várias adversidades e ataques.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="nolimitedoamanha" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">No Limite do Amanhã</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/KzOSJPYiCbM" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2014 | Ficção/Ação | 1h 53m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1631867" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1631867/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="No Limite do Amanhã(2014) on IMDb" /></a></span></p>
+                    <p>Elenco: Tom Cruise, Emily Blunt, Bill Paxton</p>
+                    <p>Viva. Morra. Repita.</p>
+                    <p>Em uma guerra contra alienígenas, William Cage descobre que tem a estranha habilidade de voltar no tempo, ficando preso em um eterno ciclo. Ele treina para usar suas novas habilidades, derrotar os invasores e acabar com a guerra.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="iammother" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">I Am Mother</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/iVMUv5KJF64" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2019 | Ficção/Suspense | 1h 53m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6292852" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt6292852/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="I Am Mother(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Clara Rugaard, Rose Byrne, Hilary Swank</p>
+                    <p>Ela vai mantê-la segura.</p>
+                    <p>Após a extinção da humanidade, uma adolescente criada por uma robô encontra outra humana e começa a questionar tudo o que aprendeu sobre o mundo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="swodespertardaforca" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Star Wars: O Despertar da Força</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/4r0287tUEgk" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2015 | Ficção/Aventura | 2h 16m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2488496" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2488496/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Star Wars: O Despertar da Força(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Daisy Ridley, John Boyega, Adam Driver</p>
+                    <p>Houve um despertar. Você sentiu?</p>
+                    <p>A queda de Darth Vader e do Império levou ao surgimento de uma nova força sombria: a Primeira Ordem. Eles procuram o jedi Luke Skywalker, desaparecido. A resistência tenta desesperadamente encontrá-lo antes para salvar a galáxia.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="swosultimosjedi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Star Wars: Os Últimos Jedi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/-di3XYRxyHY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2017 | Ficção/Aventura | 2h 32m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2527336" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2527336/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Star Wars: Os Últimos Jedi(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Daisy Ridley, John Boyega, Adam Driver</p>
+                    <p>A saga continua.</p>
+                    <p>A tranquila e solitária vida de Luke Skywalker sofre uma reviravolta quando ele conhece Rey, uma jovem que mostra fortes sinais da Força. O desejo dela de aprender o estilo dos Jedi força Luke a tomar uma decisão que mudará sua vida para sempre. Enquanto isso, Kylo Ren e o General Hux lideram a Primeira Ordem para um ataque total contra Leia e a Resistência pela supremacia da galáxia.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="spectral" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Spectral</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/WjuRdAXo4YY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2016 | Ficção/Ação | 1h 47m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2106651" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2106651/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="spectral(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: James Badge Dale, Bruce Greenwood, Emily Mortimer</p>
+                    <p>Como lutar contra um inimigo que não se pode ver.</p>
+                    <p>Quando uma força sobrenatural causa estragos numa cidade europeia devastada pela guerra, um engenheiro se une a uma equipe de elite para detê-la.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="apocalipse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Próxima Parada: Apocalipse</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/SHaIhMRiyhk" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2018 | Ficção | 2h 4m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="ttt5246700" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt5246700/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Próxima Parada: Apocalipse(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Theo James, Forest Whitaker, Kat Graham</p>
+                    <p>Ninguém sobrevive sozinho.</p>
+                    <p>Quando uma misteriosa catástrofe transforma os Estados Unidos em uma zona de guerra, um homem decide cruzar o país com seu futuro sogro em busca da noiva grávida.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="avatar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Avatar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/5PSNL1qE6VY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2009 | Ficção/Ação | 2h 42m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0499549" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0499549/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Avatar(2009) on IMDb" /></a></span></p>
+                    <p>Elenco: : Sam Worthington, Zoe Saldana, Sigourney Weaver</p>
+                    <p>Descubra um novo mundo.</p>
+                    <p>No exuberante mundo alienígena de Pandora vivem os Na'vi, seres que parecem ser primitivos, mas são altamente evoluídos. Como o ambiente do planeta é tóxico, foram criados os avatares, corpos biológicos controlados pela mente humana que se movimentam livremente em Pandora. Jake Sully, um ex-fuzileiro naval paralítico, volta a andar através de um avatar e se apaixona por uma Na'vi. Esta paixão leva Jake a lutar pela sobrevivência de Pandora.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-link">
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>Copyright@ 2022 SUPERFLIX</p>
+    </footer>
+<script src="JS/main.js"></script>
+</body>
+
+</html>

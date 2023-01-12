@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEAFLIX - Comédia</title>
+    <link rel="icon" href="img/logo deafilx.svg" />
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/jquery-1.11.0.min.js"></script>
+    <script src="JS/jquery-migrate-1.2.1.min.js"></script>
+    <script src="JS/slick.min.js"></script>
+    <link rel="stylesheet" href="css/imdbRating.css">
+    <link rel="stylesheet" type="text/css" href="CSS/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background: rgb(27,20,100);
+        background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%);
+    }
+
+    .tabelagrid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, 150px);
+        grid-template-rows: repeat(3, 210px);
+    }
+
+    .tabelagrid>div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tabelagrid img {
+        width: 400px;
+        height: 400px;
+        padding: 30px;
+    }
+
+    h4 {
+        color: #fff;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #1B1464;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="img/logo-deafilx.png" alt="" width="200" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.html">INÍCIO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">FILMES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acao.html">AÇÃO</a></li>
+                            <li><a class="dropdown-item" href="comedia.html">COMÉDIA</a></li>
+                            <li><a class="dropdown-item" href="documentario.html">DOCUMENTÁRIOS</a></li>
+                            <li><a class="dropdown-item" href="drama.html">DRAMA</a></li>
+                            <li><a class="dropdown-item" href="ficcao.html">FICÇÃO</a></li>
+                            <li><a class="dropdown-item" href="romance.html">ROMANCE</a></li>
+                            <li><a class="dropdown-item" href="suspense.html">SUSPENSE</a></li>
+                            <li><a class="dropdown-item" href="terror.html">TERROR</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="series.html">SÉRIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="infantil.html">INFANTIL</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">PERFIL</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="conta.html">CONTA</a></li>
+                            <li><a class="dropdown-item" href="centrodeajuda.html">CENTRAL DA AJUDA</a></li>
+                            <li><a class="dropdown-item" href="login.html">SAIR</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="icons">
+                    <div class="notification">
+                        <a href="#">
+                            <div class="notBtn" href="#">
+                                <div class="number">3</div>
+                                <i class="fas fa-bell" style="color: #fff; font-size: 40px;"></i>
+                                <div class="box">
+                                    <div class="display">
+                                        <div class="nothing">
+                                            <i class="fas fa-child stick"></i>
+                                            <div class="cont">
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/strangerthings4.png">
+                                                        </div>
+                                                        <div class="txt">Stranger Things estreia novas temporadas</div>
+                                                        <div class="txt sub">27/05 - 1 Volume e 01/07 - 2 Volume</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/batman.png">
+                                                        </div>
+                                                        <div class="txt">The Batman novo lançamento</div>
+                                                        <div class="txt sub">03/03</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/la_casa_de_papel.png">
+                                                        </div>
+                                                        <div class="txt">La Casa de Papel chegou nova temporada</div>
+                                                        <div class="txt sub">03/12</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/the-mandalorian.png">
+                                                        </div>
+                                                        <div class="txt">O Mandaloriano resgata um criança que realiza à guerra galáxia.</div>
+                                                        <div class="txt sub">12/11</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/lupin.png">
+                                                        </div>
+                                                        <div class="txt">Lupin estreie no terceiro ou quarto trimestre de 2022</div>
+                                                        <div class="txt sub">08/08</div>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="d-flex">
+                    <div class="search-input">
+                        <a href="" target="_blank" hidden></a>
+                        <input type="text" placeholder="Faça sua busca aqui">
+                        <div class="autocom-box"></div>
+                        <div class="icon"><i class="fas fa-search" style="color: #1B1464;"></i></div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="scale-down">
+        <h4 style="margin-top: 30px;">Comédia</h4>
+
+        <div class="tabelagrid">
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/anoitedojogo.jpg" data-bs-toggle="modal"
+                    data-bs-target="#anoitedojogo" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/cidadeperdida.jpg" data-bs-toggle="modal"
+                    data-bs-target="#cidadeperdida" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/toctoc.jpg" data-bs-toggle="modal"
+                    data-bs-target="#toctoc" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/aproposta.jpg" data-bs-toggle="modal"
+                    data-bs-target="#aproposta" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/asbemarmadas.jpg" data-bs-toggle="modal"
+                    data-bs-target="#asbemarmadas" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/esposadementira.jpg" data-bs-toggle="modal"
+                    data-bs-target="#esposadementira" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/gentegrande2.jpg" data-bs-toggle="modal"
+                    data-bs-target="#gentegrande2" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/misterionomediterraneo.jpg"
+                    data-bs-toggle="modal" data-bs-target="#misterionomediterraneo" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/simsenhor.jpg" data-bs-toggle="modal"
+                    data-bs-target="#simsenhor" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/queromatarmeuchefe.jpg"
+                    data-bs-toggle="modal" data-bs-target="#queromatarmeuchefe" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/feriasfrustradas.jpg"
+                    data-bs-toggle="modal" data-bs-target="#feriasfrustradas" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/sebebernãocasei3.jpg"
+                    data-bs-toggle="modal" data-bs-target="#sebebernãocasei3" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/megarrromantico.jpg" data-bs-toggle="modal"
+                    data-bs-target="#megarrromantico" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/perfeitaeamae2.jpg" data-bs-toggle="modal"
+                    data-bs-target="#perfeitaeamae2" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/ted2.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ted2" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/missyerrada.jpg" data-bs-toggle="modal"
+                    data-bs-target="#missyerrada" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/norbit.jpg" data-bs-toggle="modal"
+                    data-bs-target="#norbit" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/seisvezesconfusao.jpg" data-bs-toggle="modal"
+                    data-bs-target="#seisvezesconfusao" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/vovozona.jpg" data-bs-toggle="modal"
+                    data-bs-target="#vovozona" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/ocandidatohonestodois.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ocandidatohonestodois" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/famíliadobagulho.jpg" data-bs-toggle="modal"
+                    data-bs-target="#famíliadobagulho" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/loucaspracasar.jpg" data-bs-toggle="modal"
+                    data-bs-target="#loucaspracasar" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/showdevizinha.jpg" data-bs-toggle="modal"
+                    data-bs-target="#showdevizinha" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/sextafeiraemapuros.jpg" data-bs-toggle="modal"
+                    data-bs-target="#sextafeiraemapuros" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/viajarepreciso.jpg" data-bs-toggle="modal"
+                    data-bs-target="#viajarepreciso" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/zerandoavida.jpg" data-bs-toggle="modal"
+                    data-bs-target="#zerandoavida" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/ninguementraninguemsai.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ninguementraninguemsai" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/ghostbusters.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ghostbusters" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/mitty.jpg" data-bs-toggle="modal"
+                    data-bs-target="#mitty" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/zoolanderdois.jpg" data-bs-toggle="modal"
+                    data-bs-target="#zoolanderdois" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/freeguy.jpg" data-bs-toggle="modal"
+                    data-bs-target="#freeguy" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/click.jpg" data-bs-toggle="modal"
+                    data-bs-target="#click" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/johnnyenglish.jpg" data-bs-toggle="modal"
+                    data-bs-target="#johnnyenglish" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/austinpowers.jpg" data-bs-toggle="modal"
+                    data-bs-target="#austinpowers" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/comocaesegatostres.jpg" data-bs-toggle="modal"
+                    data-bs-target="#comocaesegatostres" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/baywatch.jpg" data-bs-toggle="modal"
+                    data-bs-target="#baywatch" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/americanpie.jpg" data-bs-toggle="modal"
+                    data-bs-target="#americanpie" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/descompensada.jpg" data-bs-toggle="modal"
+                    data-bs-target="#descompensada" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/eleedemais.jpg" data-bs-toggle="modal"
+                    data-bs-target="#eleedemais" /></div>
+                <div><img class="row__poster row__posterLarge" src="assets/filmes/osestagiarios.jpg" data-bs-toggle="modal"
+                    data-bs-target="#osestagiarios" /></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="anoitedojogo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Noite do Jogo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/guxFEY4Hff4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2018 | Comédia/Ação | 1h 33min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2704998" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2704998/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Noite do Jogo(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Jason Bateman, Rachel McAdams, Kyle Chandler</p>
+                    <p>Se não sabe brincar, não desce para o play.</p>
+                    <p>Max e Annie participam de um grupo de casais que organizam noites de jogos. Quando o irmão de
+                        Max, Brooks, chega, ele decide organizar uma festa com os temas assassinato e mistério. No
+                        entanto, Brooks é sequestrado de verdade, mas o grupo acredita que tudo faz parte da misteriosa
+                        brincadeira. Os seis amigos competitivos precisam resolver o caso para vencer o jogo, cujo rumo
+                        vai se tornando cada vez mais inesperado.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cidadeperdida" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">    
+                <h5 class="modal-title" id="exampleModalLabel">A Cidade Perdida</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/XZJS5LfLRNg"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2022 | Comédia/Aventura | 1h 52min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt13320622" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt13320622/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" The Lost City
+                        (2022) on IMDb" />
+                            </a></span></p>
+                    <p>Elenco: Sandra Bullock, Channing Tatum, Daniel Radcliffe</p>
+                    <p>A selva não está preparada para eles.</p>
+                    <p>A brilhante, porém reclusa autora Loretta Sage escreve sobre lugares exóticos em seus romances
+                        populares de aventura, cujas capas são estreladas pelo belo modelo Alan, que tem dedicado sua
+                        vida a personificar o personagem herói, "Dash" Durante a turné de promoção de seu novo livro com
+                        Alan, Loretta raptada por um bilioná¡rio excéntrico, para que ela o guie ao tesouro da cidade
+                        perdida descrita em seu livro recente.Para provar que é possível ser um herói na vida real, não
+                        somente nas pá¡ginas de seus livros, Alan parte para resgatá-la. Forçados a viver uma aventura
+                        épica na selva, o par improvável precisa trabalhar junto para sobreviver e encontrar o antigo
+                        tesouro, antes que seja perdido para sempre.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="toctoc" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Toc-Toc</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/xbnSlEW3KgM"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2017 | Comédia | 1h 36min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6060156" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt6060156/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Toc-Toc(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Paco León, Alexandra Jiménez, Rossy de Palma</p>
+                    <p>Eu tenho que vê-la. Eu tenho que vê-la. Eu tenho que vê-la. Eu tenho que vê-la.</p>
+                    <p>Na sala de espera do médico atrasado, pacientes com TOC precisam lidar com as manias estranhas de cada um.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="aproposta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Proposta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/a5X3u5G3Z7k"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2009 | Comédia/Romance | 1h 48min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1041829" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1041829/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Proposta(2009) on IMDb" /></a></span></p>
+                    <p>Elenco: Sandra Bullock, Ryan Reynolds, Betty White</p>
+                    <p>Você aceitaria?</p>
+                    <p>Margaret Tate é uma poderosa editora de livros que corre o risco de ser deportada para o Canadá,
+                        seu país natal. Para poder permanecer em Nova York, ela diz estar noiva de Andrew, seu
+                        assistente. O jovem aceita ajudá-la, mas impõe algumas condições, entre elas ir para o Alasca e
+                        conhecer sua família excêntrica. Com um oficial da imigração sempre à espreita, Margaret e
+                        Andrew têm que seguir o plano de casamento apesar de diversos problemas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="asbemarmadas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">As Bem-Armadas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Owza9Euh7mw" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2013 | Comédia/Ação | 2h 3m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2404463" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2404463/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="As Bem-Armadas(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Sandra Bullock, Melissa McCarthy, Demian Bichir </p>
+                    <p>Vão matar você de rir.</p>
+                    <p>A chata agente especial do FBI, Sarah Ashburn e a policial boca-suja de Boston, Shannon Mullins
+                        não podiam ser mais incompatíveis. Quando precisam juntar forças para prender um perigoso
+                        traficante de drogas, elas se tornam algo que ninguém espera.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="esposadementira" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Esposa de Mentirinha</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/QmL1mdzS544" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2011 | Comédia/Romance | 1h 57m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1564367" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1564367/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Esposa de Mentirinha(2011) on IMDb" /></a></span></p>
+                    <p>Elenco: Adam Sandler, Jennifer Aniston, Brooklyn Decker </p>
+                    <p>Às vezes o melhor marido de um cara é uma esposa.</p>
+                    <p>Infeliz em sua tentativa de casamento, Danny passa a vivenciar relacionamentos sem compromisso
+                        para driblar a carência. Assim, ele toca sua vida como cirurgião plástico bem sucedido, tendo
+                        sua melhor amiga Katherine, mãe solteira de um casal, como fiel escudeira. Quando conhece a
+                        jovem Palmer e a paixão toma conta de ambos, ele inventa, para tentar conquistá-la, que é marido
+                        de Katherine, pai das crianças e que vai se separar. Assim começa uma verdadeira aventura
+                        amorosa recheada de confusões.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="gentegrande2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Gente Grande 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/wGyjbrMC-Ok" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2013 | Comédia | 1h 41m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2191701" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2191701/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Gente Grande 2(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Adam Sandler, Kevin James, Chris Rock</p>
+                    <p>Só porque eles são um pouco mais velhos não significa que eles cresceram.</p>
+                    <p>Lenny Feder e sua família se mudam para sua cidade natal para ficar perto dos amigos, mas acabam
+                        tendo que enfrentar alguns fantasmas do passado, como a covardia diante de valentões e o
+                        famigerado bullying na escola.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="misterionomediterraneo" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Mistério no Mediterrâneo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/ZewCCWbPlsY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2019 | Comédia/Mistério | 1h 37m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1618434" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1618434/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Mistério no Mediterrâneo(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Adam Sandler, Jennifer Aniston, Luke Evans</p>
+                    <p>Problemas de primeira classe. Detetives de segunda classe.</p>
+                    <p>Numa aguardada viagem à Europa, um policial de Nova York e sua esposa cabeleireira tentam
+                        solucionar um caso de assassinato a bordo do iate de um bilionário. Assista o quanto quiser.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="simsenhor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sim, Senhor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/MVeGNR_s4SU" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2008 | Comédia | 1h 44m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1068680" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1068680/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Sim, Senhor(2008) on IMDb" /></a></span></p>
+                    <p>Elenco: Jim Carrey, Zooey Deschanel, Bradley Cooper</p>
+                    <p>Uma palavra pode mudar tudo.</p>
+                    <p>Carl Allen é um homem que perdeu muitas oportunidades por causa da palavra não. Ele decide ir
+                        para um seminário de autoajuda para aprender a dizer sim. Respondendo positivamente a todos os
+                        convites e oportunidades, Carl passa por experiências incríveis e logo descobre que as mudanças
+                        não precisariam ser tão drásticas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="queromatarmeuchefe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                    <h5 class="modal-title" id="exampleModalLabel">Quero Matar Meu Chefe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/NBJ_IVCpVdc" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2011 | Comédia/Crime | 1h 46m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1499658" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1499658/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Quero Matar Meu Chefe(2011) on IMDb" /></a></span></p>
+                    <p>Elenco: Jennifer Aniston, Jason Bateman, Colin Farrell</p>
+                    <p>Você já desejou que seu chefe estivesse morto?</p>
+                    <p>Três amigos têm um problema em comum: eles odeiam seus chefes exploradores. Assim, bolam um
+                        plano. Já que não podem pedir demissão, contratam um consultor que os ajudará a matar os chefes
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="feriasfrustradas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Férias Frustradas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/vMtOC4Hp8Vw" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2015 | Comédia/Aventura | 1h 39m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1524930" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1524930/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Férias Frustradas(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Ed Helms, Christina Applegate, Skyler Gisondo</p>
+                    <p>O que poderia dar errado?</p>
+                    <p>Seguindo os passos do pai e ansiando por uma ligação familiar, Rusty Griswold surpreende sua
+                        esposa e seus dois filhos com uma viagem que atravessa o país para o parque de diversões
+                        favorito da família, o Walley World.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="sebebernãocasei3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Se Beber, Não Case! - Parte III</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/scvyxXmz7Nw" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2013 | Comédia/Crime | 1h 40m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1951261" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1951261/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Se Beber, Não Case! - Parte III(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Bradley Cooper, Ed Helms, Zach Galifianakis</p>
+                    <p>Onde tudo termina.</p>
+                    <p>Depois da morte do pai, Alan decide ir para New Horizons com Phil, Stu e Doug, mas a viagem acaba
+                        sendo bruscamente interrompida pelos capangas de Marshall.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="megarrromantico" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Megarrromântico</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/1TAttuSNpsg" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2019 | Comédia/Romance | 1h 29m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2452244" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2452244/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Megarrromântico(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Rebel Wilson, Liam Hemsworth, Adam DeVine </p>
+                    <p>Nenhum dos sentimentos!</p>
+                    <p>Cínica em relação ao amor e desprezada em seu trabalho de Nova York, a arquiteta Natalie não
+                        acredita em romances e finais felizes. Depois de sofrer um golpe na cabeça durante uma briga com
+                        um assaltante no metrô, Natalie acorda em um universo paralelo e se vê interpretando a
+                        protagonista de uma comédia romântica na vida real.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="perfeitaeamae2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Perfeita é a Mãe 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/W61xppBj4kc" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2017 | Comédia | 1h 44m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6359956" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt6359956/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Perfeita é a Mãe 2(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Mila Kunis, Kristen Bell, Kathryn Hahn</p>
+                    <p>Lugar de mulher é onde ela quiser.</p>
+                    <p>Três mulheres sobrecarregadas com as responsabilidades e desafios do Natal decidem se rebelar
+                        contra a obrigação e o pouco reconhecimento de garantir a festa perfeita para a família, ao
+                        mesmo tempo em que precisam fazer sala para suas próprias mães.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ted2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ted 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/OcmpHpa_h8s" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2015 | Comédia | 2h 5m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2637276" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2637276/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Ted 2(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Mark Wahlberg, Amanda Seyfried, Jessica Barth</p>
+                    <p>Ted vai mandar ver, de novo</p>
+                    <p>O urso de pelúcia Ted casa-se com Tami-Lynn. O casal pretende ter um bebê, mas para terem direito
+                        à inseminação artificial, Ted tem que provar na justiça que é um ser humano. Para alcançar o seu
+                        sonho, ele conta com a ajuda da advogada Samantha e do seu grande amigo John.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="missyerrada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Missy Errada</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/AlG-zkmOwDM" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2020 | Comédia | 1h 30m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt9619798" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt9619798/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Missy Errada(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: David Spade, Lauren Lapkus, Nick Swardson</p>
+                    <p>Não há como desligá-la agora.</p>
+                    <p>Tim Morris conhece a garota dos sonhos. Logo a relação ganha força, turbinada pelas mensagens de texto. Animado, ele deixa a cautela de lado e a convida para uma temporada promovida por sua empresa em um resort em uma ilha, mas outra aparece.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="norbit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Norbit - Uma Comédia de Peso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/HFIdZpc2L6w" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2017 | Comédia/Romance | 1h 43m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0477051" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt0477051/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Norbit - Uma Comédia de Peso(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Eddie Murphy, Thandiwe Newton, Terry Crews</p>
+                    <p>Uma Comédia de Peso</p>
+                    <p>Desde que foi abandonado em um orfanato, Norbit sempre teve uma vida muito dura. Agora, casado com Rasputia, sua vida é ainda pior. Mas tudo muda quando sua antiga namorada volta à cidade.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="seisvezesconfusao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Seis Vezes Confusão</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/3jzz7oiz2ZY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2019 | Comédia | 1h 39m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt8976710" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt8976710/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Seis Vezes Confusão(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Marlon Wayans, Bresha Webb, Molly Shannon</p>
+                    <p>Perto de ter seu primeiro filho, um homem decide procurar sua mãe biológica na intenção de encontrar respostas sobre si mesmo. Porém, essa jornada o mostra muito mais surpresas do que esperava, como a existência de seus mais cinco irmãos gêmeos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="vovozona" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Vovó... Zona 3: Tal Pai, Tal Filho</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/1YmU8aMgpdM" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2011 | Comédia/Ação | 1h 47m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1464174" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1464174/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Vovó... Zona 3: Tal Pai, Tal Filho(2011) on IMDb" /></a></span></p>
+                    <p>Elenco: Martin Lawrence, Brandon T. Jackson, Jessica Lucas</p>
+                    <p>Diversão tamanho família.</p>
+                    <p>Depois que seu enteado Trent testemunha um assassinato, o agente do FBI Malcolm Turner traz Vovózona, seu alter ego, de volta para ajudar a resolver o crime. Ele trabalha disfarçado em uma escola de artes cênicas para meninas, mas, desta vez, conta com Trent e seu alter ego feminino, Charmaine, para ajudá-lo. A dupla precisa encontrar o assassino antes que o assassino os encontre, mas as coisas se complicam quando Trent se apaixona por uma estudante.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ocandidatohonestodois" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Candidato Honesto 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/tVZ6I6U0LyE" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2018 | Comédia | 1h 44m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt8837044" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt8837044/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Candidato Honesto 2(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Leandro Hassum, Rosanne Mulholland, Victor Leal</p>
+                    <p>Após cumprir quatro anos de detenção, João Ernesto se candidata à presidência novamente e vence. Um ano depois, o Brasil entra em uma grande crise e, influenciado por seu vice, as decisões de Ernesto podem levá-lo ao impeachment.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="famíliadobagulho" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Família do Bagulho</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/2tY4y9i7-I4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2013 | Comédia | 1h 58m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1723121" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1723121/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Família do Bagulho(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Jennifer Aniston, Jason Sudeikis, Will Poulter</p>
+                    <p>Uma Viagem Muito Louca.</p>
+                    <p>Um traficante é forçado por seu chefe a ir ao México pegar uma carga de maconha. A fim de melhorar suas chances de passar pela fronteira, David pede a uma stripper e dois adolescentes locais para acompanhá-lo e fingir que são uma família em férias.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="loucaspracasar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Loucas pra Casar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Mi6dHGLAuxw" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2015 | Comédia | 1h 48m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3948438" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt3948438/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Loucas pra Casar(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Ingrid Guimarães, Tatá Werneck, Márcio Garcia</p>
+                    <p>Malu, 40 anos, tinha a vida perfeita até se apaixonar por Samuel, o homem ideal. Após três anos de namoro com ele, nada de pedido de casamento. Um dia, ela percebe que estão faltando camisinhas no estoque dele. Desconfiada, Malu contrata um detetive particular e descobre que Samuel tem, não só uma, mas duas amantes. Resta saber quem ele vai levar para o altar: Malu, Lúcia, uma dançarina de boate, ou Maria, uma religiosa fanática.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="showdevizinha" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Show de Vizinha</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/crXAvp7kQnc" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2004 | Comédia/Romance | 1h 48m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0265208" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt0265208/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Show de Vizinha(2004) on IMDb" /></a></span></p>
+                    <p>Elenco: Emile Hirsch, Elisha Cuthbert, Timothy Olyphant</p>
+                    <p>Matt nunca a viu chegando... mas todos os seus amigos viram!</p>
+                    <p>Com 18 anos de idade, Matthew Kidman é um careta nato que nunca curtiu sua vida até que ele se apaixona por sua nova vizinha, a bonita Danielle, que tem aparência de inocente. Quando Matthew descobre que ela é atriz pornô, ele fica pasmo. Danielle ajuda Matthew a ter autoconfiança e a descobrir que às vezes você tem que arriscar tudo pela pessoa amada.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="sextafeiraemapuros" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sexta-Feira em Apuros</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/umvFBoLOOgo" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 1995 | Comédia/Drama | 1h 37m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0113118" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt0113118/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Sexta-Feira em Apuros(1995) on IMDb" /></a></span></p>
+                    <p>Elenco: Ice Cube, Chris Tucker, Nia Long</p>
+                    <p>Muita coisa pode acontecer entre quinta e sábado...</p>
+                    <p>É sexta-feira e Craig foi despedido, seu aluguel está vencendo e ele não aguenta mais a namorada ciumenta. Pra completar, seu amigo Smokey está encrencado com um violento traficante a quem deve dinheiro. Sentados na varanda da casa, os dois passam o tempo enquanto Smokey não pára de falar um só segundo e tentam achar um jeito de levantar a grana.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="viajarepreciso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Viajar É Preciso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/NnpHTorKRVQ" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2012 | Comédia | 1h 38m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1655460" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1655460/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Viajar É Preciso(2012) on IMDb" /></a></span></p>
+                    <p>Elenco: Paul Rudd, Jennifer Aniston, Justin Theroux</p>
+                    <p>Deixe sua bagagem para trás.</p>
+                    <p>George e Linda são um casal de workaholics de Nova York. Quando George é demitido, eles se mudam em busca de emprego. Os dois acabam encontrando uma comunidade alternativa, onde todos os recursos são divididos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="zerandoavida" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Zerando a Vida</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/3qRx1OFLFHk" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2016 | Comédia/Ação | 1h 48m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt4769836" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt4769836/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Zerando a Vida(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Adam Sandler, David Spade, Paula Patton</p>
+                    <p>Morrer foi apenas o primeiro erro.</p>
+                    <p>Dois caras perdem todo o dinheiro e decidem fingir a própria morte, assumindo outras identidades. Entretanto, os novos nomes os colocam em apuros ainda maiores do que enfrentavam antes.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ninguementraninguemsai" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ninguém Entra, Ninguém Sai</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/uDbGTOTc-N4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2017 | Comédia | 1h 23m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6230488" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt6230488/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Ninguém Entra, Ninguém Sai(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Letícia Lima, Danielle Winits, Rafael Infante</p>
+                    <p>A única saída é aproveitar.</p>
+                    <p>Suellen é uma moça romântica, estudiosa e que tem um sonho: se casar com o namorado Edu para construir sua nova família. Quando ela é selecionada para um projeto bizarro, acredita que pode ser a chance para que o casamento aconteça mais rápido. Entretanto, ela descobre que vai ficar trancafiada em um motel barato com alguns outros casais, o que vai fazer ela repensar nos seus planos para o futuro.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ghostbusters" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ghostbusters - Mais Além</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/g9NworqE7PM" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>21 | 2021 | Comédia | 2h 4m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt4513678" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt4513678/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Ghostbusters - Mais Além(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Carrie Coon, Finn Wolfhard, Mckenna Grace</p>
+                    <p>Descubra o passado. Proteja o futuro.</p>
+                    <p>Uma mãe solo e seus dois filhos se mudam para uma nova cidade e descobrem que têm uma conexão com os Caça-Fantasmas originais e o legado secreto de seu avô.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mitty" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Vida Secreta de Walter Mitty</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/vr5N_RUfIGw" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2013 | Comédia/Aventura | 1h 54m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0359950" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt0359950/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A  Vida Secreta de Walter Mitty(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Ben Stiller, Kristen Wiig, Shirley MacLaine</p>
+                    <p>Pare de sonhar. Comece a viver.</p>
+                    <p>Walter Mitty desenvolve fotos para uma revista, mas foge do tédio através de devaneios heroicos. Quando Walter recebe uma chance para uma verdadeira aventura, ele tem a chance de construir um relacionamento com uma colega de trabalho chamada Cheryl.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="zoolanderdois" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Zoolander 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/4CL4LNWHegk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                <div class="modal-body">
+                    <p>12 | 2016 | Comédia | 1h 42m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1608290" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1608290/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Zoolander 2(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Ben Stiller, Owen Wilson, Penélope Cruz</p>
+                    <p>Ridiculamente divertida.</p>
+                    <p>Os famosos ex-modelos, Derek Zoolander e Hansel, estavam afastados do mundo da moda. Entretanto, quando as celebridades mais bonitas do mundo começam a ser assassinadas, uma agente especial recruta a dupla para investigar o caso.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="freeguy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Free Guy - Assumindo o Controle</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/_XNs_Z-2Kwc" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Comédia/Ação | 1h 55m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6264654" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt6264654/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Free Guy - Assumindo o Controle(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Ryan Reynolds, Jodie Comer, Lil Rel Howery</p>
+                    <p>A vida é muito curta para ser um personagem secundário.</p>
+                    <p>Um caixa de banco preso a uma entediante rotina tem sua vida virada de cabeça para baixo quando descobre que é um personagem em um jogo interativo. Agora ele precisa aceitar sua realidade e lidar com o fato de que é o único que pode salvar o mundo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="click" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Click</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/BAIwj9pSKrw" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2006 | Comédia | 1h 47m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0389860" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt0389860/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Click(2006) on IMDb" /></a></span></p>
+                    <p>Elenco: Adam Sandler, Kate Beckinsale, Christopher Walken</p>
+                    <p>E se você tivesse um controle remoto universal... que controlasse seu universo?</p>
+                    <p>Um arquiteto casado e com filhos está cada vez mais frustrado por passar a maior parte de seu tempo trabalhando. Um dia, ele encontra um inventor excêntrico que lhe dá um controle remoto universal, com capacidade de acelerar o tempo. No início, ele usa o aparelho para acelerar qualquer momento tedioso, mas se dá conta de que está acelerando o tempo demais e deixando de viver preciosos momentos em família. Desesperado, ele procura o inventor para ajudá-lo a reverter o que fez.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="johnnyenglish" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Johnny English 3.0</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Ne9u-goR69Y" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2018 | Comédia/Aventura | 1h 28m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6921996" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt6921996/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Johnny English 3.0(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Rowan Atkinson, Olga Kurylenko, Ben Miller</p>
+                    <p>Sua licença...renovada. Sua inteligência...limitada.</p>
+                    <p>Johnny English entra em ação quando um hacker revela as identidades de agentes disfarçados na Grã-Bretanha. Como homem de poucas habilidades e métodos analógicos, Johnny precisa superar os desafios da tecnologia moderna para ter sucesso na missão.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="austinpowers" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Austin Powers em o Homem do Membro de Ouro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/XROEPkzyCRg" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2002 | Comédia/Aventura| 1h 38m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0295178" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt0295178/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Austin Powers em o Homem do Membro de Ouro(2002) on IMDb" /></a></span></p>
+                    <p>Elenco: Mike Myers, Beyoncé, Seth Green</p>
+                    <p>O super agente está de volta. Divertido e irresistível. Para enfrentar im inimigo como algo muito especial.</p>
+                    <p>Dr. Evil e seu comparsa conseguem escapar da penitenciária e, juntamente com Goldmember, elaboram mais um arrojado plano de dominação mundial, que envolve uma viagem no tempo e ainda o sequestro de Nigel Powers, pai de Austin e o mais renomado espião de todos os tempos. Austin também viaja no tempo para deter os planos do trio de vilões, reencontrando em 1975 uma antiga namorada, Foxxy Cleopatra. Juntos, Austin e Foxxy devem salvar Nigel e impedir Dr. Evil e Goldmember de dominarem o mundo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="comocaesegatostres" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Como Cães e Gatos 3: Peludos Unidos!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/i8cZM6HDXPU" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2020 | Comédia/Infantil | 1h 24m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt12745164" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt12745164/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Como Cães e Gatos 3: Peludos Unidos!(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Melissa Rauch, Max Greenfield, George Lopez</p>
+                    <p>Um vilão destrói a trégua de dez anos entre gatos e cães. Agora, uma equipe de agentes com tecnologia avançada deve usar seu instinto animal para restaurar a paz entre as espécies.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="baywatch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Baywatch: S.O.S. Malibu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/h14Mhq_MZaI" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2017 | Comédia/Ação | 2h 1m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1469304" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1469304/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Baywatch: S.O.S. Malibu(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Dwayne Johnson, Zac Efron, Priyanka Chopra Jonas</p>
+                    <p>Não se preocupe, o verão está chegando.</p>
+                    <p>O ex-atleta olímpico Matt Brody quer se juntar a uma equipe de salva-vidas de elite liderada por Mitch Buchannon. Quando as drogas e o suspeito dono de um resort ameaçam a baía, Mitch e Matt precisam colocar suas diferenças de lado e entrar em ação.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="americanpie" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">American Pie: O Reencontro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/aEtGKV7PBmY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2012 | Comédia | 1h 53m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1605630" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1605630/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="American Pie: O Reencontro(2012) on IMDb" /></a></span></p>
+                    <p>Elenco: Jason Biggs , Alyson Hannigan , Chris Klein</p>
+                    <p>Guarde o melhor pedaço pro final!</p>
+                    <p>Para comemorar dez anos de formatura do ensino médio, a turma toda se reúne em East Great Falls, Michigan, durante um fim de semana. Cada um deles vive um momento diferente, mas alguns hábitos nunca mudam.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="descompensada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style= "background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Descompensada</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/ihJd7JoUdzY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2015 | Comédia/Romance | 2h 5m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3152624" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt3152624/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Descompensada(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Amy Schumer, Bill Hader, Brie Larson</p>
+                    <p>Todos nós conhecemos um.</p>
+                    <p>Desde garotinha, Amy aprendeu que a monogamia não é realista. Agora como redatora de uma revista, ela vive livre de compromissos românticos. Mas tudo muda quando se apaixona.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="eleedemais" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ele É Demais</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/OV0OMqpkVNc" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Comédia/Romance | 1h 28m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt4590256" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt4590256/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Ele É Demais(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Addison Rae, Tanner Buchanan, Rachael Leigh Cook</p>
+                    <p>É a vez dele para uma reforma.</p>
+                    <p>Neste remake do clássico adolescente "Ela é Demais", uma influenciadora aceita o desafio de transformar um garoto pouco popular em rei do baile.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="osestagiarios" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Os Estagiários</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/iJNvxWemhI4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2013 | Comédia/Ação | 1h 48m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2234155" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2234155/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Os Estagiários(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Vince Vaughn, Owen Wilson, Rose Byrne</p>
+                    <p>Eles não têm link com a nova geração.</p>
+                    <p>Quando são demitidos, dois homens na casa dos 40 começam a procurar por um novo trabalho. Apesar de não saberem nada de tecnologia, eles são contratados como estagiários no Google, local em que convivem com chefes vinte anos mais novos do que eles.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="social-link">
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>Copyright@ 2022 SUPERFLIX</p>
+    </footer>
+    <script src="JS/main.js"></script>
+
+</body>
+
+</html>
+

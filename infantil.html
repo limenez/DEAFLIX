@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEAFLIX - Infantil</title>
+    <link rel="icon" href="img/logo deafilx.svg" />
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/jquery-1.11.0.min.js"></script>
+    <script src="JS/jquery-migrate-1.2.1.min.js"></script>
+    <script src="JS/slick.min.js"></script>
+    <link rel="stylesheet" href="css/imdbRating.css">
+    <link rel="stylesheet" type="text/css" href="CSS/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background: rgb(27,20,100);
+        background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%);
+    }
+
+    .tabelagrid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, 150px);
+        grid-template-rows: repeat(3, 210px);
+    }
+
+    .tabelagrid>div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tabelagrid img {
+        width: 400px;
+        height: 400px;
+        padding: 30px;
+    }
+
+    h4 {
+        color: #fff;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #1B1464;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="img/logo-deafilx.png" alt="" width="200" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.html">INÍCIO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">FILMES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acao.html">AÇÃO</a></li>
+                            <li><a class="dropdown-item" href="comedia.html">COMÉDIA</a></li>
+                            <li><a class="dropdown-item" href="documentario.html">DOCUMENTÁRIOS</a></li>
+                            <li><a class="dropdown-item" href="drama.html">DRAMA</a></li>
+                            <li><a class="dropdown-item" href="ficcao.html">FICÇÃO</a></li>
+                            <li><a class="dropdown-item" href="romance.html">ROMANCE</a></li>
+                            <li><a class="dropdown-item" href="suspense.html">SUSPENSE</a></li>
+                            <li><a class="dropdown-item" href="terror.html">TERROR</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="series.html">SÉRIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="infantil.html">INFANTIL</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">PERFIL</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="conta.html">CONTA</a></li>
+                            <li><a class="dropdown-item" href="centrodeajuda.html">CENTRAL DA AJUDA</a></li>
+                            <li><a class="dropdown-item" href="login.html">SAIR</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="icons">
+                    <div class="notification">
+                        <a href="#">
+                            <div class="notBtn" href="#">
+                                <div class="number">3</div>
+                                <i class="fas fa-bell" style="color: #fff; font-size: 40px;"></i>
+                                <div class="box">
+                                    <div class="display">
+                                        <div class="nothing">
+                                            <i class="fas fa-child stick"></i>
+                                            <div class="cont">
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/strangerthings4.png">
+                                                        </div>
+                                                        <div class="txt">Stranger Things estreia novas temporadas</div>
+                                                        <div class="txt sub">27/05 - 1 Volume e 01/07 - 2 Volume</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/batman.png">
+                                                        </div>
+                                                        <div class="txt">The Batman novo lançamento</div>
+                                                        <div class="txt sub">03/03</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/la_casa_de_papel.png">
+                                                        </div>
+                                                        <div class="txt">La Casa de Papel chegou nova temporada</div>
+                                                        <div class="txt sub">03/12</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/the-mandalorian.png">
+                                                        </div>
+                                                        <div class="txt">O Mandaloriano resgata um criança que realiza à guerra galáxia.</div>
+                                                        <div class="txt sub">12/11</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/lupin.png">
+                                                        </div>
+                                                        <div class="txt">Lupin estreie no terceiro ou quarto trimestre de 2022</div>
+                                                        <div class="txt sub">08/08</div>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="d-flex">
+                    <div class="search-input">
+                        <a href="" target="_blank" hidden></a>
+                        <input type="text" placeholder="Faça sua busca aqui">
+                        <div class="autocom-box"></div>
+                        <div class="icon"><i class="fas fa-search" style="color: #1B1464;"></i></div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="scale-down">
+        <h4 style="margin-top: 30px;">Infantil</h4>
+
+        <div class="tabelagrid">
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/minions.jpg" data-bs-toggle="modal" data-bs-target="#minions" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/encanto.jpg" data-bs-toggle="modal" data-bs-target="#encanto" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/eradogelobuck.jpg" data-bs-toggle="modal" data-bs-target="#eradogelobuck" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/meumalvadofavorito3.jpg" data-bs-toggle="modal" data-bs-target="#meumalvadofavorito3" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/osmuppets.jpg" data-bs-toggle="modal" data-bs-target="#osmuppets" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/thehouse.jpg" data-bs-toggle="modal" data-bs-target="#thehouse" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/angrybirds2.jpg" data-bs-toggle="modal" data-bs-target="#angrybirds2" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/narnia.jpg" data-bs-toggle="modal" data-bs-target="#narnia" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/ossmurfs2.jpg" data-bs-toggle="modal" data-bs-target="#ossmurfs2" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/pikachu.jpg" data-bs-toggle="modal" data-bs-target="#pikachu" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/clonewars.jpg" data-bs-toggle="modal" data-bs-target="#clonewars" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/sonic2.jpg" data-bs-toggle="modal" data-bs-target="#sonic2" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/alendadosguardiões.jpg" data-bs-toggle="modal" data-bs-target="#alendadosguardiões" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/dora.jpg" data-bs-toggle="modal" data-bs-target="#dora" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/picapau.jpg" data-bs-toggle="modal" data-bs-target="#picapau" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/red.jpg" data-bs-toggle="modal" data-bs-target="#red" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/hoteltransilvânia.jpg" data-bs-toggle="modal" data-bs-target="#hoteltransilvânia" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/moana.jpg" data-bs-toggle="modal" data-bs-target="#moana" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/obomdinossauro.jpg" data-bs-toggle="modal" data-bs-target="#obomdinossauro" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/divertidamente.jpg" data-bs-toggle="modal" data-bs-target="#divertidamente" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/toystory.jpg" data-bs-toggle="modal" data-bs-target="#toystory" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/scooby.jpg" data-bs-toggle="modal" data-bs-target="#scooby" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/soul.jpg" data-bs-toggle="modal" data-bs-target="#soul" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/abailarina.jpg" data-bs-toggle="modal" data-bs-target="#abailarina" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/aladdin.jpg" data-bs-toggle="modal" data-bs-target="#aladdin" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/dumbo.jpg" data-bs-toggle="modal" data-bs-target="#dumbo" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/opoderosochefinhodois.jpg" data-bs-toggle="modal" data-bs-target="#opoderosochefinhodois" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/oreileão.jpg" data-bs-toggle="modal" data-bs-target="#oreileão" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/sing.jpg" data-bs-toggle="modal" data-bs-target="#sing" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/oscroodsdois.jpg" data-bs-toggle="modal" data-bs-target="#oscroodsdois" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/osincríveisdois.jpg" data-bs-toggle="modal" data-bs-target="#osincríveisdois" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/raya.jpg" data-bs-toggle="modal" data-bs-target="#raya" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/ronbugado.jpg" data-bs-toggle="modal" data-bs-target="#ronbugado" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/petsdois.jpg" data-bs-toggle="modal" data-bs-target="#petsdois" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/procurandodory.jpg" data-bs-toggle="modal" data-bs-target="#procurandodory" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/luca.jpg" data-bs-toggle="modal" data-bs-target="#luca" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/frozendois.jpg" data-bs-toggle="modal" data-bs-target="#frozendois" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/wifiralph.jpg" data-bs-toggle="modal" data-bs-target="#wifiralph" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/carrostres.jpg" data-bs-toggle="modal" data-bs-target="#carrostres" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/infantil/clifford.jpg" data-bs-toggle="modal" data-bs-target="#clifford" /></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="minions" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Minions 2 - A Origem de Gru</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/o6xSHpTrUvg"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2022 | Comédia/Animação | 1h 30min | <span class="imdbRatingPlugin"
+                            data-user="ur150695547" data-title="tt5113044" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt5113044/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" Minions: The Rise of Gru(2022) on IMDb" /></a></span></p>
+                    <p>Elenco: Steve Carell, Taraji P. Henson, Michelle Yeoh</p>
+                    <p>Prepare-se.</p>
+                    <p>A continuação das aventuras dos Minions, sempre em busca de um líder tirânico. Dessa vez, eles
+                        ajudam um Gru ainda criança, descobrindo como ser vilão.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="eradogelobuck" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Era do Gelo: As Aventuras de Buck</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/t8bBDAemrWI"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2022 | Animação/Aventura | 1h 22min | <span class="imdbRatingPlugin"
+                            data-user="ur150695547" data-title="tt13634480" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt13634480/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="A Era do Gelo: As Aventuras de Buck(2022) on IMDb" /></a></span></p>
+                    <p>Elenco: Simon Pegg, Utkarsh Ambudkar, Justina Machado</p>
+                    <p>O Disney+ fica selvagem.</p>
+                    <p>Buck, Crash e Eddie tentam evitar que o Mundo perdido seja dominado por dinossauros.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="thehouse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">The House</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/wqbZlAEUb5w"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2022 | Animação/Comédia | 1h 37min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt11703050" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt11703050/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="The House(2022) on IMDb" /></a></span></p>
+                    </p>
+                    <p>Elenco: Mia Goth,Jarvis Cocker,Susan Wokoma</p>
+                    <p>Três contos visionários. Um lugar inesquecível.</p>
+                    <p>Nesta comédia de animação de humor ácido, uma família humilde, um arquiteto ansioso e uma
+                        senhoria cansada ficam presos à mesma casa misteriosa em épocas diferentes.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="encanto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Encanto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/GsJd_o97h5U" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2021 | Infantil/Musical | 1h 49m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt2953050" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt2953050/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Encanto(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Filipe Bragança, Stephanie Beatriz, John Leguizamo</p>
+                    <p>Conheça a Família Madrigal. Onde todos são mágicos... Exceto uma.</p>
+                    <p>Encanto da Walt Disney Animation Studios conta a história dos Madrigal, uma família
+                        extraordinária que vive escondida nas montanhas da Colômbia, em uma casa mágica, em uma cidade
+                        vibrante, em um lugar maravilhoso conhecido como um Encanto. A magia deste Encanto abençoou
+                        todos os meninos e meninas da família com um dom único, desde superforça até o poder de curar.
+                        Todos, exceto Mirabel. Mas, quando ela descobre que a magia que cerca o Encanto está em perigo,
+                        Mirabel decide que ela, a única Madrigal sem poderes mágicos, pode ser a última esperança de sua
+                        família excepcional</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="meumalvadofavorito3" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Meu Malvado Favorito 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/9XEHAP9UGfY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2017 | Infantil/Comédia | 1h 36m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt3469046" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt3469046/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Meu Malvado Favorito 3(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Leandro Hassum, Maria Clara Gueiros, Evandro Mesquita</p>
+                    <p>Oi, Irmão!</p>
+                    <p>Balthazar Bratt, ex-ator mirim e astro de TV, foi um típico malvado bem-sucedido nos anos 1980 e
+                        agora está de volta à ativa. Ele aterroriza a vida de Gru, Agnes, Margo, Edith, Dr. Nefario e os
+                        atrapalhados Minions. Em meio a tudo isso, Gru também encontra o seu irmão gêmeo, Drew.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="osmuppets" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Os Muppets</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/_BetgJuD1NA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 201 | Séries Infantil/Musical | 1 Temporada | <span class="imdbRatingPlugin"
+                            data-user="ur150695547" data-title="tt4651824" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt4651824/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Os Muppets(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Ricky Gervais, Tina Fey, Ty Burrell</p>
+                    <p>Tomando o mundo pela farsa.</p>
+                    <p>Um empresário convida os Muppets para uma turnê mundial. Kermit desconfia de suas intenções,
+                        hesita, mas o grupo acaba aceitando a proposta. Entretanto, tudo não passa de uma armadilha e
+                        eles se veem envolvidos em uma trama criminosa internacional chefiada pelo perigoso sósia de
+                        Kermit, o sapo Constantine. Kermit acaba preso na Sibéria e, enquanto tenta provar sua
+                        verdadeira identidade, Constantine está livre para realizar um grande roubo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="angrybirds2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Angry Birds 2: O Filme</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/eCnw18_rboc" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2019 | Infantil/Comédia | 1h 36m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt6095472" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt6095472/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Angry Birds 2: O Filme(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Jason Sudeikis, Josh Gad, Leslie Jones</p>
+                    <p>Inimigos unidos! Retorna amigos...</p>
+                    <p>Os raivosos passarinhos que não voam e os porquinhos conspiradores levam sua briga para outro
+                        nível quando surge uma nova ameaça que coloca ambas as Ilhas dos Porcos e dos Pássaros em
+                        perigo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="narnia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">As Crônicas de Nárnia: O Leão, a Feiticeira e o
+                        Guarda-Roupa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/j_3IO0PEENM" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2005 | Fantasia/Aventura | 2h 30m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt0363771" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt0363771/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="As Crônicas de Nárnia: O Leão, a Feiticeira e o
+                                Guarda-Roupa(2005) on IMDb" /></a></span></p>
+                    <p>Elenco: Georgie Henley, Skandar Keynes, William Moseley</p>
+                    <p>O mal reinou por 100 anos...</p>
+                    <p>Durante os bombardeios da Segunda Guerra Mundial de Londres, quatro irmãos ingleses são enviados
+                        para uma casa de campo onde eles estarão seguros. Um dia, Lucy encontra um guarda-roupa que a
+                        transporta para um mundo mágico chamado Nárnia. Depois de voltar, ela logo volta a Nárnia com
+                        seus irmãos, Peter e Edmund, e sua irmã, Susan. Lá eles se juntam ao leão mágico, Aslan, na luta
+                        contra a Feiticeira Branca.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ossmurfs2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Os Smurfs 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/3zUwxkBczXI" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2013 | Infantil/Comédia | 1h 45m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt2017020" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt2017020/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Os Smurfs 2(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Orlando Drummond, Neil Patrick Harris, Brendan Gleeson</p>
+                    <p>Prepare-se para ficar danadinho!</p>
+                    <p>Os Smurfs se unem a seus amigos humanos para resgatar Smurfette, que foi raptada por Gargamel.
+                        Ela conhece um feitiço secreto que pode transformar a mais nova criação do malvado feiticeiro em
+                        reais Smurfs.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="pikachu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Pokémon: Detetive Pikachu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/ikwHWX-ZWnc" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2019 | Infantil/Aventura | 1h 44m | <span class="imdbRatingPlugin"
+                            data-user="ur150695547" data-title="tt5884052" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt5884052/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Pokémon: Detetive Pikachu(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Philippe Maia, Justice Smith, Kathryn Newton</p>
+                    <p>A investigação vai começar!</p>
+                    <p>Um jovem une forças com o detetive Pikachu para desvendar o mistério por trás do desaparecimento
+                        de seu pai. Perseguindo pistas pelas ruas de Ryme City, a dupla dinâmica logo descobre uma trama
+                        desonesta que representa uma ameaça ao universo Pokémon.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="clonewars" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Star Wars: A Guerra dos Clones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/IrrgzSk_rZE" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2008 | Animação/Ficção | 1h 38m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt0458290" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt0458290/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Star Wars: Clones Wars(2008) on IMDb" /></a></span></p>
+                    <p>Elenco: Matt Lanter, Ashley Eckstein, Dee Bradley Baker</p>
+                    <p>Os cavaleiros Jedi continuam lutando para manter a ordem diante da Guerra dos Clones. Sistemas inteiros são eliminados, enquanto Yoda e Obi-Wan Kenobi lideram um exército contra a força do Lado Sombrio.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="sonic2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sonic 2 - O Filme</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/A2SjVRziC7M" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2022 | Aventura/Ficção | 1h 50m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt12412888" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt12412888/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Sonic 2 - O Filme(2022) on IMDb" /></a></span></p>
+                    <p>Elenco: James Marsden, Jim Carrey, Tika Sumpter</p>
+                    <p>Bem-vindos à 2ª fase</p>
+                    <p>O Dr. Robotnik retorna à procura de uma esmeralda mística que tem o poder de destruir
+                        civilizações. Para detê-lo, Sonic se une a seu antigo parceiro, Tails, e parte em uma jornada
+                        para encontrar a joia antes que ela caia em mãos erradas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="alendadosguardiões" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Lenda dos Guardiões</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/bdpvZJIuRm4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2010 | Animação/Aventura | 1h 39m | <span class="imdbRatingPlugin"
+                            data-user="ur150695547" data-title="tt1219342" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt1219342/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="A Lenda dos Guardiões(2010) on IMDb" /></a></span></p>
+                    <p>Elenco: Helen Mirren, Geoffrey Rush, Jim Sturgess</p>
+                    <p>Em seu caminho para encontrar uma lenda... ele se tornará uma.</p>
+                    <p>Uma jovem coruja descobre um plano maligno para dominar todo o reino e, para salvá-lo, deve encontrar os lendários protetores de seu mundo: os Guardiões.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dora" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Dora e a Cidade Perdida</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/gUTtJjV852c" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2019 | Comédia/Ação | 1h 42m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt7547410" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt7547410/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Dora e a Cidade Perdida(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Isabela Merced, Jeffrey Wahlberg, Madeleine Madden</p>
+                    <p>Explorador é o nome do meio dela.</p>
+                    <p>A aventureira Dora rapidamente se vê liderando o macaco Botas, o primo Diego, um misterioso
+                        habitante da selva, seus pais e um grupo de adolescentes em uma aventura para resolver um
+                        mistério impossível por trás de uma cidade perdida de ouro.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="picapau" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Pica-Pau: O Filme</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/JZcPm3qAqJA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2017 | Infantil/Comédia | 1h 34m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt2114504" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt2114504/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Pica-Pau: O Filme(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Timothy Omundson, Thaila Ayala, Graham Verchere</p>
+                    <p>Ele invadiu os cinemas.</p>
+                    <p>O travesso Pica-Pau está metido em mais uma briga por território. Os inimigos da vez são o
+                        vigarista Lance Walters e sua namorada Vanessa. Precisando de dinheiro, eles estão determinados
+                        a construir uma extravagante mansão na floresta e lucrar com sua venda, mas Pica-Pau também mora
+                        no terreno e não pretende deixá-los em paz.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="red" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Red: Crescer é Uma Fera</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/YeQoQNZq7wg" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2022 | Infantil/Comédia | 1h 40m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt8097030" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt8097030/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Red(2022) on IMDb" /></a></span></p>
+                    <p>Elenco: Flávia Alessandra, Ary Fontoura, Sandra Oh</p>
+                    <p>Crescer é uma fera.</p>
+                    <p>Uma menina de 13 anos começa a se transformar em um panda vermelho gigante sempre que fica animada.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="hoteltransilvânia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Hotel Transilvânia: Transformonstrão</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/lCPh2VAQ9fc" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2022 | Infantil/Aventura | 1h 27m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt9848626" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt9848626/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Hotel Transilvânia: Transformonstrão(2022) on IMDb" /></a></span></p>
+                    <p>Elenco: Alexandre Moreno, Fernanda Baronne, Marcelo Garcia</p>
+                    <p>A mudança pode ser assustadora.</p>
+                    <p>A nova invenção de Van Helsing transforma Drac e os amigos em humanos, e Johnny em um monstro. Agora, Drac deve encontrar uma maneira de reverter o feitiço antes que a mudança se torne permanente.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="moana" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Moana: Um Mar de Aventuras</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/80q_uNi1Ip0" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2022 | Infantil/Aventura | 1h 43m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt3521164" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt3521164/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Moana: Um Mar de Aventuras (2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Auli'i Cravalho, Dwayne Johnson, Alan Tudyk</p>
+                    <p>O oceano está chamando.</p>
+                    <p>Uma jovem parte em uma missão para salvar seu povo. Durante a jornada, Moana conhece o outrora poderoso semideus Maui, que a guia em sua busca para se tornar uma mestre em encontrar caminhos. Juntos, eles navegam pelo oceano em uma viagem incrível.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="obomdinossauro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Bom Dinossauro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/vxevns18u0U" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2015 | Infantil/Aventura | 1h 33m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt1979388" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt1979388/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="O Bom Dinossauro(2015) on IMDb" /></a></span></p>
+                    <p>Elenco:  Raymond Ochoa, Frances McDormand, Jeffrey Wright</p>
+                    <p>Um grande amigo pode mudar tudo.</p>
+                    <p>Depois que um evento traumático perturba o animado dinossauro Arlo, ele parte em uma jornada notável. No caminho para voltar para casa, ele acaba ganhando um companheiro improvável: um menino humano chamado Spot.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="divertidamente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Divertida Mente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/LSpeM7G4zfY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2015 | Infantil/Comédia| 1h 35m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt2096673" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt2096673/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Divertida Mente(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Miá Mello, Otaviano Costa, Dani Calabresa</p>
+                    <p>Conheça as pequenas vozes dentro de sua cabeça.</p>
+                    <p>Com a mudança para uma nova cidade, as emoções de Riley, que tem apenas 11 anos de idade, ficam extremamente agitadas. Uma confusão na sala de controle do seu cérebro deixa a Alegria e a Tristeza de fora, afetando a vida de Riley radicalmente.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="toystory" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Toy Story 4</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/T98oJYZErE4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2019 | Infantil/Comédia | 1h 40m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt1979376" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt1979376/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Toy Story 4(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Marco Luque, Antonio Tabet, Tom Hanks</p>
+                    <p>Prepare-se para pegar a estrada.</p>
+                    <p>Woody, Buzz Lightyear e o resto da turma embarcam em uma viagem com Bonnie e um novo brinquedo chamado Forky. A aventura logo se transforma em uma reunião inesperada quando o ligeiro desvio que Woody faz o leva ao seu amigo há muito perdido, Bo Peep.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="scooby" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Scooby! O Filme</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/9Y8N7tsA9rA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2020 | Infantil/Mistério | 1h 33m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt3152592" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt3152592/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Scooby! O Filme(2020) on IMDb" /></a></span></p>
+                    <p>Elenco:  Gina Rodriguez, Frank Welker, Mark Wahlberg</p>
+                    <p>Mistério adora companhia.</p>
+                    <p>Scooby e sua turma encaram o seu maior e mais difícil mistério de todos os tempos: um plano maligno para liberar o cão fantasma, Cérbero, no mundo. Enquanto corre para impedir esse "apocãolipse" global, a turma descobre que Scooby tem um legado secreto e um destino épico maior do que qualquer um podia imaginar.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="soul" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Soul</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/hWBxoH4-4yw" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2020 | Infantil/Comédia | 1h 40m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt2948372" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt2948372/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Soul(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Jamie Foxx, Tina Fey, Graham Norton</p>
+                    <p>Todos temos uma alma. Joe Gardner está prestes a descobrir a sua.</p>
+                    <p>Joe é um professor de música do ensino médio apaixonado por jazz, cuja vida não foi como ele esperava. Quando ele viaja a uma outra realidade para ajudar outra pessoa a encontrar sua paixão, ele descobre o verdadeiro sentido da vida.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="abailarina" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Bailarina</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/d8528X86V4E" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2016 | Infantil/Dança | 1h 29m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt2261287" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt2261287/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="A Bailarina(2016) on IMDb" /></a></span></p>
+                    <p>Elenco:  Mel Maia, Elle Fanning, Dane DeHaan</p>
+                    <p>As maiores aventuras da vida começam com um único ... Salto!</p>
+                    <p>Uma sonhadora menina órfã toma uma atitude arriscada: fugir para Paris e realizar o sonho de ser uma grande bailarina. Lá, ela decide se passar por outra pessoa, e consegue uma vaga no Grand Opera, onde vai aprontar muitas aventuras.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="aladdin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Aladdin</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/vPmSpAz1ZIA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2019 | Infantil/Musical | 2h 8m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt6139732" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt6139732/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Aladdin(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Will Smith , Mena Massoud , Naomi Scott</p>
+                    <p>Escolha sabiamente.</p>
+                    <p>Um jovem humilde descobre uma lâmpada mágica, com um gênio que pode lhe conceder desejos. Agora o rapaz quer conquistar a moça por quem se apaixonou, mas o que ele não sabe é que a jovem é uma princesa que está prestes a se noivar. Agora, com a ajuda do gênio, ele tenta se passar por um príncipe para conquistar o amor da moça e a confiança de seu pai.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dumbo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Dumbo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/gBRq3M9b3PM" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2019 | Infantil/Aventura | 1h 52m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt3861390" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt3861390/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Dumbo(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Colin Farrell , Danny DeVito , Michael Keaton</p>
+                    <p>O circo dos sonhos.</p>
+                    <p>Um elefante jovem, cujas grandes orelhas lhe permitem voar, ajuda a salvar um circo em dificuldades, mas quando o circo planeja um novo empreendimento, Dumbo e seus amigos descobrem segredos obscuros.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="opoderosochefinhodois" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Poderoso Chefinho 2: Negócios da Família</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/mYD535sbre0" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2021 | Infantil/Comédia | 1h 47m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt6932874" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt6932874/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="O Poderoso Chefinho 2(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Alec Baldwin, James Marsden, Amy Sedaris</p>
+                    <p>O recesso acabou.</p>
+                    <p>Os irmãos Templeton se tornaram adultos e se afastaram um do outro, mas um novo chefe, com uma nova abordagem, está prestes a reuni-los - e inspirar um novo negócio familiar.</p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal fade" id="oreileão" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Rei Leão</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/cQ7LgxMCzCg" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2019 | Infantil/Aventura | 2h | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt6105098" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt6105098/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="O Rei Leão(2019) on IMDb" /></a></span></p>
+                    <p>Elenco:  Ícaro Silva, Glauco Marques, Ivan Parente</p>
+                    <p>O Rei voltou.</p>
+                    <p>Traído e exilado de seu reino, o leãozinho Simba precisa descobrir como crescer e retomar seu destino como herdeiro real nas planícies da savana africana.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="sing" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sing 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/z0HBjiNDAfI" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2021 | Infantil/Musical | 1h 50m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt6467266" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt6467266/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Sing 2(2021) on IMDb" /></a></span></p>
+                    <p>Elenco:  Matthew McConaughey, Reese Witherspoon, Scarlett Johansson</p>
+                    <p>Onde seus sonhos vão te levar?</p>
+                    <p>Na glamourosa cidade de Redshore, Buster Moon e a galera enfrentam seus medos, fazem novos amigos e superam seus limites em uma jornada para convencer o recluso astro Clay Calloway a subir aos palcos novamente.</p>
+                </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="oscroodsdois" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Os Croods 2: Uma Nova Era</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/_v0167X4n7M" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2020 | Animação/Aventura | 1h 35m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt2850386" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt2850386/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Os Croods 2: Uma Nova Era(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Nicolas Cage, Emma Stone, Ryan Reynolds</p>
+                    <p>O futuro não é o que costumava ser.</p>
+                    <p>A família pré-histórica, os Croods, são desafiados por uma família rival, os Bettermans, que afirmam ser melhores e mais evoluídos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="osincríveisdois" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Os Incríveis 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/zOZR0TRnSU8" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2018 | Animação/Aventura | 1h 58m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt3606756" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt3606756/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Os Incríveis 2(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Craig T. Nelson, Holly Hunter, Sarah Vowell</p>
+                    <p>De volta ao trabalho.</p>
+                    <p>A familia dos Incríveis pegam uma nova misão, mais Sr Incrível deberá controlar sua casa enquanto sua esposa Helen salvará o mundo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="raya" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Raya e o Último Dragão</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Yh-XpUlDjJk" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2021 | Infantil/Aventura | 1h 30m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt5109280" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt5109280/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Raya e o Último Dragão(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Kelly Marie Tran, Awkwafina, Gemma Chan</p>
+                    <p>Uma missão para salvar seu mundo.</p>
+                    <p>Em um reino conhecido como Lumandra, uma Terra reinventada e habitada por uma civilização antiga, um guerreiro chamado Raya está determinado a encontrar o último dragão.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ronbugado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ron Bugado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/ujmsDV17yFA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2021 | Infantil/Comédia | 1h 46m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt7504818" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt7504818/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Ron Bugado(2021) on IMDb" /></a></span></p>
+                    <p>Elenco:  Jack Dylan Grazer, Zach Galifianakis, Ed Helms</p>
+                    <p>Melhores Amigos Para Sempre* (* a duração da bateria pode variar).</p>
+                    <p>A história de Barney, um estudante do ensino médio e Ron, seu novo dispositivo de andar, falar e conectado digitalmente. O mau funcionamento de Ron na era das redes sociais os lança em uma jornada para aprender sobre amizade.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="petsdois" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Pets - A Vida Secreta dos Bichos 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/MRvse6dSdbg" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2019 | Comédia/Aventura | 1h 26m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt5113040" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt5113040/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Pets - A Vida Secreta dos Bichos 2(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Patton Oswalt, Kevin Hart, Harrison Ford</p>
+                    <p>Não ria.</p>
+                    <p>Na sequência, Max e seus amigos de estimação, seguem suas vidas secretas depois que seus donos os deixam para o trabalho ou para a escola.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="procurandodory" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Procurando Dory</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/BGNvbWeASbA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2016 | Infantil/Aventura | 1h 37m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt2277860" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt2277860/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Procurando Dory(2016) on IMDb" /></a></span></p>
+                    <p>Elenco:  Ellen DeGeneres, Albert Brooks, Ed O'Neill</p>
+                    <p>Uma aventura inesquecível. Que ela provavelmente vai esquecer.</p>
+                    <p>O simpático, mas distraído peixe azul, Dory, começa a procura por seus pais perdidos, e todos aprendem algumas coisas sobre o real significado da família ao longo do caminho.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="luca" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Luca</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/8Ik0iKJbK1A" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2021 | Infantil/Aventura | 1h 35m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt12801262" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt12801262/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Luca(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Jacob Tremblay, Jack Dylan Grazer, Emma Berman</p>
+                    <p>Os excluídos têm sempre que se ajudar.</p>
+                    <p>Na Riviera italiana, uma amizade tão forte quanto inesperada surge entre um ser humano e um monstro marinho camuflado.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="frozendois" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Frozen 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/TTIbWKEUPnc" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2019 | Infantil/Musical | 1h 43m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt4520988" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt4520988/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Frozen 2(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Kristen Bell, Idina Menzel, Josh Gad</p>
+                    <p>Descubra o passado. Enfrente o futuro.</p>
+                    <p>Anna, Elsa, Kristoff e Olaf vão longe na floresta para aprender a verdade sobre um antigo mistério do reino deles.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="wifiralph" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">WiFi Ralph: Quebrando a Internet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/my7Q51ZF6IE" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2018 | Infantil/Comédia | 1h 52m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt5848272" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt5848272/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="WiFi Ralph(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: John C. Reilly, Sarah Silverman, Gal Gadot</p>
+                    <p>Detonando outra vez.</p>
+                    <p>Ralph, o mais famoso vilão dos videogames, e Vanellope, sua companheira atrapalhada, iniciam mais uma arriscada aventura. Após a gloriosa vitória no Fliperama Litwak, a dupla viaja para a world wide web, no universo expansivo e desconhecido da internet. Dessa vez, a missão é achar uma peça reserva para salvar o videogame Corrida Doce, de Vanellope. Para isso, eles contam com a ajuda dos cidadãos da Internet e de Yess, a alma por trás do Buzzztube, um famoso website que dita tendências.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="carrostres" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Carros 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/BuvJZGLclAU" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2017 | Comédia/Esporte | 1h 49m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt3606752" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt3606752/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Carros 3(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Owen Wilson, Cristela Alonzo, Chris Cooper</p>
+                    <p>A partir de agora, nada será como antes.</p>
+                    <p>Relâmpago McQueen está determinado a provar a uma nova geração de corredores que ele ainda é o melhor carro de corrida do mundo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="clifford" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Clifford: O Gigante Cão Vermelho</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/8KCoNr6gx-s" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2021 | Infantil/Comédia | 1h 37m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt2397461" data-style="p3">
+                            <a href="https://www.imdb.com/title/tt2397461/?ref_=ext_shr_lnk">
+                                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Clifford(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Darby Camp, Jack Whitehall, Izaac Wang</p>
+                    <p>A aventura nunca foi tão grande.</p>
+                    <p>O amor de uma menina por um cachorrinho chamado Clifford faz com que o cão cresça a um tamanho enorme.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-link">
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>Copyright@ 2022 SUPERFLIX</p>
+    </footer>
+<script src="JS/main.js"></script>
+</body>
+
+</html>

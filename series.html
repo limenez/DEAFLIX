@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEAFLIX - Séries</title>
+    <link rel="icon" href="img/logo deafilx.svg" />
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/jquery-1.11.0.min.js"></script>
+    <script src="JS/jquery-migrate-1.2.1.min.js"></script>
+    <script src="JS/slick.min.js"></script>
+    <link rel="stylesheet" href="css/imdbRating.css">
+    <link rel="stylesheet" type="text/css" href="CSS/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background: rgb(27,20,100);
+        background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%);
+    }
+
+    .tabelagrid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, 150px);
+        grid-template-rows: repeat(3, 210px);
+    }
+
+    .tabelagrid>div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tabelagrid img {
+        width: 400px;
+        height: 400px;
+        padding: 30px;
+    }
+
+    h4 {
+        color: #fff;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #1B1464;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="img/logo-deafilx.png" alt="" width="200" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.html">INÍCIO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">FILMES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acao.html">AÇÃO</a></li>
+                            <li><a class="dropdown-item" href="comedia.html">COMÉDIA</a></li>
+                            <li><a class="dropdown-item" href="documentario.html">DOCUMENTÁRIOS</a></li>
+                            <li><a class="dropdown-item" href="drama.html">DRAMA</a></li>
+                            <li><a class="dropdown-item" href="ficcao.html">FICÇÃO</a></li>
+                            <li><a class="dropdown-item" href="romance.html">ROMANCE</a></li>
+                            <li><a class="dropdown-item" href="suspense.html">SUSPENSE</a></li>
+                            <li><a class="dropdown-item" href="terror.html">TERROR</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="series.html">SÉRIES</a>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="infantil.html">INFANTIL</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">PERFIL</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="conta.html">CONTA</a></li>
+                            <li><a class="dropdown-item" href="centrodeajuda.html">CENTRAL DA AJUDA</a></li>
+                            <li><a class="dropdown-item" href="login.html">SAIR</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="icons">
+                    <div class="notification">
+                        <a href="#">
+                            <div class="notBtn" href="#">
+                                <div class="number">3</div>
+                                <i class="fas fa-bell" style="color: #fff; font-size: 40px;"></i>
+                                <div class="box">
+                                    <div class="display">
+                                        <div class="nothing">
+                                            <i class="fas fa-child stick"></i>
+                                            <div class="cont">
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/strangerthings4.png">
+                                                        </div>
+                                                        <div class="txt">Stranger Things estreia novas temporadas</div>
+                                                        <div class="txt sub">27/05 - 1 Volume e 01/07 - 2 Volume</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/batman.png">
+                                                        </div>
+                                                        <div class="txt">The Batman novo lançamento</div>
+                                                        <div class="txt sub">03/03</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/la_casa_de_papel.png">
+                                                        </div>
+                                                        <div class="txt">La Casa de Papel chegou nova temporada</div>
+                                                        <div class="txt sub">03/12</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/the-mandalorian.png">
+                                                        </div>
+                                                        <div class="txt">O Mandaloriano resgata um criança que realiza à guerra galáxia.</div>
+                                                        <div class="txt sub">12/11</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/lupin.png">
+                                                        </div>
+                                                        <div class="txt">Lupin estreie no terceiro ou quarto trimestre de 2022</div>
+                                                        <div class="txt sub">08/08</div>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="d-flex">
+                    <div class="search-input">
+                        <a href="" target="_blank" hidden></a>
+                        <input type="text" placeholder="Faça sua busca aqui">
+                        <div class="autocom-box"></div>
+                        <div class="icon"><i class="fas fa-search" style="color: #1B1464;"></i></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="scale-down">
+        <h4 style="margin-top: 30px;">Séries</h4>
+
+        <div class="tabelagrid">
+            <div><img class="row__poster row__posterLarge"  src="assets/series/lacasadepapel.jpg" data-bs-toggle="modal"
+                    data-bs-target="#lacasadepapel" /></div> 
+            <div><img class="row__poster row__posterLarge"  src="assets/series/mandalorian.jpg" data-bs-toggle="modal"
+                    data-bs-target="#mandalorian" /></div> 
+            <div><img class="row__poster row__posterLarge"  src="assets/series/umbrellaacademy.jpg" data-bs-toggle="modal"
+                    data-bs-target="#umbrellaacademy" /></div> 
+            <div><img class="row__poster row__posterLarge"  src="assets/series/lupin.jpg" data-bs-toggle="modal"
+                    data-bs-target="#lupin" /></div> 
+            <div><img class="row__poster row__posterLarge"  src="assets/series/selena.jpg" data-bs-toggle="modal"
+                    data-bs-target="#selena" /></div> 
+            <div><img class="row__poster row__posterLarge"  src="assets/series/inventandoanna.jpg" data-bs-toggle="modal"
+                    data-bs-target="#inventandoanna" /></div> 
+            <div><img class="row__poster row__posterLarge"  src="assets/series/obiwankenobi.jpg" data-bs-toggle="modal"
+                    data-bs-target="#obiwankenobi" /></div> 
+            <div><img class="row__poster row__posterLarge"  src="assets/series/luismiguel.jpg" data-bs-toggle="modal"
+                    data-bs-target="#luismiguel" /></div> 
+            <div><img class="row__poster row__posterLarge"  src="assets/series/desejosombrio.jpg" data-bs-toggle="modal"
+                    data-bs-target="#desejosombrio" /></div> 
+            <div><img class="row__poster row__posterLarge"  src="assets/series/grey.jpg" data-bs-toggle="modal"
+                    data-bs-target="#grey" /></div> 
+            <div><img class="row__poster row__posterLarge"  src="assets/series/strangerthings.jpg" data-bs-toggle="modal"
+                    data-bs-target="#strangerthings" /></div> 
+            <div><img class="row__poster row__posterLarge"  src="assets/series/os13porques.jpg" data-bs-toggle="modal"
+                    data-bs-target="#os13porques" /></div> 
+            <div><img class="row__poster row__posterLarge"  src="assets/series/lucifer.jpg" data-bs-toggle="modal"
+                    data-bs-target="#lucifer" /></div> 
+            <div><img class="row__poster row__posterLarge"  src="assets/series/theinnocent.jpg" data-bs-toggle="modal"
+                    data-bs-target="#theinnocent" /></div> 
+            <div><img class="row__poster row__posterLarge"  src="assets/series/peakyblinders.jpg" data-bs-toggle="modal"
+                    data-bs-target="#peakyblinders" /></div> 
+            <div><img class="row__poster row__posterLarge"  src="assets/series/maid.jpg" data-bs-toggle="modal"
+                    data-bs-target="#maid" /></div> 
+            <div><img class="row__poster row__posterLarge"  src="assets/series/twd.jpg" data-bs-toggle="modal"
+                    data-bs-target="#twd" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/vikings.jpg" data-bs-toggle="modal"
+                    data-bs-target="#vikings" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/round6.jpg" data-bs-toggle="modal"
+                    data-bs-target="#round6" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/dark.jpg" data-bs-toggle="modal"
+                    data-bs-target="#dark" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/ozark.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ozark" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/gotham.jpg" data-bs-toggle="modal"
+                    data-bs-target="#gotham" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/elite.jpg" data-bs-toggle="modal"
+                    data-bs-target="#elite" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/warriorrun.jpg" data-bs-toggle="modal"
+                    data-bs-target="#warriorrun" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/cursed.jpg" data-bs-toggle="modal"
+                    data-bs-target="#cursed" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/loki.jpg" data-bs-toggle="modal"
+                    data-bs-target="#loki" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/bobafett.jpg" data-bs-toggle="modal"
+                    data-bs-target="#bobafett" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/supergirl.jpg" data-bs-toggle="modal"
+                    data-bs-target="#supergirl" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/emily.jpg" data-bs-toggle="modal"
+                    data-bs-target="#emily" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/suits.jpg" data-bs-toggle="modal"
+                    data-bs-target="#suits" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/thewitcher.jpg" data-bs-toggle="modal"
+                    data-bs-target="#thewitcher" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/visavis.jpg" data-bs-toggle="modal"
+                    data-bs-target="#visavis" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/oscem.jpg" data-bs-toggle="modal"
+                    data-bs-target="#oscem" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/riverdale.jpg" data-bs-toggle="modal"
+                    data-bs-target="#riverdale" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/ogambitodarainha.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ogambitodarainha" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/toyboy.jpg" data-bs-toggle="modal"
+                    data-bs-target="#toyboy" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/cereja.jpg" data-bs-toggle="modal"
+                    data-bs-target="#cereja" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/ahs.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ahs" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/wandavision.jpg" data-bs-toggle="modal"
+                    data-bs-target="#wandavision" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/series/thecrown.jpg" data-bs-toggle="modal"
+                    data-bs-target="#thecrown" /></div>
+        </div>
+    </div>
+    <div class="modal fade" id="lacasadepapel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">La Casa de Papel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/qyp9onJQv6w"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2017 | Séries Suspense/Ação | 5 Temporadas | <span class="imdbRatingPlugin"
+                            data-user="ur150695547" data-title="tt6468322" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt6468322/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" La Casa de Papel(2017) on IMDb" />
+                            </a></span></p>
+                    <p>Elenco: Álvaro Morte, Úrsula Corberó, Pedro Alonso</p>
+                    <p>O roubo perfeito.</p>
+                    <p>Um grupo de nove ladrões, liderados por um Professor, prepara o roubo do século na Casa da Moeda
+                        da Espanha, com o objetivo de fabricar o próprio dinheiro em quantidades incalculáveis e nunca
+                        antes vista.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mandalorian" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Mandaloriano</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/eW7Twd85m2g"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2019 | Séries Ficção/Ação | 2 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt8111088" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt8111088/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Mandaloriano(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Pedro Pascal, Jason Sudeikis, Emily Swallow</p>
+                    <p>A caça de recompensas é uma profissão complicada.</p>
+                    <p>Um atirador solitário explora os confins da galáxia, longe da autoridade da Nova República.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="umbrellaacademy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">The Umbrella Academy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/5_4SW8HHfUs"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="modal-body">
+                        <p>16 | 2019 | Séries Ação/Aventura | 3 Temporadas | <span class="imdbRatingPlugin"
+                                data-user="ur150695547" data-title="tt1312171" data-style="p3"><a
+                                    href="https://www.imdb.com/title/tt1312171/?ref_=plg_rt_1"><img
+                                        src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                        alt=" The Umbrella Academy
+                            (2019) on IMDb" />
+                                </a></span></p>
+                        <p>Elenco: Elliot Page, Tom Hopper, David Castañeda</p>
+                        <p>Super. Disfuncional. Família.</p>
+                        <p>Com a morte do pai, irmãos com poderes extraordinários se reencontram e descobrem
+                            surpreendentes segredos de família – além de uma ameaça iminente à humanidade.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="lupin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Lupin</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/oT7RNAQVbG4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Séries Suspense/Mistério | 3 Temporadas | <span class="imdbRatingPlugin"
+                            data-user="ur150695547" data-title="tt2531336" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt2531336/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" Lupin
+                        (2021) on IMDb" />
+                            </a></span></p>
+                    <p>Elenco: Omar Sy, Ludivine Sagnier, Clotilde Hesme</p>
+                    <p>Assane se inspira em "Arsène Lupin, o Ladrão de Casaca" para vingá-lo</p>
+                    <p>Inspirado pelas aventuras de Arsène Lupin, o ladrão gentil Assane Diop quer se vingar de uma
+                        família rica por uma injustiça cometida contra o pai dele.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="selena" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Selena: A Série</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/-0wz7n-h71M"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2020 | Séries Drama | 2 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt9421868" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt9421868/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" Selena: A Série
+                        (2020) on IMDb" />
+                            </a></span></p>
+                    <p>Elenco: Christian Serratos, Gabriel Chavarria, Ricardo Chavira</p>
+                    <p>Toda lenda começa com um sonho.</p>
+                    <p>Na adolescência, a cantora americana de origem mexicana Selena precisa fazer escolhas difíceis
+                        junto com sua família em nome do amor e da música.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="inventandoanna" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Inventando Anna</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/5Y_t1jJEMV0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2022 | Séries Drama | 1 Temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt8740976" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt8740976/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt=" Inventando Anna(2022) on IMDb" /></a></span></p>
+                    <p>Elenco: Anna Chlumsky, Julia Garner, Arian Moayed</p>
+                    <p>Inspirado na história verdadeira de um golpista.</p>
+                    <p>Empreendedora audaciosa ou golpista? Uma jornalista conta a história de Anna Delvey, que
+                        convenceu a elite de Nova York de que era uma herdeira alemã.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="obiwankenobi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Obi-Wan Kenobi: A Série de Star Wars</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/dXHkWE4JSOA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2022 | Série Ficção/Ação | 1 temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt8466564" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt8466564/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Obi-Wan Kenobi(2022) on IMDb" /></a></span></p>
+                    <p>Elenco: Ewan McGregor, Hayden Christensen, Joel Edgerton</p>
+                    <p>Entre a escuridão e a derrota, a esperança sobrevive.</p>
+                    <p>Obi-Wan Kenobi é uma futura série limitada, criada para o serviço de streaming Disney+,
+                        estrelando o personagem homônimo de Star Wars. A série se passa dez anos depois de A Vingança
+                        dos Sith</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="luismiguel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Luis Miguel: A Série</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/HmwQ7DGJbKk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2018 | Séries Drama/Musical | 3 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt8045690" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt8045690/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Luis Miguel: A Série(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Diego Boneta, Pablo Cruz Guerrero, Jade Ewen</p>
+                    <p>O homem por trás do artista.</p>
+                    <p>Esta série retrata a vida do cantor mexicano Luis Miguel, que durante décadas cativou a América
+                        Latina e o mundo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="desejosombrio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Desejo Sombrio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/iarLUeQe_0E"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2020 | Séries Suspense | 2 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt12540080" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt12540080/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Desejo Sombrio(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Maite Perroni, Erik Hayser, Alejandro Speitzer</p>
+                    <p>Às vezes, nada é o que parece.</p>
+                    <p>Casada, Alma passa um fim de semana fora de casa. A experiência desperta uma paixão, mas acaba em
+                        tragédia e a faz questionar a verdade sobre as pessoas próximas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="grey" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Anatomia de Grey</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/U5tFJyGgNYo"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2005 | Séries Drama | 18 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0413573" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt0413573/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Anatomia de Grey(2005) on IMDb" /></a></span></p>
+                    <p>Elenco: Ellen Pompeo, Patrick Dempsey, Chandra Wilson</p>
+                    <p>A vida que você salva pode ser sua.</p>
+                    <p>A série médica de enorme sucesso foca em um grupo de jovens médicos do Hospital Grace Mercy West,
+                        de Seattle, que começaram a carreira na própria instituição como residentes. Um dos jovens
+                        médicos que dá nome ao show, Meredith Grey, é filha de um famoso cirurgião. Meredith luta para
+                        manter as relações com seus colegas, especialmente o chefe do centro cirúrgico, Richard Webber,
+                        devido ao relacionamento que já existia entre os dois -- Webber teve um caso com a mãe de
+                        Meredith na época em que ela era jovem.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="strangerthings" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Stranger Things</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/VBGOOup8lDY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2016 | Séries Drama/Mistério | 4 Temporadas | <span class="imdbRatingPlugin"
+                            data-user="ur150695547" data-title="tt4574334" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt4574334/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" Stranger Things
+                        (2016) on IMDb" />
+                            </a></span></p>
+                    <p>Elenco: Millie Bobby Brown, Winona Ryder, Finn Wolfhard</p>
+                    <p>Isso só fica mais estranho...</p>
+                    <p>Will, um garoto de 12 anos, desaparece em Montauk, Long Island. Enquanto a polícia, família e
+                        amigos procuram respostas, eles mergulham em um extraordinário mistério, envolvendo um
+                        experimento secreto do governo, forças sobrenaturais e uma garotinha.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="os13porques" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">13 Reasons Why</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/UdzM6rOC3oA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2017 | Séries de mistério | 4 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1837492" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1837492/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="13 Reasons Why(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Dylan Minnette, Katherine Langford, Alisha Boe </p>
+                    <p>Se você está ouvindo, é tarde demais.</p>
+                    <p>Clay Jensen é um estudante que se vê envolvido em uma série de mistérios provocados pelo trágico
+                        suicídio de uma amiga.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="lucifer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Lucifer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/bvywtkckn50"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2016 | Séries Suspense | 6 Temporadas | <span class="imdbRatingPlugin"
+                            data-user="ur150695547" data-title="tt5108516" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt5108516/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" Lucifer (2016) on IMDb" />
+                            </a></span></p>
+                    <p>Elenco: Tom Ellis, Lauren German, D.B. Woodside</p>
+                    <p>Todas as coisas ruins devem chegar ao fim.</p>
+                    <p>Entediado com a vida nas trevas, o diabo se muda para Los Angeles, abre um piano-bar e empresta
+                        sua sabedoria a uma investigadora de assassinatos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="theinnocent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Inocente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/NJYAIid7mNs"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2021 | Série Suspense | 1 Temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt10147644" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt10147644/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Inocente(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Mario Casas, Alexandra Jiménez, Aura Garrido</p>
+                    <p>Um estranho caso de culpa.</p>
+                    <p>Uma morte acidental lança um homem em uma espiral de intrigas e assassinato. Ele encontra o amor
+                        e recupera a liberdade, mas um telefonema traz de volta o seu passado.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="peakyblinders" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Peaky Blinders: Sangue, Apostas e Navalhas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Uv8bfaxl9j4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2013 | Séries Ação/Policial | 6 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2442560" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2442560/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Peaky Blinders: Sangue, Apostas e Navalhas(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Cillian Murphy, Sam Neill, Helen McCrory</p>
+                    <p>Londres é para tomar.</p>
+                    <p>Uma notória gangue da Inglaterra de 1919 é liderada pelo cruel Tommy Shelby, um criminoso
+                        disposto a subir na vida a qualquer preço.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="maid" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Maid</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/M4nrGje_pyc"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Séries baseadas em livros | 1 Temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt11337908" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt11337908/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Maid(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Margaret Qualley, Andie MacDowell, Nick Robinson</p>
+                    <p>Trabalho duro, salário baixo e a vontade de uma mãe de sobreviver.</p>
+                    <p>Depois de deixar para trás um relacionamento abusivo e encontrar um emprego como faxineira, uma mulher luta para sustentar a filha e construir um futuro melhor.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="twd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">The Walking Dead</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/tqTzV0OrX8Q"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2010 | Séries baseadas em HQ | 10 Temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1520211" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1520211/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="The Walking Dead(2010) on IMDb" /></a></span></p>
+                    <p>Elenco: Norman Reedus, Melissa McBride, Lauren Cohan</p>
+                    <p>Lute contra os mortos. Tema os vivos.</p>
+                    <p>Zumbis dominam o mundo dos vivos, e os sobreviventes unem forças para manter viva a raça humana.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="vikings" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Vikings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/nHMQBg6Zduc"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2013 | Séries Épicos | 6 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2306299" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2306299/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Vikings(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Travis Fimmel, Katheryn Winnick, Clive Standen</p>
+                    <p>Esta série dramática acompanha a vida do viking Ragnar Lothbrok em sua jornada para ampliar o domínio nórdico e desafiar um líder incompetente e sem visão.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="round6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Round 6</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/1bXuJn77Cfc"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2021 | Séries Suspense | 1 Temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt10919420" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt10919420/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Round 6(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Lee Jung-jae, Park Hae-soo, Wi Ha-jun</p>
+                    <p>45,6 bilhões de won é brincadeira de criança.</p>
+                    <p>Centenas de jogadores falidos aceitam um estranho convite para um jogo de sobrevivência. Um prêmio milionário aguarda, mas as apostas são altas e mortais.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dark" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">DARK</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/9RNHKKYJvg8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2017 | Séries policiais | 3 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt5753856" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt5753856/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Dark(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Louis Hofmann, Oliver Masucci, Jördis Triebel</p>
+                    <p>Tudo está conectado.</p>
+                    <p>Quatro famílias iniciam uma desesperada busca por respostas quando uma criança desaparece e um complexo mistério envolvendo três gerações começa a se revelar.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ozark" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ozark</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/5hAXVqrljbs"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2017 | Séries Drama | 4 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt5071412" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt5071412/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Ozark(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Jason Bateman, Laura Linney, Sofia Hublitz</p>
+                    <p>Seu destino final.</p>
+                    <p>Um consultor financeiro leva a família para um lago remoto para lavar quinhentos milhões de dólares e acalmar um traficante.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="gotham" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Gotham</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/pbbVusP6i7w"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2014 | Séries Ação | 5 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3749900" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt3749900/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Gotham(2014) on IMDb" /></a></span></p>
+                    <p>Elenco:  Ben McKenzie, Donal Logue, David Mazouz</p>
+                    <p>Antes de Batman, havia Gotham.</p>
+                    <p>O tenente James Gordon chega a Gotham com o intuito de combater a corrupção. Gordon tenta fazer a diferença e começa investigando o assassinato de Thomas e Martha Wayne, cujas mortes deixaram órfão seu filho Bruce.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="elite" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Elite</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/t04JpO7GbYc"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2016 | Séries Drama | 4 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt7134908" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt7134908/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Elite(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Itzan Escamilla, Miguel Bernardeau, Danna Paola</p>
+                    <p>Após três jovens da escola pública serem transferidos para um conceituado colégio de elite, o conflito entre classes acaba levando a um assassinato.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="warriorrun" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Warrior Nun</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/X7jzD_o0qcU"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2020 | Séries Drama | 1 Temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt9059350" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt9059350/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Warrior Nun(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Alba Baptista, Toya Turner, Lorena Andrea</p>
+                    <p>Livrai-nos do mal.</p>
+                    <p>Uma jovem acorda no necrotério com superpoderes e descobre que faz parte de uma seita secreta de freiras caçadoras de demônios.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cursed" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cursed - A Lenda do Lago</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/4AUHZfp-0SA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2020 | Séries baseadas em livros | 1 Temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt8210856" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt8210856/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Cursed - A Lenda do Lago(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Katherine Langford, Devon Terrell, Gustaf Skarsgård</p>
+                    <p>E se a espada escolheu uma rainha?</p>
+                    <p>Com poderes misteriosos e uma espada lendária, Nimue embarca na missão de salvar seu povo na companhia do mercenário Arthur.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="loki" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Loki</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/bEJI-DfxIxY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Séries superaventura | 1 Temporada| <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt9140554" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt9140554/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Loki(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Tom Hiddleston, Owen Wilson, Gugu Mbatha-Raw</p>
+                    <p>A hora de Loki chegou.</p>
+                    <p>Começando imediatamente depois que Loki rouba o Tesseract (de novo), ele se encontra diante da Autoridade de Variação Temporal, uma organização burocrática que existe fora do tempo e espaço. Forçado a responder por seus crimes contra a linha do tempo, ele recebe uma escolha: Ser deletado da realidade ou ajudar a capturar uma ameaça ainda maior.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="bobafett" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Livro de Boba Fett</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/ORaEE8h3BzY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Séries Ação | 1 Temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt13668894" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt13668894/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Livro de Boba Fett(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Temuera Morrison, Ming-Na Wen, Robert Rodriguez</p>
+                    <p>A história dele está só começando.</p>
+                    <p>Uma notória gangue da Inglaterra de 1919 é liderada pelo cruel Tommy Shelby, um criminoso
+                        disposto a subir na vida a qualquer preço.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="supergirl" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Supergirl</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/49RZx5tUKM4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2015 | Séries Ficção | 6 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt4016454" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt4016454/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Supergirl(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Melissa Benoist, Mehcad Brooks, Chyler Leigh</p>
+                    <p>Uma força contra o medo.</p>
+                    <p>Kara Zor-El escapou de seu planeta quando tinha 12 anos de idade. Desde que chegou à Terra, ela conseguiu esconder seus poderes, os quais compartilha com seu primo, o Super-Homem. Mas agora, ela ajuda a proteger os cidadãos de National City.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="emily" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Emily em Paris</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/oO59n_mLyHA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2020 | Séries Comédia dramática | 2 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt8962124" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt8962124/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Emily em Paris(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Lily Collins, Philippine Leroy-Beaulieu, Ashley Park</p>
+                    <p>Perdoe seu francês.</p>
+                    <p>Emily Cooper consegue o trabalho dos sonhos em Paris. Agora, ela precisa administrar a carreira, os amigos e o amor na Cidade Luz.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="suits" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Suits: Homens de Terno</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/IHlZvtiNYtQ"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2011 | Séries de tribunal | 9 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1632701" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1632701/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Suits: Homens de Terno(2011) on IMDb" /></a></span></p>
+                    <p>Elenco: Gabriel Macht, Patrick J. Adams, Rick Hoffman</p>
+                    <p>Nem tudo é preto e branco.</p>
+                    <p>Mesmo sem se formar e sem licença para advogar, um jovem brilhante impressiona um importante advogado e consegue uma cobiçada posição em sua firma</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="thewitcher" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">The Witcher</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/tjujvMkqWe4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2019 | Séries baseadas em livros | 2 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt5180504" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt5180504/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="The Witcher(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Henry Cavill, Anya Chalotra, Freya Allan</p>
+                    <p>Os piores monstros são aqueles que criamos.</p>
+                    <p>O mutante Geralt de Rívia é um caçador de monstros que luta para encontrar seu lugar num mundo onde as pessoas muitas vezes são mais perversas que as criaturas selvagens.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="visavis" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Vis a vis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/RCQfONeclxI"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2015 | Séries policiais | 2h 15min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt4524056" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt4524056/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Vis a vis(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Najwa Nimri, Maggie Civantos, Itziar Castro</p>
+                    <p>Londres é para tomar.</p>
+                    <p>Manipulada pelo homem por quem se apaixonou, essa moça cometeu um crime. Condenada à prisão, ela agora deve aprender a viver num ambiente hostil e impiedoso.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="oscem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">The 100</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/fZCHODAHeX4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2014 | Séries baseadas em livros | 7 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2661044" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2661044/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="The 100(2014) on IMDb" /></a></span></p>
+                    <p>Elenco: Eliza Taylor, Paige Turco, Bob Morley</p>
+                    <p>A sobrevivência não é quem você é. É quem você se torna.</p>
+                    <p>Quase 100 anos após um apocalipse nuclear devastar a Terra, 100 sobreviventes de uma estação espacial voltam para avaliar as condições do planeta.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="riverdale" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Riverdale</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/HxtLlByaYTc"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2017 | Séries baseadas em HQ | 5 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt5420376" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt5420376/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Riverdale(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: K.J. Apa, Lili Reinhart, Camila Mendes</p>
+                    <p>Cidade pequena. Grandes segredos.</p>
+                    <p>Enquanto tentam lidar com problemas típicos da adolescência como amor, sexo, escola e família, Archie e sua turma se envolvem em um grande mistério.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ogambitodarainha" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Gambito da Rainha</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/cop7dQEjGbA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2020 | Séries baseadas em livros | 1 Temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt10048342" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt10048342/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Gambito da Rainha(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Anya Taylor-Joy, Bill Camp, Marielle Heller</p>
+                    <p>Em um orfanato nos anos 1950, uma garota-prodígio do xadrez luta contra o vício em uma jornada improvável para se tornar a número 1 do mundo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="toyboy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Toy Boy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/DuOEZw_ynhg"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2019 | Séries policiais | 2 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt8693266" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt8693266/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Toy Boy(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Jesús Mosquera, Cristina Castaño, María Pedraza</p>
+                    <p>Após anos de prisão, um stripper ganha liberdade condicional e tenta provar, antes do novo julgamento, que sua amante armou para incriminá-lo pelo assassinato do marido.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cereja" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Vingança Sabor Cereja</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/8rn14asTdUk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2021 | Séries baseadas em livros | 1 Temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt11343600" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt11343600/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Vingança Sabor Cereja(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Rosa Salazar, Eric Lange, Catherine Keener</p>
+                    <p>Os sonhos tornam-se pesadelos.</p>
+                    <p>Uma cineasta vai para Hollywood no começo dos anos 1990 para fazer seu filme, mas se depara com um mundo alucinante de sexo, magia, vingança… e gatinhos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ahs" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">American Horror Story</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/nK2gVZ5Cj30"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2011 | Séries Terror | 10 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1844624" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1844624/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="American Horror Story(2011) on IMDb" /></a></span></p>
+                    <p>Elenco: Jessica Lange, Lily Rabe, Connie Britton</p>
+                    <p>A série gira em torno dos Harmon, uma família de três que se desloca de Boston para Los Angeles a fim de resolver alguns problemas do passado. O que eles não sabem é que a casa escolhida como nova moradia está assombrada. E não assombrada por pálidos fantasmas amigáveis, mas sim por criaturas demoníacas. Criaturas que têm como hábito não apenas assustar os moradores da residência como também devorá-los. Após morar no local assombroso, o psiquiatra e patriarca da família, Ben, poderá acabar precisando de um psiquiatra para ele mesmo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="wandavision" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">WandaVision</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/sj9J2ecsSpo"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Séries Ação/Ficção | 1 Temporada | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt9140560" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt9140560/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="WandaVision(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Elizabeth Olsen, Paul Bettany, Kathryn Hahn</p>
+                    <p>Marvel Studios apresenta uma nova era da televisão.</p>
+                    <p>Wanda Maximoff e Visão, um casal de super-heróis com uma vida perfeita, que começa a suspeitar que nem tudo é o que parece.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="thecrown" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">The Crown</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/dFZC-_T_irA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2016 | Séries Drama | 4 Temporadas | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt4786824" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt4786824/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="The Crown(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Olivia Colman, Helena Bonham Carter, Tobias Menzies</p>
+                    <p>Os tempos mudam. O dever perdura.</p>
+                    <p>Uma crônica da vida da Rainha Elizabeth II dos anos 1940 aos tempos modernos. Com o passar das décadas, intrigas pessoais, romances e rivalidades políticas foram revelados e ajudaram a moldar o século XX.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-link">
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>Copyright@ 2022 SUPERFLIX</p>
+    </footer>
+<script src="JS/main.js"></script>
+</body>
+
+</html>
+
+
+
+

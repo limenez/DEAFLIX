@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>Centro de Ajuda</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo deafilx.svg" />
+    <link href="CSS/forms.css" rel="stylesheet" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <script src="JS/jquery-1.11.0.min.js"></script>
+    <script src="JS/jquery-migrate-1.2.1.min.js"></script>
+
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+    footer {
+    text-align: center;
+    padding: 25px 0 5px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    color:black;
+    font-size: 18px;
+}
+p.mb-1{
+    color:black;
+    font-size: 18px;
+}    
+</style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #1B1464;">
+        <a class="navbar-brand" href="login.html">
+                <img class="logo" src="img/logo-deafilx.png" alt="" width="200" height="60">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="index.html">INICIO</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                        data-bs-toggle="dropdown">PERFIL</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="conta.html">CONTA</a></li>
+                        <li><a class="dropdown-item" href="login.html">SAIR</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br/>
+    <br/>
+    <div class="container">
+            <h4 class="mb-3">Centro de Ajuda</h4>
+            <label for="exampleFormControlInput1" class="form-label">Nome</label>
+            <input type="name" class="form-control" id="exampleFormControlInput1">
+        
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Assunto</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+        <br/>
+        <input class="btn btn-secondary" type="button" value="Continuar" onclick="myFunction()">
+    </div>
+    </div>
+    
+<script>
+function myFunction() {
+    alert("Enviado com sucesso!!!");
+}
+</script>
+<footer>
+    <div class="my-5 pt-5 text-muted text-center text-large">
+        <p class="mb-1">&copy; Copyright@ 2022 SUPERFLIX</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="privacidade.html">Privacidade</a></li>
+            <li class="list-inline-item"><a href="termosdeuso.html">Termos</a></li>
+            <li class="list-inline-item"><a href="centrodeajuda.html">Centro de Ajuda</a></li>
+        </ul>
+    </div>
+    </footer>
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/forms.js"></script>
+</body>
+</html>

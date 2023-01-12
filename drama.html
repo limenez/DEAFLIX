@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEAFLIX - Drama</title>
+    <link rel="icon" href="img/logo deafilx.svg" />
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/jquery-1.11.0.min.js"></script>
+    <script src="JS/jquery-migrate-1.2.1.min.js"></script>
+    <script src="JS/slick.min.js"></script>
+    <link rel="stylesheet" href="css/imdbRating.css">
+    <link rel="stylesheet" type="text/css" href="CSS/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background: rgb(27,20,100);
+        background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%);
+    }
+
+    .tabelagrid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, 150px);
+        grid-template-rows: repeat(3, 210px);
+    }
+
+    .tabelagrid>div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tabelagrid img {
+        width: 400px;
+        height: 400px;
+        padding: 30px;
+    }
+
+    h4 {
+        color: #fff;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #1B1464;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="img/logo-deafilx.png" alt="" width="200" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.html">INÍCIO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">FILMES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acao.html">AÇÃO</a></li>
+                            <li><a class="dropdown-item" href="comedia.html">COMÉDIA</a></li>
+                            <li><a class="dropdown-item" href="documentario.html">DOCUMENTÁRIOS</a></li>
+                            <li><a class="dropdown-item" href="drama.html">DRAMA</a></li>
+                            <li><a class="dropdown-item" href="ficcao.html">FICÇÃO</a></li>
+                            <li><a class="dropdown-item" href="romance.html">ROMANCE</a></li>
+                            <li><a class="dropdown-item" href="suspense.html">SUSPENSE</a></li>
+                            <li><a class="dropdown-item" href="terror.html">TERROR</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="series.html">SÉRIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="infantil.html">INFANTIL</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">PERFIL</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="conta.html">CONTA</a></li>
+                            <li><a class="dropdown-item" href="centrodeajuda.html">CENTRAL DA AJUDA</a></li>
+                            <li><a class="dropdown-item" href="login.html">SAIR</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="icons">
+                    <div class="notification">
+                        <a href="#">
+                            <div class="notBtn" href="#">
+                                <div class="number">3</div>
+                                <i class="fas fa-bell" style="color: #fff; font-size: 40px;"></i>
+                                <div class="box">
+                                    <div class="display">
+                                        <div class="nothing">
+                                            <i class="fas fa-child stick"></i>
+                                            <div class="cont">
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/strangerthings4.png">
+                                                        </div>
+                                                        <div class="txt">Stranger Things estreia novas temporadas</div>
+                                                        <div class="txt sub">27/05 - 1 Volume e 01/07 - 2 Volume</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/batman.png">
+                                                        </div>
+                                                        <div class="txt">The Batman novo lançamento</div>
+                                                        <div class="txt sub">03/03</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/la_casa_de_papel.png">
+                                                        </div>
+                                                        <div class="txt">La Casa de Papel chegou nova temporada</div>
+                                                        <div class="txt sub">03/12</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/the-mandalorian.png">
+                                                        </div>
+                                                        <div class="txt">O Mandaloriano resgata um criança que realiza à guerra galáxia.</div>
+                                                        <div class="txt sub">12/11</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/lupin.png">
+                                                        </div>
+                                                        <div class="txt">Lupin estreie no terceiro ou quarto trimestre de 2022</div>
+                                                        <div class="txt sub">08/08</div>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="d-flex">
+                    <div class="search-input">
+                        <a href="" target="_blank" hidden></a>
+                        <input type="text" placeholder="Faça sua busca aqui">
+                        <div class="autocom-box"></div>
+                        <div class="icon"><i class="fas fa-search" style="color: #1B1464;"></i></div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="scale-down">
+        <h4 style="margin-top: 30px;">Drama</h4>
+
+        <div class="tabelagrid">
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/imperdoavel.jpg" data-bs-toggle="modal"
+                data-bs-target="#imperdoavel" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/afilhaperdida.jpg" data-bs-toggle="modal"
+                data-bs-target="#afilhaperdida"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/casagucci.jpg" data-bs-toggle="modal"
+                data-bs-target="#casagucci"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/suprema.jpg" data-bs-toggle="modal"
+                data-bs-target="#suprema"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/seteminutos.jpg" data-bs-toggle="modal"
+                data-bs-target="#seteminutos"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/oquartodejack.jpg" data-bs-toggle="modal"
+                data-bs-target="#oquartodejack"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/naoolheparacima.jpg" data-bs-toggle="modal"
+                data-bs-target="#naoolheparacima"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/nanaturezaselvagem.jpg"
+                data-bs-toggle="modal" data-bs-target="#nanaturezaselvagem"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/oladobomdavida.jpg" data-bs-toggle="modal"
+                data-bs-target="#oladobomdavida"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/taofortetaoperto.jpg"
+                data-bs-toggle="modal" data-bs-target="#taofortetaoperto"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/umsonhopossivel.jpg" data-bs-toggle="modal"
+                data-bs-target="#umsonhopossivel"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/snowden.jpg" data-bs-toggle="modal"
+                data-bs-target="#snowden"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/extraordinario.jpg" data-bs-toggle="modal"
+                data-bs-target="#extraordinario"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/ateoriadetudo.jpg" data-bs-toggle="modal"
+                data-bs-target="#ateoriadetudo"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/nocoraçãodomar.jpg" data-bs-toggle="modal"
+                data-bs-target="#nocoraçãodomar"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/milagredafé.jpg" data-bs-toggle="modal"
+                data-bs-target="#milagredafé"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/milagre.jpg" data-bs-toggle="modal"
+                data-bs-target="#milagre"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/meupai.jpg" data-bs-toggle="modal"
+                data-bs-target="#meupai"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/coracoesdeferro.jpg" data-bs-toggle="modal"
+                data-bs-target="#coracoesdeferro"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/estrelasalemdotempo.jpg" data-bs-toggle="modal"
+                data-bs-target="#estrelasalemdotempo"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/ateoultimohomem.jpg" data-bs-toggle="modal"
+                data-bs-target="#ateoultimohomem"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/coringa.jpg" data-bs-toggle="modal"
+                data-bs-target="#coringa"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/vidadepois.jpg" data-bs-toggle="modal"
+                data-bs-target="#vidadepois"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/noritmodocoracão.jpg" data-bs-toggle="modal"
+                data-bs-target="#noritmodocoracão"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/radioactive.jpg" data-bs-toggle="modal"
+                data-bs-target="#radioactive"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/portodaaminhavida.jpg" data-bs-toggle="modal"
+                data-bs-target="#portodaaminhavida"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/ataquedoscaês.jpg" data-bs-toggle="modal"
+                data-bs-target="#ataquedoscaês"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/kingrichard.jpg" data-bs-toggle="modal"
+                data-bs-target="#kingrichard"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/tick.jpg" data-bs-toggle="modal"
+                data-bs-target="#tick"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/stevejobs.jpg" data-bs-toggle="modal"
+                data-bs-target="#stevejobs"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/aredesocial.jpg" data-bs-toggle="modal"
+                data-bs-target="#aredesocial"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/spencer.jpg" data-bs-toggle="modal"
+                data-bs-target="#spencer"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/deusnãoestámorto.jpg" data-bs-toggle="modal"
+                data-bs-target="#deusnãoestámorto"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/milagresdoparaiso.jpg" data-bs-toggle="modal"
+                data-bs-target="#milagresdoparaiso"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/océuédeverdade.jpg" data-bs-toggle="modal"
+                data-bs-target="#océuédeverdade"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/agarotadinamarquesa.jpg" data-bs-toggle="modal"
+                data-bs-target="#agarotadinamarquesa"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/aduquesa.jpg" data-bs-toggle="modal"
+                data-bs-target="#aduquesa"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/astorresgemeas.jpg" data-bs-toggle="modal"
+                data-bs-target="#astorresgemeas"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/ojogodaimitação.jpg" data-bs-toggle="modal"
+                data-bs-target="#ojogodaimitação"  /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/omeninoquedescobriuovento.jpg" data-bs-toggle="modal"
+                data-bs-target="#omeninoquedescobriuovento"  /></div>    
+        </div>
+    </div>
+
+    <div class="modal fade" id="imperdoavel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Imperdoável</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/P0RO1pF4L1o" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Drama | 1h 54m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt11233960" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt11233960/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Imperdoável(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Sandra Bullock, Vincent D'Onofrio, Viola Davis </p>
+                    <p>Ninguém escapa do passado.</p>
+                    <p>Livre da prisão e sem o perdão da sociedade, uma mulher condenada por assassinato decide procurar
+                        a irmã que deixou para trás.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="afilhaperdida" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Filha Perdida</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/s63AZRGzUtc"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Drama | 2h 4min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt9100054" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt9100054/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" A Filha Perdida
+                        (2021) on IMDb" />
+                            </a></span></p>
+                    <p>Elenco: Olivia Colman, Jessie Buckley, Dakota Johnson</p>
+                    <p>Ser mãe é uma responsabilidade esmagadora.</p>
+                    <p>As férias pacatas de uma mulher mudam de rumo quando sua obsessão por uma jovem mãe hospedada nas
+                        proximidades traz à tona antigas lembranças.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="casagucci" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Casa Gucci</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/g1Ud5HJXb50" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Drama/Crime | 2h 38m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt11214590" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt11214590/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Casa Gucci(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Lady Gaga, Adam Driver, Al Pacino</p>
+                    <p>Um legado pelo qual vale a pena matar.</p>
+                    <p>A verdadeira história de como Patrizia Reggiani planejou matar o marido Maurizio Gucci, neto do
+                        renomado estilista Guccio Gucci.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="suprema" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Suprema</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/FaKL-uN4MiI" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2018 | Drama jurídico | 1h 54m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt4669788" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt4669788/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Suprema(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Felicity Jones, Armie Hammer, Kathy Bales</p>
+                    <p>Sua história fez história...</p>
+                    <p>Acompanhe a história de Ruth Bader Ginsburg, uma juíza da Suprema Corte que foi nomeada para o
+                        Supremo Tribunal no ano de 1993 pelo presidente Bill Clinton e, assim, se tornando a segunda
+                        juíza mulher, depois de Sandra Day O'Connor.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="seteminutos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sete Minutos Depois da Meia-Noite</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/NBz1EmBFwbM" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2016 | Drama/Fantasia | 1h 48m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3416532" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt3416532/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Sete Minutos Depois da Meia-Noite(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Lewis MacDougall, Felicity Jones, Sigourney Weaver </p>
+                    <p>As histórias são criaturas fantásticas.</p>
+                    <p>O garoto Conor tem muitos problemas na vida. Seu pai é muito ausente, a mãe sofre um um câncer em
+                        fase terminal, a avó é uma megera, e ele é maltratado na escola pelos colegas. No entanto, todas
+                        as noites Conor tem o mesmo sonho, com uma gigantesca árvore que decide contar histórias para
+                        ele, em troca de escutar as histórias do garoto. Embora as conversas com a árvore tenham
+                        consequências negativas na vida real, elas ajudam Conor a escapar das dificuldades por meio do
+                        mundo da fantasia.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="oquartodejack" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Quarto de Jack</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/IeM5qJp2v8Y" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2015 | Drama/Suspense | 1h 58m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3170832" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt3170832/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Quarto de Jack(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Brie Larson, Jacob Tremblay, Joan Allen</p>
+                    <p>Baseado no livro best-seller.</p>
+                    <p>Joy e seu filho Jack vivem isolados em um quarto. O único contato que ambos têm com o mundo
+                        exterior é a visita periódica do Velho Nick, o homem que os mantém em cativeiro. Joy faz o
+                        possível para tornar suportável a vida no local. Quando seu filho completa cinco anos, ela
+                        decide elaborar um plano de fuga. Com a ajuda de Jack, ela tenta enganar Nick para retornar à
+                        realidade e apresentar um novo mundo a seu filho.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="naoolheparacima" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Não Olhe para Cima</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/c1nToClX_3w" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Drama | 2h 25m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt11286314" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt11286314/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Não Olhe para Cima(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Leonardo DiCaprio, Jennifer Lawrence, Meryl Streep</p>
+                    <p>Baseado em possíveis fatos reais.</p>
+                    <p>Dois astrônomos descobrem um cometa mortal vindo em direção à Terra e partem em um tour midiático
+                        para alertar a humanidade. Só que ninguém parece dar muita bola.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="nanaturezaselvagem" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Na Natureza Selvagem</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/4u07rpXrTz8" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2007 | Drama/Aventura | 2h 28m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0758758" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0758758/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Na Natureza Selvagem(2007) on IMDb" /></a></span></p>
+                    <p>Elenco: Emile Hirsch, Marcia Gay Harden, William Hurt</p>
+                    <p>Uma aventura baseada em fatos reais.</p>
+                    <p>Christopher McCandless, filho de pais ricos, se forma na universidade de Emory como um dos
+                        melhores estudantes e atletas. Porém, em vez de em embarcar em uma carreira prestigiosa e
+                        lucrativa, ele escolhe doar suas economias para caridade, livrar-se de seus pertences e viajar
+                        pelo Alasca.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="oladobomdavida" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Lado Bom da Vida</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/h2xb_rkbAU8" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2012 | Drama/Romance | 2h 2m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1045658" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1045658/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Lado Bom da Vida(2012) on IMDb" /></a></span></p>
+                    <p>Elenco: Bradley Cooper, Jennifer Lawrence, Robert De Niro</p>
+                    <p>Cuidado com os sinais.</p>
+                    <p>Depois de uma fase difícil de sua vida, Pat Solitano Jr. está disposto a seguir em frente e
+                        reconquistar sua ex-mulher. Através de amigos, ele conhece Tiffany, que lhe promete ajuda na
+                        tarefa da reconquista. Uma inesperada ligação começa a uni-los.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="taofortetaoperto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tão Forte e Tão Perto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/dmqQQMl73Lc" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2011 | Drama/Mistério | 2h 9m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0477302" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0477302/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Tão Forte e Tão Perto(2011) on IMDb" /></a></span></p>
+                    <p>Elenco: Tom Hanks, Thomas Horn, Sandra Bullock</p>
+                    <p>Nada tem tanto poder como a curiosidade de uma criança.</p>
+                    <p>Um menino de 9 anos perde seu pai no atentado de 11 de setembro em Nova York. Ele acha uma chave
+                        em sua casa e acredita ser uma mensagem de seu pai. Começa assim uma comovente expedição pela
+                        cidade para achar a fechardura que se abre com a chave.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="umsonhopossivel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Um Sonho Possível</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/qacQrxVl0Xo" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2009 | Drama | 2h 9m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0878804" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt0878804/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Um Sonho Possível(2009) on IMDb" /></a></span></p>
+                    <p>Elenco: Sandra Bullock, Quinton Aaron, Tim McGraw</p>
+                    <p>Baseado em uma extraordinária história real.</p>
+                    <p>Michael Oher é um jovem negro, filho de uma mãe viciada e que não tem onde morar. Com boa vocação
+                        para os esportes, um dia ele é avistado pela família de Leigh Anne Tuohy, andando em direção ao
+                        estádio da escola para dormir longe da chuva. Ao ser convidado para passar uma noite na casa dos
+                        milionários, Michael não tem ideia que aquele dia mudaria para sempre a sua vida. Com a ajuda da
+                        nova família e de uma tutora dedicada, ele percebe seu potencial como estudante e jogador de
+                        futebol americano.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="snowden" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Snowden: Herói ou Traidor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/cJkp4blUyl8" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2016 | Drama/Suspense | 2h 14m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3774114" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt3774114/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Snowden: Herói ou Traidor(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Joseph Gordon-Levitt, Shailene Woodley, Melissa Leo</p>
+                    <p>O único lugar seguro é fugindo.</p>
+                    <p>Desiludido com o mundo da inteligência secreta, o ex-funcionário da CIA, Edward Snowden, vaza
+                        documentos sigilosos da NSA.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="extraordinario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Extraordinario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/6g80d7igX0k" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2017 | Drama | 1h 53m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2543472" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2543472/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Extraordinario(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Julia Roberts, Jacob Tremblay, Owen Wilson</p>
+                    <p>Você está pronto para conhecer Auggie Pullman?</p>
+                    <p>Auggie Pullman é um garoto que nasceu com uma deformidade facial e precisou passar por 27
+                        cirurgias plásticas. Aos 10 anos, ele finalmente começa a frequentar uma escola regular, como
+                        qualquer outra criança, pela primeira vez. No quinto ano, ele precisa se esforçar para conseguir
+                        se encaixar em sua nova realidade.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ateoriadetudo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Teoria de Tudo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/SbUVNHdPE4w" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2014 | Drama/Romance | 2h 3m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2980516" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2980516/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Teoria de Tudo(2014) on IMDb" /></a></span></p>
+                    <p>Elenco: Eddie Redmayne, Felicity Jones, Tom Prior</p>
+                    <p>A Extraordinária História de Jane e Stephen Hawking</p>
+                    <p>Baseado na história de Stephen Hawking, o filme expõe como o astrofísico fez descobertas
+                        relevantes para o mundo da ciência, inclusive relacionadas ao tempo. Também retrata seu romance
+                        com Jane Wilde, uma estudante de Cambridge que viria a se tornar sua esposa. Aos 21 anos de
+                        idade, Hawking descobriu que sofria de uma doença motora degenerativa, mas isso não o impediu de
+                        se tornar um dos maiores cientistas da atualidade.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="nocoraçãodomar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">No Coração do Mar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/E_hwdx5k5_k" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2015 | Drama/Aventura | 2h 1m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1390411" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1390411/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="No Coração do Mar(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Chris Hemsworth, Benjamin Walker, Cillian Murphy </p>
+                    <p>Baseado na incrível história real que inspirou Moby-Dick.</p>
+                    <p>Nesta história real que inspirou Moby Dick, a tripulação de um navio baleeiro luta
+                        desesperadamente para sobreviver ao ataque de uma baleia gigante.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="milagredafé" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Superação: O Milagre da Fé</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/wLr6rTgytvc" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2019 | Drama | 1h 56m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt7083526" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt7083526/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Superação: O Milagre da Fé(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Chrissy Metz, Mike Colter, Topher Grace </p>
+                    <p>Baseado numa incrível história real.</p>
+                    <p>Durante um passeio com a família em uma manhã de inverno no Lago St Louis, no Missouri, o menino John Smith, de apenas 14 anos, sofre uma queda e se afoga por mais de 15 minutos. Chegando ao hospital, John é considerado morto por mais de uma hora até que sua mãe, Joyce Smith, ao lado do pai e de um pastor, junta todas as suas forças e pede a Deus para que seu filho sobreviva. Sua prece poderosa é responsável por um milagre inédito.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="milagre" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Milagre na Cela 7</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/kipVc36vCTI" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2019 | Drama | 2h 12m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt10431500" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt10431500/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Milagre na Cela 7(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Aras Bulut İynemli, Nisa Sofiya Aksongur, Deniz Baysal </p>
+                    <p>Memo, um pastor de ovelhas com deficiência mental, vive com sua filha e avó em uma vila na costa turca do mar Egeu. Um dia, sua vida é virada de cabeça para baixo quando a filha do comandante morre e Memo é acusado do assassinato e condenado à morte.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="meupai" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Meu Pai</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/yJW4szoZX1U" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2020 | Drama | 1h 37m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt10272386" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt10272386/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Meu Pai(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Anthony Hopkins, Olivia Colman, Mark Gatiss</p>
+                    <p>Um homem recusa toda a ajuda de sua filha à medida que envelhece. Ele começa a duvidar dos entes queridos, de sua própria mente e de sua realidade ao tentar compreender as mudanças que estão acontecendo em sua vida.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="coracoesdeferro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Corações de Ferro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/OoKSKzqpPy4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2014 | Drama/Guerra | 2h 14m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2713180" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2713180/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Corações de Ferro(2014) on IMDb" /></a></span></p>
+                    <p>Elenco: Brad Pitt, Shia LaBeouf, Logan Lerman</p>
+                    <p>Uma guerra nunca termina serenamente.</p>
+                    <p>Durante o final da Segunda Guerra Mundial, o sargento Don "Wardaddy" lidera um grupo de apenas cinco soldados americanos encarregado de aniquilar os nazistas. Em um tanque de guerra Sherman, os homens enfrentam uma missão mortal. Apesar da desvantagem numérica, falta de armas e um soldado inexperiente, "Wardaddy" e seus homens se movem em um ataque espetacular no coração da Alemanha nazista.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="estrelasalemdotempo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Estrelas Além do Tempo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/2CIqexd838s" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2016 | Drama/Ficção | 2h 7m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt4846340" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt4846340/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Estrelas Além do Tempo(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Taraji P. Henson, Octavia Spencer, Janelle Monáe</p>
+                    <p>Genialidade não tem raça. Força não tem gênero. Coragem não tem limite.</p>
+                    <p>No auge da corrida espacial travada entre Estados Unidos e Rússia durante a Guerra Fria, uma equipe de cientistas da NASA, formada exclusivamente por mulheres afro-americanas, provou ser o elemento crucial que faltava na equação para a vitória dos Estados Unidos, liderando uma das maiores operações tecnológicas registradas na história americana e se tornando verdadeiras heroínas da nação.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ateoultimohomem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Até o Último Homem</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/zCzcZD65neE" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2016 | Drama/Guerra | 2h 19m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2119532" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2119532/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Até o Último Homem(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Andrew Garfield, Vince Vaughn, Teresa Palmer</p>
+                    <p>Um dos maiores heróis da história americana nunca disparou uma bala.</p>
+                    <p>Acompanhe a história de Desmond T. Doss, um médico do exército americano que, durante a Segunda Guerra Mundial, se recusa a pegar em armas. Durante a Batalha de Okinawa ele trabalha na ala médica e salva cerca de 75 homens.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="coringa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Coringa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/i-mq08BpLWE" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2019 | Drama/Crime | 2h 2m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt7286456" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt7286456/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Coringa(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Joaquin Phoenix, Robert De Niro, Zazie Beetz</p>
+                    <p>Coloque um sorriso nessa cara.</p>
+                    <p>Isolado, intimidado e desconsiderado pela sociedade, o fracassado comediante Arthur Fleck inicia seu caminho como uma mente criminosa após assassinar três homens em pleno metrô. Sua ação inicia um movimento popular contra a elite de Gotham City, da qual Thomas Wayne é seu maior representante.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="vidadepois" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Vida Depois</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/WkhI3kIT-cg" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Drama | 1h 32m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt11847410" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt11847410/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Vida Depois(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Jenna Ortega, Maddie Ziegler, Niles Fitch</p>
+                    <p>Nada será como antes.</p>
+                    <p>A estudante do Ensino Médio Vada tem que lidar com as consequências emocionais de uma tragédia escolar. Enquanto se reinventa, ela também reavalia seus relacionamentos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="noritmodocoracão" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">No Ritmo do Coração</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/USGw538dzuU" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Drama/Musical | 1h 51m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt10366460" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt10366460/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="No Ritmo do Coração(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Emilia Jones, Marlee Matlin, Eugenio Derbez</p>
+                    <p>Toda família tem sua própria linguagem.</p>
+                    <p>Ruby, de 17 anos, é a única pessoa que ouve em uma família de surdos. Quando o negócio de seus pais é ameaçado, ela fica dividida entre seu amor pela música e suas obrigações.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="radioactive" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Radioactive</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/3XLw8cCSPIo" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2019 | Drama/Romance | 1h 43m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6017756" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt6017756/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Radioactive(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Rosamund Pike, Sam Riley, Aneurin Barnard</p>
+                    <p>Pioneira. Gênio. Rebelde.</p>
+                    <p>Movida por uma mente brilhante e uma grande paixão, Marie Curie embarca em uma jornada científica com o marido, Pierre, para explicar elementos radioativos até então desconhecidos. Logo se torna evidente que seu trabalho pode levar salvar milhares de vidas se aplicado na medicina - ou destruir bilhões se for usado na guerra.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="portodaaminhavida" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Por Toda a Minha Vida</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/mWyJvohEFj8" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2020 | Drama | 1h 33m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt8305852" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt8305852/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Por Toda a Minha Vida(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Jessica Rothe, Harry Shum Jr., Kyle Allen</p>
+                    <p>Baseado em uma verdadeira história de amor.</p>
+                    <p>Um jovem casal planeja seu casamento mesmo após o diagnóstico de câncer devastador do noivo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ataquedoscaês" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ataque dos Cães</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/QoLe_gCavww" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Drama/Faroeste | 2h 5m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt10293406" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt10293406/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Ataque dos Cães(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Benedict Cumberbatch, Kirsten Dunst, Jesse Plemons</p>
+                    <p>Um fazendeiro durão trava uma guerra de ameaças contra a nova esposa do irmão e seu filho adolescente, até que antigos segredos vêm à tona.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="kingrichard" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">King Richard: Criando Campeãs</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/9MRLMEMhNb0" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Drama/Esporte | 2h 24m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt9620288" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt9620288/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="King Richard(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Will Smith, Aunjanue Ellis, Saniyya Sidney</p>
+                    <p>Venus, Serena e um plano para a grandeza.</p>
+                    <p>Richard Williams é um pai dedicado e determinado a tornar suas filhas, Venus e Serena, em lendas do esporte. Com métodos pouco tradicionais, ele cria duas das maiores atletas de todos os tempos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tick" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tick, Tick... Boom!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/gOSGZGdp0lI" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Drama/Aventura | 2h 1m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt8721424" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt8721424/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Tick, Tick... Boom!(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Andrew Garfield, Vanessa Hudgens, Bradley Whitford</p>
+                    <p>Quanto tempo temos para fazer algo grande?</p>
+                    <p>Prestes a completar 30 anos, um compositor promissor lida com o amor, a amizade e a pressão para criar algo incrível antes que o tempo acabe.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="stevejobs" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Steve Jobs</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/0EFazRwoSlA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2015 | Drama | 2h 2m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2080374" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2080374/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Steve Jobs(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Michael Fassbender, Kate Winslet, Seth Rogen</p>
+                    <p>Pode um grande homem ser um bom homem?</p>
+                    <p>O filme destaca momentos decisivos na vida de Steve Jobs, desde o lançamento do primeiro Macintosh, em 1984, e a criação da NeXT Inc, até a introdução revolucionária do iMac. Fatos da vida pessoal de Jobs também são revelados, especialmente o conturbado relacionamento com sua primeira filha Lisa.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="aredesocial" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Rede Social</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/6VtX6przSlI" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2010 | Drama | 2h | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1285016" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1285016/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Rede Social(2010) on IMDb" /></a></span></p>
+                    <p>Elenco: Jesse Eisenberg, Andrew Garfield, Justin Timberlake</p>
+                    <p>Você não consegue 500 milhões de amigos sem fazer alguns inimigos.</p>
+                    <p>Em uma noite de outono em 2003, o estudante de Harvard e gênio da computação Mark Zuckerberg se senta em seu computador e começa a trabalhar em um novo conceito que acaba se transformando em uma rede social global. Seis anos e 500 milhões de amigos mais tarde, Zuckerberg se torna o mais jovem bilionário da história com o sucesso de sua rede social. Mas sua ascensão sem precedentes traz complicações legais e pessoais.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="spencer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Spencer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/yS1oP3VaXQA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2021 | Drama | 1h 57m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt12536294" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt12536294/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Spencer(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Kristen Stewart, Timothy Spall, Jack Nielen</p>
+                    <p>Todo conto de fadas termina.</p>
+                    <p>Com roteiro de Steven Knight, SPENCER narra o que poderia ter acontecido nos últimos dias do casamento da princesa Diana com o príncipe Charles. O casamento da princesa Diana e do príncipe Charles há muito esfriou. E embora haja muitos rumores de casos e de divórcio, a paz foi ordenada para as festividades de Natal no Queen's Sandringham, a casa de campo da Família Real. O evento é repleto de comida e bebida, tiro e caça. Diana conhece as regras do jogo de aparências. Mas este ano, as coisas serão muito diferentes.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deusnãoestámorto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Deus Não Está Morto - O Próximo Capítulo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Au_tcy-m3Eg" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2021 | Drama | 1h 50m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt14578032" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt14578032/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Deus não está morto - O Próximo Capítulo(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: David A.R. White , William Forsythe , Isaiah Washington</p>
+                    <p>O próximo capítulo.</p>
+                    <p>O reverendo Dave Hill defende um grupo de famílias cristãs que estudam em casa após receberem uma inspeção surpresa de uma oficial progressista do governo local, que não gostou do que encontrou.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="milagresdoparaiso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Milagres do Paraíso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/3f2CYnOgtDU" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2016 | Drama | 1h 49m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt4257926" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt4257926/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Milagres do Paraíso(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Jennifer Garner, Kylie Rogers, Martin Henderson</p>
+                    <p>Como explicar o inexplicável?</p>
+                    <p>Christy e Kevin Beam são pais de três garotas: Abbie, Annabel e Adelynn. Cristãos convictos, os Beams vão à igreja com frequência. Um dia, Annabel começa a sentir fortes dores na região do abdome. Após muitos exames, é constatado que a garota possui um grave problema digestivo. Tal situação faz com que Christy busque a todo custo algum meio de salvar a vida da filha, ao mesmo tempo em que se afasta cada vez mais de sua crença em Deus.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="océuédeverdade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Céu é de Verdade</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/4Gn4YAUgU3A" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2014 | Drama | 1h 40m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1929263" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1929263/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Céu é de Verdade(2014) on IMDb" /></a></span></p>
+                    <p>Elenco: Greg Kinnear,Kelly Reilly,Margo Martindale</p>
+                    <p>Desvendado o mistério.</p>
+                    <p>Todd Burpo é pastor e bombeiro voluntário em uma pequena cidade do Nebraska. Ele e sua esposa enfrentam uma situação complicada quando seu filho, Colton, precisa ser operado às pressas. Felizes com a recuperação milagrosa da criança, eles não estão preparados para o que vem a seguir. Colton conta que foi ao céu e voltou e diz coisas que não teria como saber. Convicto de que o filho visitou o paraíso, Todd passa a questionar sua própria fé daquilo que pregava até então.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="agarotadinamarquesa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Garota Dinamarquesa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/vjq2FgjpXow" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2015 | Drama/Romance | 1h 59m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0810819" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt0810819/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Garota Dinamarquesa(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Eddie Redmayne, Alicia Vikander, Ben Whishaw</p>
+                    <p>Inspirado na extraordinária história real.</p>
+                    <p>Na Copenhague de 1926, os artistas Einar e Gerda Wegener se casam. Gerda então decide vestir Einar de mulher para pintá-lo. Einar começa a mudar sua aparência, transformando-se em uma mulher, e passa a se chamar de Lili Elbe. Com o apoio, ainda que conturbado, da esposa, um Einar deprimido passa por uma das primeiras cirurgias de mudança de sexo da história para tentar se transformar por completo em Lili e recuperar o gosto pela vida.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="aduquesa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Duquesa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/111EyWUrYZM" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2008 | Drama | 1h 50m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0864761" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt0864761/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Duquesa(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Keira Knightley, Ralph Fiennes, Charlotte Rampling</p>
+                    <p>O escândalo que chocou uma nação. A coragem que definiu uma mulher.</p>
+                    <p>A duquesa Georgina de Devonshire usou de todas as suas influências para participar do cenário político dos ingleses durante o final de 1700. Porém, mesmo adorada pelo povo e com todo seu poder e charme, a duquesa não conseguiu conquistar o coração de seu marido.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="astorresgemeas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">As Torres Gêmeas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/r-gwQVzwCbQ" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2006 | Drama | 2h 9m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0469641" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt0469641/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="As Torres Gêmeas(2006) on IMDb" /></a></span></p>
+                    <p>Elenco: Nicolas Cage, Michael Peña, Maria Bello</p>
+                    <p>O mundo viu o mal naquele dia. Dois homens viram outra coisa.</p>
+                    <p>Dois agentes da Autoridade Portuária, o sargento John McLoughlin e o diretor de Will Jimeno, ficam presos nos escombros do World Trade Center depois de ajudarem as pessoas escapar dos edifícios durante os ataques terroristas de 11 de setembro de 2001.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ojogodaimitação" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Jogo da Imitação</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/YIkKbMcJL_4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2014 | Drama/Guerra | 1h 54m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2084970" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2084970/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Jogo da Imitação(2014) on IMDb" /></a></span></p>
+                    <p>Elenco: Benedict Cumberbatch, Keira Knightley, Matthew Goode</p>
+                    <p>O verdadeiro enigma estava no homem que desvendou o código.</p>
+                    <p>Em 1939, a recém-criada agência de inteligência britânica MI6 recruta Alan Turing, um aluno da Universidade de Cambridge, para entender códigos nazistas, incluindo o "Enigma", que criptógrafos acreditavam ser inquebrável. A equipe de Turing, incluindo Joan Clarke, analisa as mensagens de "Enigma", enquanto ele constrói uma máquina para decifrá-las. Após desvendar as codificações, Turing se torna herói. Porém, em 1952, autoridades revelam sua homossexualidade, e a vida dele vira um pesadelo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="omeninoquedescobriuovento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Menino Que Descobriu o Vento</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/OBprnlpM744" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2019 | Drama | 1h 53m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt7533152" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt7533152/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Menino Que Descobriu o Vento(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Maxwell Simba , Chiwetel Ejiofor , Aïssa Maïga</p>
+                    <p>Sempre esforçando-se para adquirir conhecimentos diversificados, um jovem de Malawi se cansa de assistir todos os colegas de seu vilarejo passando por dificuldades e começa a desenvolver uma inovadora turbina de vento.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-link">
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>Copyright@ 2022 SUPERFLIX</p>
+    </footer>
+<script src="JS/main.js"></script>
+</body>
+
+</html>

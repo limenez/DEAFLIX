@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEAFLIX - Romance</title>
+    <link rel="icon" href="img/logo deafilx.svg" />
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/jquery-1.11.0.min.js"></script>
+    <script src="JS/jquery-migrate-1.2.1.min.js"></script>
+    <script src="JS/slick.min.js"></script>
+    <link rel="stylesheet" href="css/imdbRating.css">
+    <link rel="stylesheet" type="text/css" href="CSS/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background: rgb(27,20,100);
+        background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%);
+    }
+
+    .tabelagrid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, 150px);
+        grid-template-rows: repeat(3, 210px);
+    }
+
+    .tabelagrid>div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tabelagrid img {
+        width: 400px;
+        height: 400px;
+        padding: 30px;
+    }
+
+    h4 {
+        color: #fff;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #1B1464;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="img/logo-deafilx.png" alt="" width="200" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.html">INÍCIO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">FILMES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acao.html">AÇÃO</a></li>
+                            <li><a class="dropdown-item" href="comedia.html">COMÉDIA</a></li>
+                            <li><a class="dropdown-item" href="documentario.html">DOCUMENTÁRIOS</a></li>
+                            <li><a class="dropdown-item" href="drama.html">DRAMA</a></li>
+                            <li><a class="dropdown-item" href="ficcao.html">FICÇÃO</a></li>
+                            <li><a class="dropdown-item" href="romance.html">ROMANCE</a></li>
+                            <li><a class="dropdown-item" href="suspense.html">SUSPENSE</a></li>
+                            <li><a class="dropdown-item" href="terror.html">TERROR</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="series.html">SÉRIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="infantil.html">INFANTIL</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">PERFIL</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="conta.html">CONTA</a></li>
+                            <li><a class="dropdown-item" href="centrodeajuda.html">CENTRAL DA AJUDA</a></li>
+                            <li><a class="dropdown-item" href="login.html">SAIR</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="icons">
+                    <div class="notification">
+                        <a href="#">
+                            <div class="notBtn" href="#">
+                                <div class="number">3</div>
+                                <i class="fas fa-bell" style="color: #fff; font-size: 40px;"></i>
+                                <div class="box">
+                                    <div class="display">
+                                        <div class="nothing">
+                                            <i class="fas fa-child stick"></i>
+                                            <div class="cont">
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/strangerthings4.png">
+                                                        </div>
+                                                        <div class="txt">Stranger Things estreia novas temporadas</div>
+                                                        <div class="txt sub">27/05 - 1 Volume e 01/07 - 2 Volume</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/batman.png">
+                                                        </div>
+                                                        <div class="txt">The Batman novo lançamento</div>
+                                                        <div class="txt sub">03/03</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/la_casa_de_papel.png">
+                                                        </div>
+                                                        <div class="txt">La Casa de Papel chegou nova temporada</div>
+                                                        <div class="txt sub">03/12</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/the-mandalorian.png">
+                                                        </div>
+                                                        <div class="txt">O Mandaloriano resgata um criança que realiza à guerra galáxia.</div>
+                                                        <div class="txt sub">12/11</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/lupin.png">
+                                                        </div>
+                                                        <div class="txt">Lupin estreie no terceiro ou quarto trimestre de 2022</div>
+                                                        <div class="txt sub">08/08</div>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="d-flex">
+                    <div class="search-input">
+                        <a href="" target="_blank" hidden></a>
+                        <input type="text" placeholder="Faça sua busca aqui">
+                        <div class="autocom-box"></div>
+                        <div class="icon"><i class="fas fa-search" style="color: #1B1464;"></i></div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="scale-down">
+        <h4 style="margin-top: 30px;">Romance</h4>
+
+        <div class="tabelagrid">
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/yesterday.jpg" data-bs-toggle="modal" data-bs-target="#yesterday" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/comoeueraantesdevocê.jpg" data-bs-toggle="modal" data-bs-target="#comoeueraantesdevocê" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/amorcomdatamarcada.jpg" data-bs-toggle="modal" data-bs-target="#amorcomdatamarcada" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/atravesdaminhajanela.jpg" data-bs-toggle="modal" data-bs-target="#atravesdaminhajanela" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/aprovadefogo.jpg" data-bs-toggle="modal" data-bs-target="#aprovadefogo" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/ultimacartadeamor.jpg" data-bs-toggle="modal" data-bs-target="#ultimacartadeamor" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/acasadolago.jpg" data-bs-toggle="modal" data-bs-target="#acasadolago" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/aculpaedasestrelas.jpg" data-bs-toggle="modal" data-bs-target="#aculpaedasestrelas" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/sexosemcompromisso.jpg" data-bs-toggle="modal" data-bs-target="#sexosemcompromisso" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/amizadecolorida.jpg" data-bs-toggle="modal" data-bs-target="#amizadecolorida" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/orgulhoepreconceito.jpg" data-bs-toggle="modal" data-bs-target="#orgulhoepreconceito" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/umhomemdesorte.jpg" data-bs-toggle="modal" data-bs-target="#umhomemdesorte" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/umdia.jpg" data-bs-toggle="modal" data-bs-target="#umdia" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/cinquentatonsmaisescuros.jpg" data-bs-toggle="modal" data-bs-target="#cinquentatonsmaisescuros" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/rebecca.jpg" data-bs-toggle="modal" data-bs-target="#rebecca" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/umromanceproibido.jpg" data-bs-toggle="modal" data-bs-target="#umromanceproibido" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/acincopassosdevoce.jpg" data-bs-toggle="modal" data-bs-target="#acincopassosdevoce" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/seuuficar.jpg" data-bs-toggle="modal" data-bs-target="#seuuficar" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/adoraveismulheres.jpg" data-bs-toggle="modal" data-bs-target="#adoraveismulheres" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/porlugaresincríveis.jpg" data-bs-toggle="modal" data-bs-target="#porlugaresincríveis" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/omeunamoradodofuturo.jpg" data-bs-toggle="modal" data-bs-target="#omeunamoradodofuturo" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/titanic.jpg" data-bs-toggle="modal" data-bs-target="#titanic" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/umportoseguro.jpg" data-bs-toggle="modal" data-bs-target="#umportoseguro" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/amorteevidadecharlie.jpg" data-bs-toggle="modal" data-bs-target="#amorteevidadecharlie" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/aultimamusica.jpg" data-bs-toggle="modal" data-bs-target="#aultimamusica" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/paixaosemlimites.jpg" data-bs-toggle="modal" data-bs-target="#paixaosemlimites" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/foiapenasumsonho.jpg" data-bs-toggle="modal" data-bs-target="#foiapenasumsonho" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/desejoereparação.jpg" data-bs-toggle="modal" data-bs-target="#desejoereparação" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/queridojohn.jpg" data-bs-toggle="modal" data-bs-target="#queridojohn" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/aguaparaelefantes.jpg" data-bs-toggle="modal" data-bs-target="#aguaparaelefantes" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/omelhordemim.jpg" data-bs-toggle="modal" data-bs-target="#omelhordemim" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/mammamia.jpg" data-bs-toggle="modal" data-bs-target="#mammamia" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/simplesmenteacontece.jpg" data-bs-toggle="modal" data-bs-target="#simplesmenteacontece" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/questaodetempo.jpg" data-bs-toggle="modal" data-bs-target="#questaodetempo" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/Amoremlittleitaly.jpg" data-bs-toggle="modal" data-bs-target="#Amoremlittleitaly" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/afterdepoisdodesencontro.jpg" data-bs-toggle="modal" data-bs-target="#afterdepoisdodesencontro" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/aescolha.jpg" data-bs-toggle="modal" data-bs-target="#aescolha" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/idasevindasdoamor.jpg" data-bs-toggle="modal" data-bs-target="#idasevindasdoamor" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/cinderela.jpg" data-bs-toggle="modal" data-bs-target="#cinderela" /></div>
+            <div><img class="row__poster row__posterLarge"  src="assets/filmes/abelaeafera.jpg" data-bs-toggle="modal" data-bs-target="#abelaeafera" /></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="amorcomdatamarcada" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Amor com Data Marcada </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/iKv4NLomON4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2020 | Comédia/Romance | 1h 44min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt9866072" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt9866072/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" Amor com Data Marcada
+                        (2020) on IMDb" />
+                            </a></span></p>
+                    <p>Elenco: Emma Roberts, Luke Bracey, Kristin Chenoweth</p>
+                    <p>Quem é o seu acompanhante perfeito?</p>
+                    <p>Sloane é uma jovem sarcástica que acredita estar bem sozinha. Jackson é um solteiro divertido que
+                        procura companhia sem romance. Os dois fazem um acordo: ser o par um do outro em ocasiões
+                        especiais. Mas o que fazer quando sentimentos aparecem para complicar tudo?</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="atravesdaminhajanela" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Através da Minha Janela</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/DB9-hN0s3r8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2022 | Romance | 1h 53min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt14463484" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt14463484/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt=" Através da Minha Janela(2022) on IMDb" /></a></span></p>
+                    <p>Elenco: Clara Galle, Julio Peña Fernández, Guillermo Lasheras</p>
+                    <p>Tudo começou com a senha do Wi-Fi...</p>
+                    <p>A paixão de Raquel pelo vizinho vira algo mais depois que ele também começa a sentir algo por
+                        ela, apesar das objeções da família</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="yesterday" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Yesterday</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/eW3ahnN4Emk" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2019 | Romance | 1h 56m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt8079248" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt8079248/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Yesterday(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Himesh Patel, Lily James, Ed Sheeran</p>
+                    <p>Todos no mundo se esqueceram dos Beatles. Todos, exceto Jack...</p>
+                    <p>Após sofrer um acidente, um cantor e compositor acorda em uma estranha realidade em que ele é a
+                        única pessoa que lembra dos Beatles. Com as músicas de seus ídolos, ele se transforma em um
+                        grande sucesso, mas a fama tem seu preço.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="comoeueraantesdevocê" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Como Eu Era Antes de Você</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/PnqUs3xiAVI" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2016 | Romance/Drama | 1h 50m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2674426" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2674426/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Como Eu Era Antes de Você(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Emilia Clarke, Sam Claflin, Janet McTeer</p>
+                    <p>Viva corajosamente.</p>
+                    <p>De origem modesta e sem grandes aspirações, a peculiar Louisa Clark é contratada para ser
+                        cuidadora de Will, um jovem tetraplégico depressivo e cínico.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="aprovadefogo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Á Prova de Fogo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/KRFEKRT0fcc" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2008 | Romance/Religião | 1h 58m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1129423" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1129423/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Á Prova de Fogo(2008) on IMDb" /></a></span></p>
+                    <p>Elenco: Kirk Cameron, Erin Bethea, Ken Bevel</p>
+                    <p>Nunca deixe seu parceiro para trás.</p>
+                    <p>Bombeiro dedicado enfrenta um possível divórcio. Quando toda esperança parece acabar, seu pai
+                        religioso intervém.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ultimacartadeamor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Última Carta de Amor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/AfwAAH0sQEQ" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2021 | Romance/Drama | 1h 50m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1893273" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1893273/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Última Carta de Amor(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Shailene Woodley, Felicity Jones, Callum Turner</p>
+                    <p>Não deixe de escrever sua história de amor.</p>
+                    <p>Depois de encontrar uma série de cartas de amor de 1965, uma repórter decide resolver o mistério
+                        de um romance secreto – e, quem sabe, se apaixonar também?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="acasadolago" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Casa do Lago</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/sQGcHQTRijM" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2006 | Romance | 1h 45m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0410297" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0410297/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Casa do Lago(2006) on IMDb" /></a></span></p>
+                    <p>Elenco: Keanu Reeves, Sandra Bullock, Christopher Plummer</p>
+                    <p>É possível amar alguém que você nunca viu?</p>
+                    <p>Uma médica solitária vai morar numa linda casa na beira de um lago, apaixona-se por um arquiteto
+                        frustrado, que troca de bilhetes com ela pela caixa de correio da casa onde ela mora. Quando
+                        eles descobrem que estão vivendo no mesmo dia, mas com dois anos de diferença, eles resolvem
+                        desafiar o tempo e tentam descobrir qual é o mistério atrás do incrível romance deles.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="aculpaedasestrelas" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Culpa é das Estrelas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/lFOOZJ1UChg" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2014 | Romance | 2h 6m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2582846" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2582846/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Culpa é das Estrelas(2014) on IMDb" /></a></span></p>
+                    <p>Elenco: Shailene Woodley, Ansel Elgort, Nat Wolff</p>
+                    <p>Hazel Grace Lancaster e Augustus Waters são dois adolescentes que se conhecem em um grupo de
+                        apoio para pacientes com câncer. Por causa da doença, Hazel sempre descartou a ideia de se
+                        envolver amorosamente, mas acaba cedendo ao se apaixonar por Augustus. Juntos, eles viajam para
+                        Amsterdã, onde embarcam em uma jornada inesquecível.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="sexosemcompromisso" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sexo sem Compromisso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/9f-sl8zFL5c" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2011 | Romance/Comédia | 1h 50m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1411238" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1411238/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Sexo sem Compromisso(2011) on IMDb" /></a></span></p>
+                    <p>Elenco: Natalie Portman, Ashton Kutcher, Kevin Kline</p>
+                    <p>A amizade tem seus benefícios.</p>
+                    <p>Amigos de longa data, Emma e Adam tornam seu relacionamento mais sério ao ter relações sexuais.
+                        Com medo de estragar a amizade entre eles, os novos amantes fazem um pacto para manter as coisas
+                        puramente no plano físico, sem brigas, sem ciúmes e sem expectativas. Emma e Adam prometem fazer
+                        o que quiserem, onde quiserem, contanto que não se apaixonem.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="amizadecolorida" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Amizade Colorida</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/v4DQgGQAIbQ" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2011 | Romance/Comédia | 1h 49m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1632708" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1632708/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Amizade Colorida(2011) on IMDb" /></a></span></p>
+                    <p>Elenco: Justin Timberlake, Mila Kunis, Patricia Clarkson</p>
+                    <p>Jamie é uma recrutadora em Nova York que convence Dylan, um diretor de arte de Los Angeles, a
+                        aceitar um emprego na revista GQ, em Manhattan. Os dois descobrem que têm muito em comum e se
+                        tornam amigos. Traumatizados por vários romances com finais infelizes, Dylan e Jamie decidem
+                        parar de procurar o amor verdadeiro e cair na diversão. Mas as coisas se complicam quando os
+                        melhores amigos acrescentam sexo ao relacionamento.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="orgulhoepreconceito" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Orgulho e Preconceito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Ur_DIHs92NM" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2005 | Romance/Drama | 2h 7m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0414387" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0414387/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Orgulho e Preconceito(2005) on IMDb" /></a></span></p>
+                    <p>Elenco: Keira Knightley, Matthew Macfadyen, Rosamund Pike</p>
+                    <p>Um romance à frente de seu tempo.</p>
+                    <p>Elizabeth Bennet vive com sua mãe, pai e irmãs no campo, na Inglaterra. Por ser uma das filhas
+                        mais velhas, ela enfrenta uma crescente pressão de seus pais para se casar. Quando Elizabeth é
+                        apresentada ao belo e rico Darcy, faíscas voam. Embora haja uma química óbvia entre os dois, a
+                        natureza excessivamente reservada de Darcy ameaça a relação.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="umhomemdesorte" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Um Homem de Sorte</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/X2ZMQMSmgZY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2012 | Romance/Drama | 1h 41m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1327194" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1327194/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Um Homem de Sorte(2012) on IMDb" /></a></span></p>
+                    <p>Elenco: Zac Efron, Taylor Schilling, Blythe Danner</p>
+                    <p>Logan Thibault volta da guerra do Iraque com a certeza de que seu talismã durante o conflito foi
+                        a fotografia de uma mulher que ele não conhece. Ele se aproxima dela sem lhe contar a verdade e
+                        se envolve em sua vida e com sua família.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="umdia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Um Dia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/FYDDEq-biew" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 |2011 | Romance/Drama | 1h 47m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1563738" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1563738/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Um Dia(2011) on IMDb" /></a></span></p>
+                    <p>Elenco: Anne Hathaway, Jim Sturgess, Patricia Clarkson</p>
+                    <p>Vinte anos. Duas pessoas...</p>
+                    <p>Emma Morley e Dexter Mayhew sentem uma conexão especial desde o dia em que se conheceram. Apesar
+                        de seguirem rumos diferentes, eles acabam se reencontrando todos os anos no dia 15 de julho.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cinquentatonsmaisescuros" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cinquenta Tons Mais Escuros</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/_XLcM5Wqe-Y" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2017 | Romance/Drama | 1h 58m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt4465564" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt4465564/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Cinquenta Tons Mais Escuros(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Dakota Johnson, Jamie Dornan, Bella Heathcote</p>
+                    <p>Sem mais regras.</p>
+                    <p>Incomodada com os hábitos e atitudes de Christian Grey, Anastasia decide terminar o
+                        relacionamento e focar no desenvolvimento de sua carreira. O desejo, porém, fala mais alto e ela
+                        logo volta aos jogos sexuais do conturbado empresário.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="rebecca" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Rebecca - A Mulher Inesquecível</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/VedvnAJxm7c" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2020 | Romance/Drama | 2h 3min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2235695" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2235695/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Rebecca - A Mulher Inesquecível(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Lily James, Armie Hammer, Kristin Scott Thomas</p>
+                    <p>Após se mudar para a mansão do marido, uma jovem recém-casada é assombrada pela presença da
+                        falecida mulher dele e por uma governanta assustadora.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="umromanceproibido" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Um Romance Proibido</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/_5grMpFTfkA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2014 | Romance/Drama | 1h 30min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3139538" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt3139538/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt=" Um Romance Proibido(2014) on IMDb" /></a></span></p>
+                    <p>Elenco: Martin Starr, Dina Shihabi, Paul Wesley</p>
+                    <p>Eles farão de tudo para ficarem juntos.</p>
+                    <p>Amira é uma imigrante iraquiana que mora nos Estados Unidos e luta para conseguir sua cidadania. Porém, para sobreviver no país ela realiza algumas atividades que infringem a lei. Em apuros durante uma dessas situações, ela precisará da ajuda de Sam, um amigo do marido que é ex-soldado e está se acostumando com a vida civil. Com a iminente deportação, uma história de amor surge entre os dois.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="acincopassosdevoce" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Cinco Passos de Você</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/meNwI-3Jbpw" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2019 | Romance/Drama | 1h 57min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6472976" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt6472976/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Cinco Passos de Você(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Haley Lu Richardson, Cole Sprouse, Moises Arias</p>
+                    <p>Se a vida te afastar, lute por cada centímetro.</p>
+                    <p>Dois adolescentes com fibrose cística se encontram em um hospital e se apaixonam, mesmo que sua doença os obrigue a evitar contato físico.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="seuuficar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Se Eu Ficar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/fFskURcUXv0" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2014 | Romance/Drama | 1h 47min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1355630" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1355630/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Se Eu Ficar(2014) on IMDb" /></a></span></p>
+                    <p>Elenco: Chloë Grace Moretz, Mireille Enos, Jamie Blackley</p>
+                    <p>Viva para amar.</p>
+                    <p>A jovem musicista Mia tem uma brilhante carreira pela frente, o que lhe gera dúvida entre dedicar-se integralmente à carreira, na famosa escola Julliard, ou a Adam, seu amor. Porém, a vida lhe traz uma surpresa. Mia sofre um grave acidente de carro, perde a família e fica à beira da morte. Em coma, ela reflete sobre o passado e o futuro que pode ter, caso sobreviva.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="adoraveismulheres" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Adoráveis Mulheres</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/lMXOEA2f2CE" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2019 | Romance/Drama | 2h 15min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3281548" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt3281548/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Adoráveis Mulheres(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Saoirse Ronan, Emma Watson, Florence Pugh</p>
+                    <p>Nos anos seguintes à Guerra de Secessão, Jo March e suas duas irmãs voltam para casa quando Beth, a tímida irmã caçula, desenvolve uma doença devastadora que muda para sempre a vida delas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="umromanceproibido" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Um Romance Proibido</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/_5grMpFTfkA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2014 | Romance/Drama | 1h 30min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3139538" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt3139538/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt=" Um Romance Proibido(2014) on IMDb" /></a></span></p>
+                    <p>Elenco: Martin Starr, Dina Shihabi, Paul Wesley</p>
+                    <p>Eles farão de tudo para ficarem juntos.</p>
+                    <p>Amira é uma imigrante iraquiana que mora nos Estados Unidos e luta para conseguir sua cidadania. Porém, para sobreviver no país ela realiza algumas atividades que infringem a lei. Em apuros durante uma dessas situações, ela precisará da ajuda de Sam, um amigo do marido que é ex-soldado e está se acostumando com a vida civil. Com a iminente deportação, uma história de amor surge entre os dois.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="omeunamoradodofuturo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Meu Namorado do Futuro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/m-7paPlcB84" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2011 | Romance/Ficção | 2h | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1747924" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1747924/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt=" O Meu Namorado do Futuro(2011) on IMDb" /></a></span></p>
+                    <p>Elenco: Sara Rue, Barry Watson, Fred Willard</p>
+                    <p>Marque um encontro com o destino.</p>
+                    <p>Um milênio depois de nossa era atual, Pax, um arqueologista responsável por estudar a cultura do passado da Terra, acaba encontrando em uma de suas expedições um livro escrito em 2010, cujo tema era o amor. Curioso para descobrir o que significa a palavra, Pax viaja no tempo até atingir a data em que o livro foi escrito para tentar encontrar a autora do romance, Elizabeth Barrett.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="titanic" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Titanic</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/CHekzSiZjrY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 1997 | Romance/Drama | 3h 14m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0120338" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0120338/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt=" Titanic(1997) on IMDb" /></a></span></p>
+                    <p>Elenco:  Leonardo DiCaprio, Kate Winslet, Billy Zane</p>
+                    <p>Nada na Terra poderia ficar entre eles.</p>
+                    <p>Jack Dawson  é um jovem aventureiro que, na mesa de jogo, ganha uma passagem para a primeira viagem do transatlântico Titanic. Trata-se de um luxuoso e imponente navio, anunciado na época como inafundável, que parte para os Estados Unidos. Nele está também Rose DeWitt Bukater, a jovem noiva de Caledon Hockley. Rose está descontente com sua vida, já que sente-se sufocada pelos costumes da elite e não ama Caledon. Entretanto, ela precisa se casar com ele para manter o bom nome da família, que está falida. Um dia, desesperada, Rose ameaça se atirar do Titanic, mas Jack consegue demovê-la da ideia. Pelo ato ele é convidado a jantar na primeira classe, onde começa a se tornar mais próximo de Rose. Logo eles se apaixonam, despertando a fúria de Caledon. A situação fica ainda mais complicada quando o Titanic se choca com um iceberg, provocando algo que ninguém imaginava ser possível: o naufrágio do navio.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="umportoseguro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Um Porto Seguro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/g_b9Dtl3qKQ" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2013 | Romance/Drama | 1h 55m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1702439" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1702439/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Um Porto Seguro(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Julianne Hough, Josh Duhamel, Cobie Smulders</p>
+                    <p>Você Saberá Quando Encontrar.</p>
+                    <p>Quando uma misteriosa mulher chamada Katie se muda para a pequena cidade de Southport, Carolina do Sul, seus novos vizinhos começam a levantar questões sobre seu passado. Bela e discreta, ela evita qualquer tipo de laço pessoal com os outros habitantes da região até que conhece o charmoso Alex, um homem gentil, viúvo e pai de dois filhos, e a sincera Jo (Cobie Smulders), que se torna sua amiga. Katie começa a se interessar por Alex e se sente cada vez mais afeiçoada a ele e sua família. Ela acaba se apaixonando mas um segredo de seu passado a impede de ser plenamente feliz.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="amorteevidadecharlie" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Morte e Vida de Charlie</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/M8iVf7ilhr0" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2010 | Romance | 1h 40m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1438254" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1438254/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Morte e Vida de Charlie(2010) on IMDb" /></a></span></p>
+                    <p>Elenco: Zac Efron, Amanda Crew, Charlie Tahan</p>
+                    <p>A vida é para viver.</p>
+                    <p>Adorado pela mãe e pelo irmãozinho Sam, Charlie St. Cloud é um velejador de sucesso e universitário com um futuro brilhante. Quando Sam morre em um um terrível acidente, os sonhos de Charlie também desaparecem. Porém a ligação entre os dois irmãos é tão forte que eles se encontram todos os dias ao entardecer. A volta de uma ex-colega de escola obriga Charlie a tomar uma decisão difícil: permanecer preso ao passado ou deixar que o amor lhe mostre o futuro.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="aultimamusica" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Última Música</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/tlQpJAcNzJg" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2010 | Romance | 1h 48m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1294226" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1294226/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Última Música(2010) on IMDb" /></a></span></p>
+                    <p>Elenco: Miley Cyrus, Liam Hemsworth, Greg Kinnear</p>
+                    <p>Uma história sobre família, primeiro amor, segundas chances e o momento da vida que a leva de volta para casa.</p>
+                    <p>Uma garota rebelde é enviada a uma cidade costeira do sul durante o verão para ficar com seu pai. Através de seu amor mútuo pela música, a dupla distante aprende a se reconectar.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="paixaosemlimites" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Paixão Sem Limites</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/WFqdBYKQMos" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2010 | Romance/Drama | 1h 58m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1648216" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1648216/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Paixão Sem Limites(2010) on IMDb" /></a></span></p>
+                    <p>Elenco: Mario Casas, María Valverde, Álvaro Cervantes</p>
+                    <p>Você já esteve prestes a tocar o céu?</p>
+                    <p>Dois jovens, que pertencem a mundos diferentes, apaixonam-se e mergulham em uma emocionante jornada de descobertas. Babi é uma garota de classe alta, inocente, educada dentro de princípios rígidos. Hace é um rapaz rebelde, impulsivo, que adora viver perigosamente e está sempre participando em corridas ilegais de motos. Babi e Hace vão lutar contra preconceitos e contra todos, para viver uma história de amor digna de Romeu e Julieta.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="foiapenasumsonho" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Foi Apenas um Sonho</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/9LTxmSyc3vY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>1 | 2008 | Romance/Drama | 2h 5m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0959337" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0959337/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Foi Apenas um Sonho(2008) on IMDb" /></a></span></p>
+                    <p>Elenco: Kate Winslet, Leonardo DiCaprio, Michael Shannon</p>
+                    <p>Como você se liberta sem se separar?</p>
+                    <p>Frank e April estão bem distantes da convencionalidade dos subúrbios. No entanto, é exatamente isso que os irrita quando compram uma casa em Connecticut. Ele trabalha 10 horas por dia em um emprego que odeia enquanto ela, uma dona de casa na década de 1950, anseia por realização e paixão. Rebelando-se contra o tédio de suas vidas, o casal planeja uma fuga que vai por à prova seus limites.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="desejoereparação" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Desejo e Reparação</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/STvqLQzeqoc" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2007 | Romance/Drama | 2h 3m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0783233" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0783233/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Desejo e Reparação(2007) on IMDb" /></a></span></p>
+                    <p>Elenco: Keira Knightley, James McAvoy, Saoirse Ronan</p>
+                    <p>Dilacerados pela traição. Separados pela guerra. Ligados pelo amor.</p>
+                    <p>Este drama baseado no livro de Ian McEwan acompanha a vida de dois jovens amantes, Cecilia Tallis e Robbie Turner. Quando o casal é separado por causa de uma mentira inventada por Briony, irmã caçula e ciumenta de Cecilia, todos sofrem com as consequências. Robbie é preso, mas quando seus caminhos se cruzam novamente durante a Segunda Guerra Mundial, surge uma nova esperança.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="queridojohn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Querido John</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/_99xWg_Fesw" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2010 | Romance/Drama | 1h 48m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0989757" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0989757/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Querido John(2010) on IMDb" /></a></span></p>
+                    <p>Elenco: Channing Tatum, Amanda Seyfried, Richard Jenkins</p>
+                    <p>O que você faria com uma carta que mudou tudo?</p>
+                    <p>Quando o soldado John Tyree conhece Savannah Curtis, universitária idealista, um forte romance nasce entre eles. Durante sete anos de um tumultuado relacionamento, o casal se encontra apenas esporadicamente e mantém contato por meio de cartas de amor. Porém, a correspondência entre o casal desencadeia consequências imprevisíveis.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="aguaparaelefantes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Água para Elefantes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/MuSAKS5ZGHM" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2011 | Romance/Drama | 2h | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1067583" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1067583/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Água para Elefantes(2011) on IMDb" /></a></span></p>
+                    <p>Elenco: Reese Witherspoon, Robert Pattinson, Christoph Waltz</p>
+                    <p>A vida é o espetáculo mais espetacular da terra.</p>
+                    <p>Jacob Jankowski é um estudante de veterinária que está perto de se formar quando uma tragédia o força a abandonar a escola. Sem ter pra onde ir, ele pega um trem que pertence a um circo itinerante. Jacob consegue um emprego como tratador de animais e conhece Marlena, uma bela artista de circo. A compaixão que ambos sentem por um elefante especial chamado Rosie, os leva a se apaixonar, mas August, o marido de Marlena, se coloca no caminho deles.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="omelhordemim" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Melhor de Mim</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/_K_qbjm97tY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2014 | Romance/Drama | 1h 58m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1972779" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1972779/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Melhor de Mim(2014) on IMDb" /></a></span></p>
+                    <p>Elenco: Michelle Monaghan, James Marsden, Luke Bracey</p>
+                    <p>A vida é para viver.</p>
+                    <p>Amanda e Dawson se apaixonaram perdidamente na primavera 1964. Ela, uma garota bonita e de família tradicional, via no namorado um porto seguro para toda a sua paixão e seu espírito livre. Separados pelo destino, cada um seguiu o seu caminho até que, após 20 anos, um encontro inesperado traz à tona sentimentos que estavam perdidos no passado</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mammamia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Mamma Mia! O Filme</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/iCVpJ8x1Tnc" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2008 | Romance/Musical | 1h 48m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0795421" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0795421/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Mamma Mia! O Filme(2008) on IMDb" /></a></span></p>
+                    <p>Elenco: Meryl Streep, Amanda Seyfried, Pierce Brosnan</p>
+                    <p>Faça uma viagem pelo corredor que você nunca esquecerá.</p>
+                    <p>Donna, a proprietária de um hotel nas ilhas gregas, está preparando o casamento de sua filha com a ajuda de duas amigas. Enquanto isso, a noiva Sophie convida três ex-namorados de sua mãe na esperança de conhecer seu verdadeiro pai.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="simplesmenteacontece" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Simplesmente Acontece</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/qdK-H_E-gXA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2014 | Romance/Comédia | 1h 42m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1638002" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1638002/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Simplesmente Acontece(2014) on IMDb" /></a></span></p>
+                    <p>Elenco: Lily Collins, Sam Claflin, Christian Cooke</p>
+                    <p>Não se pode controlar as coisas que vêm do coração.</p>
+                    <p>Alex e Rosie são amigos inseparáveis que cresceram juntos em Londres, compartilhando entre si suas melhores experiências. Tudo muda quando Alex ganha uma bolsa de estudos e passa a morar nos EUA. Separados, seus caminhos agora são outros. Mas nos tempos de hoje é impossível não se conectar. E, em se tratando de amor, o difícil é fazer as escolhas certas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="questaodetempo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Questão de Tempo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/-0gX9g4Lxm8" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2013 | Romance | 2h 3m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2194499" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2194499/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Questão de Tempo(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Domhnall Gleeson, Rachel McAdams, Bill Nighy</p>
+                    <p>E se cada momento da vida viesse com uma segunda chance?</p>
+                    <p>Depois de descobrir que ele pode viajar no tempo, o jovem Tim Lake usa sua habilidade para ganhar o coração da mulher dos seus sonhos e salvar seu amigo de um desastre profissional.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Amoremlittleitaly" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Amor em Little Italy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/I-DMrk3hqEE" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2018 | Romance/Comédia | 1h 41m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6957966" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt6957966/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Amor em Little Italy(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Emma Roberts, Hayden Christensen, Danny Aiello</p>
+                    <p>O amor é um gosto adquirido.</p>
+                    <p>Nikki é uma talentosa chef que trabalha em Londres. Ao voltar à pizzaria da família em Little Italy, Canadá, ela reinicia um romance com seu amigo de infância. Mas há um problema: Leo é o filho do inimigo de sua família.</p>
+                </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="afterdepoisdodesencontro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">After - Depois do Desencontro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Vau1ELQQKdo" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Romance/Drama | 1h 38m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt13069986" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt13069986/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="After - Depois do Desencontro(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Josephine Langford , Hero Fiennes Tiffin , Louise Lombard</p>
+                    <p>Tessa toma uma decisão que pode mudar sua vida, mas isso prejudica seu relacionamento com Hardin. Em meio a brigas constantes, o casal tenta achar um ponto de equilíbrio.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="aescolha" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Escolha</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Yzvmf5WXGvo" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2016 | Romance/Drama | 1h 51m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3797868" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt3797868/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Escolha(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Teresa Palmer, Benjamin Walker, Alexandra Daddario</p>
+                    <p>Deixe seu coração decidir.</p>
+                    <p>Travis é um jovem que não acredita em relacionamentos, até que Gabby se muda para a casa ao lado. Ela o instiga logo de cara e os dois acabam se entregando a uma relação que nenhum deles esperava que acontecesse.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="idasevindasdoamor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Idas e Vindas do Amor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/rwjPn76s5wU" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2010 | Romance/Comédia | 2h 5m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0817230" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0817230/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Idas e Vindas do Amor(2010) on IMDb" /></a></span></p>
+                    <p>Elenco: Jessica Alba, Kathy Bates, Jessica Biel</p>
+                    <p>Uma história de amor. Mais ou menos.</p>
+                    <p>As armadilhas do amor moderno são exibidas numa roda viva de relacionamentos e a vida de solteiro no Dia dos Namorados.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cinderela" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cinderela</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/KsnlU2y-Lz0" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>Livre | 2015 | Romance/Infantil | 1h 52m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1661199" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1661199/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Cinderela(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Lily James, Richard Madden, Cate Blanchett</p>
+                    <p>Meia-noite é apenas o começo.</p>
+                    <p>A história acompanha a jovem Ella, cujo pai comerciante se casa novamente depois de ficar viúvo de sua mãe. Ansiosa para apoiá-lo, ela recebe bem a madrasta e suas filhas, Anastasia e Drisella, na nova casa. No entanto, quando seu pai morre subitamente, ela se vê à mercê de uma família cruel e invejosa. Trabalhando como empregada e agora chamada de Cinderela, ela começa a perder a esperança, mas uma fada madrinha provoca uma mudança em seu destino.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="abelaeafera" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Bela e a Fera</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/yzHuQPgO3Gs" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>10 | 2017 | Romance/Musical | 2h 19m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2771200" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2771200/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Bela e a Fera(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Emma Watson, Dan Stevens, Luke Evans</p>
+                    <p>Seja nosso convidado.</p>
+                    <p>Moradora de uma pequena aldeia francesa, Bela tem o pai capturado pela Fera e decide entregar sua vida ao estranho ser em troca da liberdade do progenitor. No castelo, ela conhece objetos mágicos e descobre que a Fera é na verdade um príncipe que precisa de amor para voltar à forma humana.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<footer>
+    <div class="social-link">
+        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <p>Copyright@ 2022 SUPERFLIX</p>
+</footer>
+<script src="JS/main.js"></script>
+</body>
+
+</html>

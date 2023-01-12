@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEAFLIX - Ação</title>
+    <link rel="icon" href="img/logo deafilx.svg" />
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/jquery-1.11.0.min.js"></script>
+    <script src="JS/jquery-migrate-1.2.1.min.js"></script>
+    <script src="JS/slick.min.js"></script>
+    <link rel="stylesheet" href="css/imdbRating.css">
+    <link rel="stylesheet" type="text/css" href="CSS/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background: rgb(27,20,100);
+        background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%);
+    }
+
+    .tabelagrid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, 150px);
+        grid-template-rows: repeat(3, 210px);
+    }
+
+    .tabelagrid>div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tabelagrid img {
+        width: 400px;
+        height: 400px;
+        padding: 30px;
+    }
+
+    h4 {
+        color: #fff;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #1B1464;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="img/logo-deafilx.png" alt="" width="200" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.html">INÍCIO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">FILMES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acao.html">AÇÃO</a></li>
+                            <li><a class="dropdown-item" href="comedia.html">COMÉDIA</a></li>
+                            <li><a class="dropdown-item" href="documentario.html">DOCUMENTÁRIOS</a></li>
+                            <li><a class="dropdown-item" href="drama.html">DRAMA</a></li>
+                            <li><a class="dropdown-item" href="ficcao.html">FICÇÃO</a></li>
+                            <li><a class="dropdown-item" href="romance.html">ROMANCE</a></li>
+                            <li><a class="dropdown-item" href="suspense.html">SUSPENSE</a></li>
+                            <li><a class="dropdown-item" href="terror.html">TERROR</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="series.html">SÉRIES</a>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="infantil.html">INFANTIL</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">PERFIL</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="conta.html">CONTA</a></li>
+                            <li><a class="dropdown-item" href="centrodeajuda.html">CENTRAL DA AJUDA</a></li>
+                            <li><a class="dropdown-item" href="login.html">SAIR</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="icons">
+                    <div class="notification">
+                        <a href="#">
+                            <div class="notBtn" href="#">
+                                <div class="number">3</div>
+                                <i class="fas fa-bell" style="color: #fff; font-size: 40px;"></i>
+                                <div class="box">
+                                    <div class="display">
+                                        <div class="nothing">
+                                            <i class="fas fa-child stick"></i>
+                                            <div class="cont">
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/strangerthings4.png">
+                                                        </div>
+                                                        <div class="txt">Stranger Things estreia novas temporadas</div>
+                                                        <div class="txt sub">27/05 - 1 Volume e 01/07 - 2 Volume</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/batman.png">
+                                                        </div>
+                                                        <div class="txt">The Batman novo lançamento</div>
+                                                        <div class="txt sub">03/03</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/la_casa_de_papel.png">
+                                                        </div>
+                                                        <div class="txt">La Casa de Papel chegou nova temporada</div>
+                                                        <div class="txt sub">03/12</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/the-mandalorian.png">
+                                                        </div>
+                                                        <div class="txt">O Mandaloriano resgata um criança que realiza à guerra galáxia.</div>
+                                                        <div class="txt sub">12/11</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/lupin.png">
+                                                        </div>
+                                                        <div class="txt">Lupin estreie no terceiro ou quarto trimestre de 2022</div>
+                                                        <div class="txt sub">08/08</div>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="d-flex">
+                    <div class="search-input">
+                        <a href="" target="_blank" hidden></a>
+                        <input type="text" placeholder="Faça sua busca aqui">
+                        <div class="autocom-box"></div>
+                        <div class="icon"><i class="fas fa-search" style="color: #1B1464;"></i></div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="scale-down">
+        <h4 style="margin-top: 30px;">Ação</h4>
+
+        <div class="tabelagrid">
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/batman.jpg" data-bs-toggle="modal" data-bs-target="#batman" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/uncharted.jpg" data-bs-toggle="modal" data-bs-target="#uncharted" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/doutorestranho2.jpg" data-bs-toggle="modal" data-bs-target="#doutorestranho2" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/viuvanegra.jpg" data-bs-toggle="modal" data-bs-target="#viuvanegra" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/aranhahomem.jpg" data-bs-toggle="modal" data-bs-target="#aranhahomem" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/eternos.jpg" data-bs-toggle="modal" data-bs-target="#eternos" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/alertavermelho.jpg" data-bs-toggle="modal" data-bs-target="#alertavermelho" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/venom.jpg" data-bs-toggle="modal" data-bs-target="#venom" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/shangchi.jpg" data-bs-toggle="modal" data-bs-target="#shangchi" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/mortalkombat.jpg" data-bs-toggle="modal" data-bs-target="#mortalkombat" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/ligadajustiça2.jpg" data-bs-toggle="modal" data-bs-target="#ligadajustiça2" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/aguerradoamanha.jpg" data-bs-toggle="modal" data-bs-target="#aguerradoamanha" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/vingadores3.jpg" data-bs-toggle="modal" data-bs-target="#vingadores3" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/gijoesnakeeyes.jpg" data-bs-toggle="modal" data-bs-target="#gijoesnakeeyes" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/007contraspectre.jpg" data-bs-toggle="modal" data-bs-target="#007contraspectre" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/capitamarvel.jpg" data-bs-toggle="modal" data-bs-target="#capitamarvel" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/capitaoamerica3.jpg" data-bs-toggle="modal" data-bs-target="#capitaoamerica3" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/resgate.jpg" data-bs-toggle="modal" data-bs-target="#resgate" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/vf9.jpg" data-bs-toggle="modal" data-bs-target="#vf9" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/oregresso.jpg" data-bs-toggle="modal" data-bs-target="#oregresso" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/missãoimpossivel6.jpg" data-bs-toggle="modal" data-bs-target="#missãoimpossivel6" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/aorigem.jpg" data-bs-toggle="modal" data-bs-target="#aorigem" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/convergente.jpg" data-bs-toggle="modal" data-bs-target="#convergente" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/mazerunneracuramortal.jpg" data-bs-toggle="modal" data-bs-target="#mazerunneracuramortal" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/vingadoresultimato.jpg" data-bs-toggle="modal" data-bs-target="#vingadoresultimato" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/aquaman.jpg" data-bs-toggle="modal" data-bs-target="#aquaman" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/mulhermaravilha2.jpg" data-bs-toggle="modal" data-bs-target="#mulhermaravilha2" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/johnwick3.jpg" data-bs-toggle="modal" data-bs-target="#johnwick3" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/operaçãofronteira.jpg" data-bs-toggle="modal" data-bs-target="#operaçãofronteira" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/madmax.jpg" data-bs-toggle="modal" data-bs-target="#madmax" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/mateoumorra.jpg" data-bs-toggle="modal" data-bs-target="#mateoumorra" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/kingsman.jpg" data-bs-toggle="modal" data-bs-target="#kingsman" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/braven.jpg" data-bs-toggle="modal" data-bs-target="#braven" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/impasse.jpg" data-bs-toggle="modal" data-bs-target="#impasse" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/missãoresgate.jpg" data-bs-toggle="modal" data-bs-target="#missãoresgate" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/afortaleza.jpg" data-bs-toggle="modal" data-bs-target="#afortaleza" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/aprofissional.jpg" data-bs-toggle="modal" data-bs-target="#aprofissional" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/red.jpg" data-bs-toggle="modal" data-bs-target="#red" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/osmercenários.jpg" data-bs-toggle="modal" data-bs-target="#osmercenários" /></div>
+            <div><img class="row__poster row__posterLarge" src="assets/filmes/hobbseshaw.jpg" data-bs-toggle="modal" data-bs-target="#hobbseshaw" /></div>
+            
+            
+            
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="batman" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">The Batman (2022)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/w2zipr-sJ1I"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2022 | Ação/Aventura | 2h 56min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt1877830" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt1877830/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" Batman
+                    (2022) on IMDb" />
+                            </a></span></p>
+                    <p>Elenco: Robert Pattinson, Zoë Kravitz, Colin Farrell</p>
+                    <p>Após a perda de seus pais, Bruce Wayne acaba se tornando um vigilante na cidade de Gotham City.
+                    </p>
+                    <p>Bruce Wayne é um jovem bilionário da cidade de Gotham City, Nova Jersey, que também age
+                        secretamente como o vigilante noturno Batman após o assassinato dos seus pais.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="uncharted" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Uncharted: Fora do Mapa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/R68xqaxgTSI"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2022 | Aventura/Ação | 1h 56min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt1464335" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt1464335/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" Uncharted - Fora do Mapa
+                    (2022) on IMDb" />
+                            </a></span></p>
+                    <p>Elenco: Tom Holland, Mark Wahlberg, Sophia Ali</p>
+                    <p>A sorte favorece os audazes.</p>
+                    <p>Nathan Drake e seu parceiro canastrão Victor "Sully" Sullivan embarcam em uma perigosa busca para
+                        encontrar o maior tesouro jamais encontrado. Enquanto isso, eles também rastreiam pistas que
+                        podem levar ao irmão perdido de Nathan.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="doutorestranho2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Doutor Estranho no Multiverso da Loucura</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/idU-bx2x1a8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2022 | Ação/Aventura | 2h 28min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt9419884" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt9419884/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" Doutor Estranho no Multiverso da Loucura(2022) on IMDb" />
+                            </a></span></p>
+                    <p>Elenco: Benedict Cumberbatch, Chiwetel Ejiofor, Elizabeth Olsen</p>
+                    <p>O multiverso está estilhaçado em pedaços.</p>
+                    <p>Em Doutor Estranho no Multiverso da Loucura, após derrotar Dormammu e enfrentar Thanos nos
+                        eventos de Vingadores: Ultimato, o Mago Supremo, Stephen Strange, e seu parceiro Wong, continuam
+                        suas pesquisas sobre a Joia do Tempo. Mas um velho amigo que virou inimigo coloca um ponto final
+                        nos seus planos e faz com que Strange desencadeie um mal indescritível, o obrigando a enfrentar
+                        uma nova e poderosa ameaça. O longa se conecta com a série do Disney+ WandaVision e tem relação
+                        também com Loki. O longa pertence a fase 4 do MCU onde a realidade do universo pode entrar em
+                        colapso por causa do mesmo feitiço que trouxe os vilões do Teioso para o mundo dos Vingadores e
+                        o Mago Supremo precisará contar com a ajuda de Wanda, que vive isolada desde os eventos de
+                        WandaVision.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="viuvanegra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Viúva Negra</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Gm3o0bfGP3g"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2021 | Ação/Aventura | 2h 15min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt3480822" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt3480822/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Viúva Negra(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Scarlett Johansson, Florence Pugh, Rachel Weisz</p>
+                    <p>Seu mundo. Seus segredos. Seu legado.</p>
+                    <p>Ao nascer, a Viúva Negra, então conhecida como Natasha Romanova, é entregue à KGB, que a prepara
+                        para se tornar sua agente suprema. Porém, o seu próprio governo tenta matá-la quando a União
+                        Soviética se desfaz.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="venom" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Venom: Tempo de Carnificina</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/K1TloEu4EXA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Ação/Ficção | 1h 45min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt7097896" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt7097896/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Venom: Tempo de Carnificina(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Tom Hardy, Woody Harrelson, Michelle Williams</p>
+                    <p>O segredo de Eddie e se torna o hospedeiro de Carnificina.</p>
+                    <p>O relacionamento entre Eddie e Venom está evoluindo. Buscando a melhor forma de lidar com a
+                        inevitável simbiose, esse dois lados descobrem como viver juntos e, de alguma forma, se tornarem
+                        melhores juntos do que separados.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="aranhahomem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Homem-Aranha: Sem Volta para Casa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/EZo8V4XgzPY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2021 | Ação/Aventura | 2h 28min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt10872600" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt10872600/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Homem-Aranha: Sem Volta para Casa(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Tom Holland, Zendaya, Benedict Cumberbatch</p>
+                    <p>O Multiverso está aberto!!!</p>
+                    <p>O Homem-Aranha precisa lidar com as consequências da sua verdadeira identidade ter sido
+                        descoberta.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="eternos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Eternos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/lRrSFvZUgGw"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2021 | Ação/Aventura | 2h 37min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt9032400" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt9032400/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Eternos(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Gemma Chan, Richard Madden, Salma Hayek</p>
+                    <p>No início...</p>
+                    <p>Os Eternos são uma raça de seres imortais que viveram durante a antiguidade da Terra, moldando
+                        sua história e suas civilizações enquanto batalhavam os malignos Deviantes.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="alertavermelho" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Alerta Vermelho</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/5JQuYpBZarc"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2021 | Ação/Aventura | 1h 57min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt7991608" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt7991608/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Alerta Vermelho(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Dwayne Johnson, Ryan Reynolds, Gal Gadot</p>
+                    <p>Roubar é uma arte.</p>
+                    <p>Um agente do FBI persegue o ladrão de arte mais procurado do mundo. Ele só não esperava ter seu
+                        alvo como parceiro para prender uma bandida muito esperta.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="shangchi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Shang-Chi e a Lenda dos Dez Anéis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/wAmkU6FEKUw"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2021 | Ação/Aventura | 2h 12min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt9376612" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt9376612/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Shang-Chi e a Lenda dos Dez Anéis(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Simu Liu, Tony Leung Chiu-Wai, Awkwafina</p>
+                    <p>Você não pode fugir do seu destino.</p>
+                    <p>Shang-Chi é o filho do líder de uma organização criminosa poderosa. O rapaz foi criado desde
+                        criança para ser um guerreiro, mas decidiu abandonar esse caminho e fugiu para viver uma vida
+                        pacífica. Porém, tudo isso muda quando ele é atacado por um grupo de assassinos e se vê forçado
+                        a enfrentar seu passado.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mortalkombat" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Mortal Kombat</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/8Tk8sqXlogM"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Ação/Aventura | 1h 50min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt0293429" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt0293429/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Mortal Kombat(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Lewis Tan, Jessica McNamee, Josh Lawson</p>
+                    <p>Venha pra cá.</p>
+                    <p>O lutador de MMA Cole Young não conhece sua herança, nem sabe o motivo do Imperador da Exoterra
+                        ter enviado seu melhor guerreiro, Sub-Zero, para ir atrás dele. Temendo pela segurança de sua
+                        família, ele se une a outros heróis para proteger a Terra.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ligadajustiça2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Liga da Justiça de Zack Snyder</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/jt3-3LtSj6c"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Ação/Aventura | 4h 2min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt12361974" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt12361974/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Liga da Justiça de Zack Snyder(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Ben Affleck, Henry Cavill, Gal Gadot</p>
+                    <p>Caído. Ressuscitado. Unidos.</p>
+                    <p>Impulsionado pela restauração de sua fé na humanidade e inspirado pelo ato altruísta do Superman,
+                        Bruce Wayne convoca sua nova aliada Diana Prince para o combate contra um inimigo ainda maior,
+                        recém-despertado. Juntos, Batman e Mulher-Maravilha buscam e recrutam com agilidade um time de
+                        meta-humanos, mas mesmo com a formação da liga de heróis sem precedentes o ataque ao planeta
+                        ainda pode ser catastrófico.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="aguerradoamanha" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Guerra do Amanhã</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/iT5YPWGmh0k"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Ação/Ficção | 2h 20min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt9777666" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt9777666/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="A Guerra do Amanhã(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Chris Pratt, Yvonne Strahovski, J.K. Simmons</p>
+                    <p>A luta pelo amanhã começa hoje.</p>
+                    <p>O mundo fica chocado quando um grupo de viajantes do tempo chega em 2051 para entregar uma
+                        mensagem urgente: trinta anos no futuro, a humanidade está perdendo uma guerra global contra uma
+                        espécie alienígena mortal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="vingadores3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Vingadores: Guerra Infinita</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/4jGRyEa2jhE"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2018 | Ação/Ficção | 2h 29min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt4154756" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt4154756/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Vingadores: Guerra Infinita(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Robert Downey Jr., Chris Hemsworth, Chris Hemsworth</p>
+                    <p>Um universo inteiro. De uma vez por todas.</p>
+                    <p>Homem de Ferro, Thor, Hulk e os Vingadores se unem para combater seu inimigo mais poderoso, o
+                        maligno Thanos. Em uma missão para coletar todas as seis pedras infinitas, Thanos planeja
+                        usá-las para infligir sua vontade maléfica sobre a realidade.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="gijoesnakeeyes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">G.I. Joe Origens: Snake Eyes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/AyBCeaVokvg"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Ação/Aventura | 2h 1min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt8404256" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt8404256/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="G.I. Joe Origens: Snake Eyes(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Henry Golding, Andrew Koji, Úrsula Corberó</p>
+                    <p>O lendário guerreiro. Sua história de origem épica.</p>
+                    <p>Snake Eyes é um obstinado nômade que é bem-vindo a um antigo clã japonês chamado Arashikage,
+                        depois de salvar a vida de seu herdeiro aparente; ao chegar ao Japão, o clã Arashikage ensina a
+                        Snake Eyes os caminhos para se tornar um guerreiro ninja, ao mesmo tempo que fornece algo que
+                        ele sempre desejou: um lar; mas, quando os segredos de seu passado são revelados, a honra e a
+                        lealdade de Snake Eyes serão testadas, mesmo que isso signifique perder a confiança das pessoas
+                        mais próximas a ele.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="007contraspectre" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">007 - Contra Spectre</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/a7TBd8YPqLo"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2015 | Ação/Aventura | 2h 28min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt2379713" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt2379713/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="007 - Contra Spectre(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Daniel Craig, Christoph Waltz, Léa Seydoux</p>
+                    <p>Bem-vindo, James. Porque demorou tanto?</p>
+                    <p>James Bond chega à Cidade do México e está pronto para eliminar Marco Sciarra sem que o chef M
+                        saiba da missão. O caso leva à suspensão temporária do agente, que passa a ser constantemente
+                        vigiado pelo governo britânico graças a uma tecnologia implantada em seu corpo por Q. Na
+                        tentativa de despistar os inimigos e até mesmo alguns de seus parceiros de trabalho, ele se
+                        responsabiliza por ajudar a filha de um desafeto. Toda a situação o leva ao centro de uma temida
+                        organização denominada Spectre.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="capitamarvel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Capitã Marvel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/av2jODMFu6M"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2019 | Ação/Ficção | 2h 4min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt4154664" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt4154664/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Capitã Marvel(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Brie Larson, Samuel L. Jackson, Jude Law</p>
+                    <p>Mais alto. Mais longe. Mais rápido.</p>
+                    <p>Capitã Marvel, parte do exército de elite dos Kree, uma raça alienígena, encontra-se no meio de
+                        uma batalha entre seu povo e os Skrulls. Ao tentar impedir uma invasão de larga escala na Terra,
+                        em 1995, ela tem memórias recorrentes de uma outra vida, como Carol Danvers, agente da Força
+                        Aérea norte-americana. Com a ajuda de Nick Fury, Capitã Marvel precisa descobrir os segredos de
+                        seu passado e pôr um fim ao conflito intergalático com os Skrulls.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="capitaoamerica3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Capitão América: Guerra Civil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/FRLYZn5PGuA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2016 | Ação/Aventura | 2h 28min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt3498820" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt3498820/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Capitão América: Guerra Civil(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Chris Evans, Robert Downey Jr., Scarlett Johansson</p>
+                    <p>Unidos Venceremos. Divididos Cairemos.</p>
+                    <p>Depois do ataque de Ultron, os políticos decidem controlar os Vingadores, já que suas ações
+                        afetam toda a humanidade. A decisão coloca o Capitão América em rota de colisão com o Homem de
+                        Ferro.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="resgate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resgate</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/GMKKq_bYd0E"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2020 | Ação/Suspense | 1h 56min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt8936646" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt8936646/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Resgate(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Chris Hemsworth,Rudhraksh Jaiswal,Randeep Hooda</p>
+                    <p>Quando a missão termina, a redenção começa.</p>
+                    <p>Em Bangladesh, o mercenário do mercado negro Tyler Rake luta para sobreviver durante a missão
+                        para resgatar o filho sequestrado de um chefe do crime internacional.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="vf9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Velozes & Furiosos 9 </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/NnDGWyfP7q4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Ação/Aventura | 2h 25min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt5433138" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt5433138/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Velozes & Furiosos 9(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Vin Diesel, Michelle Rodriguez, Jordana Brewster</p>
+                    <p>A Justiça está chegando.</p>
+                    <p>Dominic Toretto e Letty vivem uma vida pacata ao lado do filho. Mas eles logo são ameaçados pelo
+                        passado de Dom: seu irmão desaparecido Jakob, que retorna e está trabalhando ao lado de Cipher.
+                        Cabe a Dom reunir a equipe novamente para enfrentá-los.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="oregresso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Regresso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/S4PpYv9n0ko"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2015 | Ação/Aventura | 2h 36min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt1663202" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt1663202/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="O Regresso(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Leonardo DiCaprio, Tom Hardy, Domhnall Gleeson</p>
+                    <p>Sangue perdido. Vida encontrada.</p>
+                    <p>Nos anos 1820, um caçador de peles luta pela sobrevivência para se vingar de um mercenário cruel
+                        que o deixou à beira da morte próximo ao rio Missouri.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="missãoimpossivel6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Missão: Impossível - Efeito Fallout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/0Y5u-o3JJNM"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2018 | Ação/Suspense | 2h 28min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt4912910" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt4912910/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Missão Impossível 6(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Tom Cruise, Henry Cavill, Ving Rhames</p>
+                    <p>Algumas missões não são uma escolha.</p>
+                    <p>Após o fracasso de uma missão, Ethan Hunt e sua equipe são obrigados a trabalhar com a CIA e
+                        parcerias do passado para salvar o mundo de um desastre nuclear.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="aorigem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Origem </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/0PIg7ttyegA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2010 | Ação/Ficção | 2h 28min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt1375666" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt1375666/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="A Origem (2010) on IMDb" /></a></span></p>
+                    <p>Elenco: Leonardo DiCaprio, Marion Cotillard, Elliot Page</p>
+                    <p>Sua mente é a cena do crime.</p>
+                    <p>Dom Cobb é um ladrão com a rara habilidade de roubar segredos do inconsciente, obtidos durante o
+                        estado de sono. Impedido de retornar para sua família, ele recebe a oportunidade de se redimir
+                        ao realizar uma tarefa aparentemente impossível: plantar uma ideia na mente do herdeiro de um
+                        império. Para realizar o crime perfeito, ele conta com a ajuda do parceiro Arthur, o discreto
+                        Eames e a arquiteta de sonhos Ariadne. Juntos, eles correm para que o inimigo não antecipe seus
+                        passos.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="convergente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Série Divergente: Convergente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/ttdRr-Hw01g"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2016 | Ação/Ficção | 2h | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt3410834" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt3410834/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Convergente(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Shailene Woodley, Theo James, Naomi Watts</p>
+                    <p>Fuja do mundo que você conhece.</p>
+                    <p>Beatrice, Tobias, Caleb e alguns outros conseguem cruzar os muros que cercam a cidade para
+                        explorar o mundo proibido lá fora.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="vingadoresultimato" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Vingadores: Ultimato</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/g6ng8iy-l0U"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2019 | Ação/Ficção | 3h 2m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt4154796" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt4154796/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Vingadores: Ultimato(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Robert Downey Jr., Chris Evans, Mark Ruffalo</p>
+                    <p>O fim de uma era!</p>
+                    <p>Após Thanos eliminar metade das criaturas vivas, os Vingadores têm de lidar com a perda de amigos
+                        e entes queridos. Com Tony Stark vagando perdido no espaço sem água e comida, Steve Rogers e
+                        Natasha Romanov lideram a resistência contra o titã louco.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mazerunneracuramortal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Maze Runner: A Cura Mortal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/mqUnRDKkRWI"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2018 | Ação/Ficção | 2h 22m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt4500922" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt4500922/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Maze Runner: A Cura Mortal(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Dylan O'Brien, Kaya Scodelario, Thomas Brodie-Sangster</p>
+                    <p>Todo labirinto tem seu fim.</p>
+                    <p>Thomas embarca em uma missão para encontrar a cura para uma doença mortal e descobre que os planos da C.R.U.E.L podem trazer consequências catastróficas para a humanidade.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="aquaman" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Aquaman</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/9NzOpyudyfk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2018 | Ação/Aventura | 2h 24m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt1477834" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt1477834/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Aquaman(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Jason Momoa, Amber Heard, Willem Dafoe</p>
+                    <p>O mar te chama.</p>
+                    <p>A cidade de Atlantis, que já foi lar de uma das mais avançadas civilizações do mundo, agora é um reino submerso dominado pelo ganancioso Rei Orm. Com um vasto exército a seu dispor, Orm planeja conquistar tanto os demais reinos do oceano, quanto o mundo da superfície. Em seu caminho está Aquaman, meio-humano e meio-atlante, e verdadeiro herdeiro do trono. Com a ajuda da princesa Mera, Aquaman precisa recuperar o lendário Tridente de Atlan e aceitar seu destino como protetor das profundezas.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mulhermaravilha2" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Mulher-Maravilha 1984</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/xXEwp0uQmjM"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2020 | Ação/Aventura | 2h 31m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt7126948" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt7126948/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Mulher-Maravilha 1984(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Gal Gadot, Chris Pine, Kristen Wiig</p>
+                    <p>Uma nova era de maravilhas começa.</p>
+                    <p>Na década de 1980, a Mulher-Maravilha enfrenta dois novos inimigos: Max Lord e Mulher-Leopardo.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="johnwick3" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">John Wick 3: Parabellum</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/M7XM597XO94"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2019 | Ação/Suspense | 2h 11m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt6146586" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt6146586/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="John Wick 3: Parabellum(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Keanu Reeves, Ian McShane, Halle Berry</p>
+                    <p>Toda ação tem uma consequência.</p>
+                    <p>O lendário John Wick luta para sair de Nova York quando um contrato de 14 milhões de dólares faz dele o alvo dos maiores assassinos do mundo.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="operaçãofronteira" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Operação Fronteira</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/CMTE62DL37Q"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2019 | Ação/Aventura | 2h 5m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt1488606" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt1488606/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Operação Fronteira(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Ben Affleck, Oscar Isaac, Charlie Hunnam</p>
+                    <p>Você não pode ir tão longe sem cruzar todas as linhas.</p>
+                    <p>A lealdade entre eles é colocada à prova quando esses cinco ex-militares se reúnem para roubar a fortuna de um chefão das drogas com consequências totalmente inesperadas.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="madmax" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Mad Max: Estrada da Fúria</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/IVmf82obaaA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2015 | Ação/Aventura | 2h | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt1392190" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt1392190/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Mad Max: Estrada da Fúria(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Tom Hardy, Charlize Theron, Zoë Kravitz</p>
+                    <p>Só os loucos sobrevivem.</p>
+                    <p>Em um mundo pós-apocalíptico, Max Rockatansky acredita que a melhor forma de sobreviver é não depender de ninguém. Porém, após ser capturado pelo tirano Immortan Joe e seus rebeldes, Max se vê no meio de uma guerra mortal iniciada pela Imperatriz Furiosa, que tenta salvar um grupo de garotas. Também tentando fugir, Max aceita ajudá-la.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mateoumorra" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Mate ou Morra</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/t8V_uH0lgWs"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Ação/Ficção | 1h 40m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt7638348" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt7638348/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Mate ou Morra(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Frank Grillo, Mel Gibson, Naomi Watts</p>
+                    <p>Ficando sem tempo. E vive.</p>
+                    <p>Roy Pulver é um ex-agente das forças especiais que se vê forçado a reviver o dia de sua morte inúmeras vezes. Ele acorda sendo perseguido por assassinos e, de uma forma ou de outra, acaba sempre morrendo no final. Enquanto luta para chegar ao fim do dia com vida, Roy descobre uma mensagem de sua ex-esposa revelando o envolvimento do cientista Ventor nesse ciclo mortal e percebe que a sua família também corre perigo.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="kingsman" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">King's Man: A Origem</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/HV90NtHhf-A"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Ação/Aventura | 2h 11m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt6856242" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt6856242/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="King's Man: A Origem(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Ralph Fiennes, Gemma Arterton, Rhys Ifans</p>
+                    <p>Testemunhe a origem sangrenta.</p>
+                    <p>Um homem precisa correr contra o tempo para impedir que os piores tiranos e criminosos da história exterminem milhões de pessoas e destruam a humanidade.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="braven" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Perigo na Montanha</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/hOwIQNA9A8I"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2018 | Ação/Suspense | 1h 34m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt5001754" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt5001754/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Braven(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Jason Momoa, Stephen Lang, Garret Dillahunt</p>
+                    <p>Eles ameaçaram seu mundo. Ele destruirá os deles.</p>
+                    <p>O lenhador Joe, que reside na fronteira entre os Estados Unidos e o Canadá, defende sua família de um grupo de traficantes perigosos.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="impasse" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Impasse</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/H-jMG0D-aPE"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Ação/Suspense | 1h 37m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt10957044" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt10957044/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Impasse(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Patrick Muldoon, Bruce Willis, Matthew Marsden</p>
+                    <p>Ron Whitlock, um criminoso procurado, lidera uma equipe de mercenários em uma missão de vingança. Convencido de que o governo está trabalhando contra eles, o grupo impiedoso apreende brutalmente uma usina de energia e mantém todos dentro dela como reféns. Com uma cidade próxima à beira de uma inundação massiva, cabe ao soldado de forças especiais aposentado Mack Karr salvar milhares de vidas inocentes antes que seja tarde demais.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="missãoresgate" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Missão Resgate</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/-zjikObAJHk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Ação/Suspense | 1h 43m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt3758814" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt3758814/?ref_=ext_shr_lnk"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt="Missão Resgate(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Liam Neeson, Laurence Fishburne, Holt McCallany</p>
+                    <p>Esta missão está em gelo fino.</p>
+                    <p>Após o desmoronamento de uma mina de diamantes, Mike McCann, um experiente motorista de caminhão, é recrutado por Jim Goldenrod para liderar uma missão de resgate. Ele e sua equipe têm apenas 30 horas para transportar uma enorme carga sobre rios congelados e tentar salvar a vida dos mineradores soterrados.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="afortaleza" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">A Fortaleza</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/GNGXauix9Mo"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="modal-body">
+                <p>18 | 2021 | Ação | 1h 40m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt14577300" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt14577300/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Fortaleza(2021) on IMDb" /></a></span></p>
+                <p>Elenco: Jesse Metcalfe, Bruce Willis, Chad Michael Murray</p>
+                <p>Esta prisão não tem grades.</p>
+                <p>Um ex-agente da CIA se vê preso bunker tecnológico sob o ataque de um ladrão cibernético vingativo.</p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal fade" id="aprofissional" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">A Profissional</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/RhHqUKdi978"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="modal-body">
+                <p>16 | 2021 | Ação/Suspense | 1h 49m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6079772" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt6079772/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Profissional(2021) on IMDb" /></a></span></p>
+                <p>Elenco: Maggie Q, Samuel L. Jackson, Michael Keaton</p>
+                <p>Feito para vingança.</p>
+                <p>Anna é resgatada quando criança e treinada para se tornar a assassina profissional mais habilidosa do mundo. Quando Moody, o homem que ela tinha como um pai e que lhe ensinou tudo sobre sobrevivência, é brutalmente assassinado, ela se junta ao enigmático Rembrandt e promete ir até o fim em busca de vingança.</p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal fade" id="red" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Red - Aposentados e Perigosos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/ECKaAQZpKjo"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="modal-body">
+                <p>14 | 2010 | Ação/Comédia | 1h 51m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1245526" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1245526/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="RED(2010) on IMDb" /></a></span></p>
+                <p>Elenco: Bruce Willis, Morgan Freeman, Helen Mirren</p>
+                <p>Ainda Armados. Ainda Perigosos. De volta à Ativa.</p>
+                <p>Após sobreviver a uma tentativa de homicídio investida por assassinos de aluguel, o agente aposentado da CIA Frank Moses decide se unir ao seu antigo time de campo para garantir a segurança de sua família.</p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal fade" id="osmercenários" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Os Mercenários 3</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/P7rLEE8_a9Y"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="modal-body">
+                <p>14 | 2014 | Ação/Aventura | 2h 11m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2333784" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2333784/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Os Mercenários 3(2014) on IMDb" /></a></span></p>
+                <p>Elenco: Sylvester Stallone, Jason Statham, Arnold Schwarzenegger</p>
+                <p>Nova equipe. Nova atitude. Nova missão.</p>
+                <p>Barney e sua trupe de mercenários resgatam Doc, um dos integrantes do grupo, que estava preso há oito anos. Participando de uma missão, os mercenários são surpreendidos quando reencontram Conrad, um comerciante de armas impiedoso, que Barney acreditava ter matado. Novos membros, mais jovens e mais rápidos, entram para equipe e um novo duelo começa.</p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal fade" id="hobbseshaw" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Velozes & Furiosos: Hobbs & Shaw</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/V4nxGVgDPEw"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="modal-body">
+                <p>14 | 2019 | Ação/Aventura | 2h 16m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6806448" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt6806448/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Velozes & Furiosos: Hobbs & Shaw(2019) on IMDb" /></a></span></p>
+                <p>Elenco: Dwayne Johnson, Jason Statham, Idris Elba</p>
+                <p>Muita ação, adrenalina e pancadaria.</p>
+                <p>O corpulento policial Luke Hobbs se junta ao fora da lei Deckard Shaw para combater um terrorista geneticamente melhorado que tem força sobre-humana.</p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+
+    <footer>
+        <div class="social-link">
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>Copyright@ 2022 SUPERFLIX</p>
+    </footer>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

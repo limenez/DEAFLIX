@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEAFLIX - Terror</title>
+    <link rel="icon" href="img/logo deafilx.svg" />
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/jquery-1.11.0.min.js"></script>
+    <script src="JS/jquery-migrate-1.2.1.min.js"></script>
+    <script src="JS/slick.min.js"></script>
+    <link rel="stylesheet" href="css/imdbRating.css">
+    <link rel="stylesheet" type="text/css" href="CSS/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background: rgb(27,20,100);
+        background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%);
+    }
+
+    .tabelagrid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, 150px);
+        grid-template-rows: repeat(3, 210px);
+    }
+
+    .tabelagrid>div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tabelagrid img {
+        width: 400px;
+        height: 400px;
+        padding: 30px;
+    }
+
+    h4 {
+        color: #fff;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #1B1464;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="img/logo-deafilx.png" alt="" width="200" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.html">INÍCIO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">FILMES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acao.html">AÇÃO</a></li>
+                            <li><a class="dropdown-item" href="comedia.html">COMÉDIA</a></li>
+                            <li><a class="dropdown-item" href="documentario.html">DOCUMENTÁRIOS</a></li>
+                            <li><a class="dropdown-item" href="drama.html">DRAMA</a></li>
+                            <li><a class="dropdown-item" href="ficcao.html">FICÇÃO</a></li>
+                            <li><a class="dropdown-item" href="romance.html">ROMANCE</a></li>
+                            <li><a class="dropdown-item" href="suspense.html">SUSPENSE</a></li>
+                            <li><a class="dropdown-item" href="terror.html">TERROR</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="series.html">SÉRIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="infantil.html">INFANTIL</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">PERFIL</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="conta.html">CONTA</a></li>
+                            <li><a class="dropdown-item" href="centrodeajuda.html">CENTRAL DA AJUDA</a></li>
+                            <li><a class="dropdown-item" href="login.html">SAIR</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="icons">
+                    <div class="notification">
+                        <a href="#">
+                            <div class="notBtn" href="#">
+                                <div class="number">3</div>
+                                <i class="fas fa-bell" style="color: #fff; font-size: 40px;"></i>
+                                <div class="box">
+                                    <div class="display">
+                                        <div class="nothing">
+                                            <i class="fas fa-child stick"></i>
+                                            <div class="cont">
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/strangerthings4.png">
+                                                        </div>
+                                                        <div class="txt">Stranger Things estreia novas temporadas</div>
+                                                        <div class="txt sub">27/05 - 1 Volume e 01/07 - 2 Volume</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/batman.png">
+                                                        </div>
+                                                        <div class="txt">The Batman novo lançamento</div>
+                                                        <div class="txt sub">03/03</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/la_casa_de_papel.png">
+                                                        </div>
+                                                        <div class="txt">La Casa de Papel chegou nova temporada</div>
+                                                        <div class="txt sub">03/12</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/the-mandalorian.png">
+                                                        </div>
+                                                        <div class="txt">O Mandaloriano resgata um criança que realiza à guerra galáxia.</div>
+                                                        <div class="txt sub">12/11</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/lupin.png">
+                                                        </div>
+                                                        <div class="txt">Lupin estreie no terceiro ou quarto trimestre de 2022</div>
+                                                        <div class="txt sub">08/08</div>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="d-flex">
+                    <div class="search-input">
+                        <a href="" target="_blank" hidden></a>
+                        <input type="text" placeholder="Faça sua busca aqui">
+                        <div class="autocom-box"></div>
+                        <div class="icon"><i class="fas fa-search" style="color: #1B1464;"></i></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="scale-down">
+        <h4 style="margin-top: 30px;">Terror</h4>
+
+        <div class="tabelagrid">
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/panico5.jpg" data-bs-toggle="modal"
+                    data-bs-target="#panico5" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/aIlhadafantasia.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ailhadafantasia" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/omassacre.jpg" data-bs-toggle="modal"
+                    data-bs-target="#omassacre" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/lugarsilencioso2.jpg"
+                    data-bs-toggle="modal" data-bs-target="#lugarsilencioso2" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/residentevil6.jpg" data-bs-toggle="modal"
+                    data-bs-target="#residentevil6" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/inovacaodomal3.jpg" data-bs-toggle="modal"
+                    data-bs-target="#inovacaodomal3" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/afreira.jpg" data-bs-toggle="modal"
+                    data-bs-target="#afreira" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/fuja.jpg" data-bs-toggle="modal"
+                    data-bs-target="#fuja" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/residentevilbemvindoaraccooncity.jpg"
+                    data-bs-toggle="modal" data-bs-target="#residentevil" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/chernobyl.jpg" data-bs-toggle="modal"
+                    data-bs-target="#chernobyl" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/sobrenatural4.jpg" data-bs-toggle="modal"
+                    data-bs-target="#sobrenatural4" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/vendeseestacasa.jpg" data-bs-toggle="modal"
+                    data-bs-target="#vendeseestacasa" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/atividadeparanormal5.jpg"
+                    data-bs-toggle="modal" data-bs-target="#atividadeparanormal5" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/ohomemnastrevas.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ohomemnastrevas" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/ouija.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ouija" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/cuidadocomquemchama.jpg" data-bs-toggle="modal"
+                    data-bs-target="#cuidadocomquemchama" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/tempo.jpg" data-bs-toggle="modal"
+                    data-bs-target="#tempo" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/maligno.jpg" data-bs-toggle="modal"
+                    data-bs-target="#maligno" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/espiral.jpg" data-bs-toggle="modal"
+                    data-bs-target="#espiral" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/ahoradasuamorte.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ahoradasuamorte" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/nos.jpg" data-bs-toggle="modal"
+                    data-bs-target="#nos" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/ohomemnastrevasdois.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ohomemnastrevasdois" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/annabelletres.jpg" data-bs-toggle="modal"
+                    data-bs-target="#annabelletres" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/itcapitulodois.jpg" data-bs-toggle="modal"
+                    data-bs-target="#itcapitulodois" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/aultimapremonicao.jpg" data-bs-toggle="modal"
+                    data-bs-target="#aultimapremonicao" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/ameacaprofunda.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ameacaprofunda" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/rogaipornos.jpg" data-bs-toggle="modal"
+                    data-bs-target="#rogaipornos" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/jogosmortaisjigsaw.jpg" data-bs-toggle="modal"
+                    data-bs-target="#jogosmortaisjigsaw" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/halloweenkills.jpg" data-bs-toggle="modal"
+                    data-bs-target="#halloweenkills" /></div>  
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/carrie.jpg" data-bs-toggle="modal"
+                    data-bs-target="#carrie" /></div>    
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/ahoradopesadelo.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ahoradopesadelo" /></div>    
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/amortedodemonio.jpg" data-bs-toggle="modal"
+                    data-bs-target="#amortedodemonio" /></div>    
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/oexorcismodeemilyrose.jpg" data-bs-toggle="modal"
+                    data-bs-target="#oexorcismodeemilyrose" /></div>    
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/cadaver.jpg" data-bs-toggle="modal"
+                    data-bs-target="#cadaver" /></div>    
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/naviofantasma.jpg" data-bs-toggle="modal"
+                    data-bs-target="#naviofantasma" /></div>    
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/oritual.jpg" data-bs-toggle="modal"
+                    data-bs-target="#oritual" /></div>    
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/vozesevultos.jpg" data-bs-toggle="modal"
+                    data-bs-target="#vozesevultos" /></div>    
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/oalbergue3.jpg" data-bs-toggle="modal"
+                    data-bs-target="#oalbergue3" /></div>    
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/temalguemnasuacasa.jpg" data-bs-toggle="modal"
+                    data-bs-target="#temalguemnasuacasa" /></div>    
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/hush.jpg" data-bs-toggle="modal"
+                    data-bs-target="#hush" /></div>    
+            </div>
+    </div>
+
+    <div class="modal fade" id="omassacre" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Massacre da Serra Elétrica: O Retorno de
+                        Leatherface</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/C9aMF5AJ3Is" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2022 | Terror | 1h 23min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt11755740" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt11755740/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Massacre da Serra Elétrica(2022) on IMDb" /></a></span></p>
+                    <p>Elenco: Sarah Yarkin, Elsie Fisher, Mark Burnham</p>
+                    <p>A face da loucura está de volta.</p>
+                    <p>Nesta sequência, um grupo de jovens decide dar vida nova a uma cidade fantasma no Texas, mas
+                        acaba se deparando com Leatherface, o famoso maníaco da serra elétrica.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="lugarsilencioso2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Um Lugar Silencioso II</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/AkIMYJpVM3w" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2020 | Terror | 1h 37m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt8332922" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt8332922/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Um Lugar Silencioso II(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Emily Blunt, John Krasinski, Cillian Murphy</p>
+                    <p>Apenas o silêncio não será suficiente.</p>
+                    <p>A família Abbott precisa enfrentar os terrores do mundo exterior enquanto luta pela sobrevivência
+                        em silêncio. Forçados a se aventurar no desconhecido, eles percebem que as criaturas que caçam
+                        pelo som não são as únicas ameaças no caminho da areia.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="residentevil6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resident Evil 6: O Capítulo Final</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/17sInSM9kE0" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2016 | Terror/Ação | 1h 46m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2592614" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2592614/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Resident Evil 6(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Milla Jovovich, Ali Larter, Iain Glen</p>
+                    <p>Prepare-se para o inferno.</p>
+                    <p>Alice tem que enfrentar o Dr. Isaacs, a Umbrella e uma horda de zumbis para salvar a humanidade
+                        com um antivírus que está em Raccoon City.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="inovacaodomal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Invocação do Mal 3: A Ordem do Demônio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/anDtrp34xig" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Terror/Suspense | 1h 52m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt7069210" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt7069210/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="SInvocação do Mal 3(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Patrick Wilson, Vera Farmiga, Ruairi O'Connor</p>
+                    <p>O caso demoníaco que chocou a América.</p>
+                    <p>O casal Ed e Lorraine Warren investigam um assassino que alega ter sido possuído por um demônio.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="afreira" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Freira</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/4V44ew-laC4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2018 | Terror/Thriller | 1h 36m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt5814060" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt5814060/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Freira(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Taissa Farmiga, Demián Bichir, Jonas Bloquet</p>
+                    <p>Implore por perdão.</p>
+                    <p>Presa em um convento na Romênia, uma freira comete suicídio. Para investigar o caso, o Vaticano
+                        envia um padre assombrado e uma noviça prestes a se tornar freira. Arriscando suas vidas, a fé e
+                        até suas almas, os dois descobrem um segredo profano e se confrontam com uma força do mal que
+                        toma a forma de uma freira demoníaca e transforma o convento em um campo de batalha.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="chernobyl" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Chernobyl Diaries: Sinta A Radiação</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/PCpEuez4INk" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2012 | Terror/Thriller | 1h 33m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1991245" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1991245/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Chernobyl Diaries(2012) on IMDb" /></a></span></p>
+                    <p>Elenco: Devin Kelley, Jonathan Sadowski, Ingrid Bolsø Berdal</p>
+                    <p>Experimente as consequências</p>
+                    <p>Uri leva seis jovens turistas para passear em uma cidade onde viviam as famílias dos
+                        trabalhadores da usina nuclear de Chernobyl. No fim do tour, o carro não funciona. Agora, terão
+                        que passar a noite ali e viver seu pior pesadelo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="sobrenatural4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sobrenatural: A Última Chave</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/WLl3RrjCkrQ" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2018 | Terror/Thriller | 1h 43m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt5726086" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt5726086/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Sobrenatural 4(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Lin Shaye, Angus Sampson, Leigh Whannell</p>
+                    <p>É melhor gritar antes que ele te cale.</p>
+                    <p>Elise Rainier é chamada para resolver o caso de uma assombração no Novo México, mas descobre que
+                        a atividade sobrenatural está acontecendo justamente na casa em que ela passou a infância.
+                        Enquanto tenta resolver o caso do morador de sua antiga casa, ela é obrigada a confrontar vários
+                        fantasmas e demônios de seu passado, sendo alguns literais. Ao lado de Specs e Tucker, Elise se
+                        depara com seu caso mais pessoal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="vendeseestacasa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Vende-se Esta Casa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/tMSu3Gyz1jU" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2018 | Terror | 1h 34m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt7608028" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt7608028/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Vende-se Esta Casa(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Dylan Minnette, Piercey Dalton, Sharif Atkins</p>
+                    <p>Você não pode trancar o que já está dentro.</p>
+                    <p>Após a morte do pai, o adolescente Logan Wallace e sua mãe, Naomi Wallace, se mudam
+                        temporariamente para uma casa à venda, buscando superar o trauma familiar. Eles precisam apenas
+                        organizar um dia de portas abertas para acolher potenciais compradores do imóvel. Depois deste
+                        evento, Logan e Naomi começam a perceber presenças estranhas dentro da casa.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="atividadeparanormal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Atividade Paranormal: Ente Próximo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/6kgcOdAEfic"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>"
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Terror/Suspense | 2h | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt10515988" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt10515988/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Atividade Paranormal 5(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Emily Bader, Roland Buck III, Dan Lippert</p>
+                    <p>A atividade renasce.</p>
+                    <p>Um documentarista acompanha a jovem Margot até uma comunidade Amish na esperança de conseguir
+                        informações sobre a família dela. Após uma série de acontecimentos estranhos, ela logo percebe
+                        que este povo isolado pode estar escondendo algo sinistro.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ohomemnastrevas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Homem nas Trevas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/uKY0dYfOibI" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2016 | Terror/Thriller | 1h 28m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6246322" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt6246322/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Homem nas Trevas(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Stephen Lang, Jane Levy, Dylan Minnette </p>
+                    <p>No escuro o cego é rei.</p>
+                    <p>Rocky, Alex e Money são ladrões que ganham dinheiro invadindo casas de pessoas ricas em Detroit.
+                        Money fica sabendo sobre um veterano de guerra cego que ganhou muito dinheiro pela morte de sua
+                        única filha. Pensando ser um alvo fácil, o trio invade a casa isolada do homem em uma vizinhança
+                        abandonada. Após se verem presos lá dentro, os jovens invasores têm que lutar por suas vidas ao
+                        descobrirem que a vítima não é nada inofensiva.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ouija" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ouija: O Jogo dos Espíritos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/uhahuJl4F_I" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 2014 | Terror/Thriller | 1h 29m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt4361050" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt4361050/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="SOuija(2014) on IMDb" /></a></span></p>
+                    <p>Elenco: Olivia Cooke, Matthew Settle, Shelley Hennig</p>
+                    <p>É apenas um jogo... Não é?</p>
+                    <p>Após a repentina morte de sua melhor amiga, Debbie, Laine encontra um antigo jogo, Ouija, no
+                        quarto de Debbie e tenta usá-lo para dizer adeus. Mas, ao invés de contatar a amiga, Laine faz
+                        contato com um espírito que se intitula DZ. Quando estranhos eventos começam a ocorrer, Laine
+                        recruta seus amigos para desvendarem o que DZ quer. Ao se envolverem mais com o jogo, eles
+                        descobrem que a misteriosa morte de Debbie não será única e que vão ter o mesmo destino, caso
+                        não fechem o portal que abriram</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ailhadafantasia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Ilha da Fantasia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/adkmIMpHyfU"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2020 | Terror/Suspense | 1h 50min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt0983946" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt0983946/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" A Ilha da Fantasia
+                        (2020) on IMDb" />
+                            </a></span></p>
+                    <p>Elenco: Michael Peña, Maggie Q, Lucy Hale</p>
+                    <p>Cuidado com o que deseja.</p>
+                    <p>Uma ilha mágica no meio do Oceano Pacífico oferece aos seus visitantes a possibilidade de
+                        realizar seus sonhos e viver aventuras que parecem impossíveis em qualquer outro lugar. Porém,
+                        como avisa o anfitrião da ilha, Sr. Roarke, realizar seus desejos pode não acontecer da maneira
+                        esperada.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="panico5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Pânico (2022)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/RsAmlwGJhYk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2022 | Terror/Suspense | 1h 55min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt11245972" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt11245972/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" Pânico
+                        (2022) on IMDb" />
+                            </a></span></p>
+                    <p>Elenco: Neve Campbell, Courteney Cox, David Arquette</p>
+                    <p>É sempre alguém que você conhece.</p>
+                    <p>Vinte e cinco anos após uma série de crimes brutais chocar a tranquila Woodsboro, um novo
+                        assassino se apropria da máscara de Ghostface e começa a perseguir um grupo de adolescentes para
+                        trazer à tona segredos do passado mortal da cidade.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="fuja" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Fuja</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Y0-RFZDmycQ"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2020 | Terror/Suspense | 1h 29min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                            data-title="tt8633478" data-style="p3"><a
+                                href="https://www.imdb.com/title/tt8633478/?ref_=plg_rt_1"><img
+                                    src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                    alt=" Fuja
+                        (2020) on IMDb" />
+                            </a></span></p>
+                    <p>Elenco: Sarah Paulson, Kiera Allen, Pat Healy</p>
+                    <p>Você não pode escapar do amor de uma mãe.</p>
+                    <p>Após anos vivendo isolada e sob cuidados médicos e desejando liberdade, Chloe começa a desconfiar
+                        que sua mãe esteja escondendo um segredo sinistro.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="residentevil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resident Evil: Bem-Vindo a Raccoon City</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/bs9ajBjzHK4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Terror/Ação | 1h 47min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6920084" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt6920084/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Resident Evil: Bem-Vindo a Raccoon City(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Kaya Scodelario, Hannah John-Kamen, Robbie Amell</p>
+                    <p>Testemunhe a origem do mal.</p>
+                    <p>Racoon City já foi uma próspera cidade do Meio-Oeste, graças à gigante farmacêutica The Umbrella
+                        Corporation. Mas abaixo da superfície algo maligno se esconde. Após o êxodo da empresa, o mal é
+                        desencadeado nos habitantes desavisados da cidade.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cuidadocomquemchama" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cuidado Com Quem Chama</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/iX79y5R4i2M"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2020 | Terror/Mistério | 1h 5m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt12749596" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt12749596/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Cuidado Com Quem Chama(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Haley Bishop, Jemma Moore, Emma Louise Webb</p>
+                    <p>Alguém novo entrou na reunião.</p>
+                    <p>Grupo de amigos contrata um médium para fazer uma sessão por Zoom na quarentena. As coisas pareciam bem, até que um espírito maligno começa a invadir suas casas e eles percebem que podem não sobreviver à noite.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tempo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tempo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/8KwPvp9z8Yg"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Terror/Suspense | 1h 48m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt10954652" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt10954652/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Tempo(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Gael García Bernal, Vicky Krieps, Rufus Sewell</p>
+                    <p>Ninguém pode escapar dele...</p>
+                    <p>Uma família decide se divertir em uma praia e se vê envolvida em um mistério sinistro. O tempo parece passar de forma diferente no lugar, fazendo com que eles envelheçam anos em alguns minutos.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="maligno" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Maligno</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/0nw1ZWHNd4c"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Terror/Suspense | 1h 51m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3811906" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt3811906/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Maligno(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Annabelle Wallis, Maddie Hasson, George Young</p>
+                    <p>Uma nova visão do terror.</p>
+                    <p>Madison começa a ter sonhos aterrorizantes de pessoas sendo brutalmente assassinadas e acaba descobrindo que, na verdade, são visões dos crimes enquanto acontecem. Aos poucos, ela percebe que esses assassinatos estão conectados a uma entidade do seu passado chamada Gabriel e, para impedir a criatura, Madison precisa investigar de onde ela surgiu e enfrentar seus traumas de infância.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="espiral" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Espiral: O Legado de Jogos Mortais</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/MqvrTJ5ugCc"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2021 | Terror/Mistério | 1h 33m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt10342730" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt10342730/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Espiral: O Legado de Jogos Mortais(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Chris Rock, Max Minghella, Samuel L. Jackson</p>
+                    <p>Alguém novo entrou na reunião.</p>
+                    <p>O detetive Zeke Banks investiga o caso de um assassino em série que está seguindo os passos de Jigsaw. Involuntariamente, ele se vê preso no centro do jogo mórbido do homicida.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ahoradasuamorte" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Hora da Sua Morte</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/tIVyZtFQV_0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2019 | Terror/Suspense | 1h 30m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt10039344" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt10039344/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Hora da Sua Morte(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Elizabeth Lail, Jordan Calloway, Talitha Bateman</p>
+                    <p>Alguém novo entrou na reunião.</p>
+                    <p>Uma jovem enfermeira baixa um aplicativo para o celular chamado 'Countdown'. Aparentemente, este pode prever o momento exato em que uma pessoa vai morrer. E ela descobre que só tem três dias de vida.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="nos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nós</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/rx3bQ9p5jC8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2019 | Terror/Suspense | 2h 1m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6857112" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt6857112/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Nós(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Lupita Nyong'o, Winston Duke, Elisabeth Moss</p>
+                    <p>Tenha cuidado.</p>
+                    <p>Adelaide e Gabe levam a família para passar um fim de semana na praia e descansar. Eles começam a aproveitar o ensolarado local, mas a chegada de um grupo misterioso muda tudo e a família se torna refém de seres com aparências iguais às suas.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ohomemnastrevasdois" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Homem nas Trevas 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/cbz9_K3mw1E"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Terror/Suspense | 1h 38m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6246322" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt6246322/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Homem nas Trevas 2(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Stephen Lang, Madelyn Grace, Brendan Sexton III</p>
+                    <p>Alguém novo entrou na reunião.</p>
+                    <p>O ex-militar cego Norman Nordstrom vive uma vida tranquila e isolada, se relacionando apenas com sua jovem filha adotiva. Porém, sua paz logo é destruída quando um grupo de criminosos invade sua casa e sequestra a garota. Assim, Norman é forçado a voltar a seus instintos sombrios para salvá-la.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="annabelletres" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Annabelle 3: De Volta para Casa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/BlAsN0G8_7o"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2019 | Terror/Mistério | 1h 46m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt8350360" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt8350360/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Annabelle 3: De Volta para Casa(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Mckenna Grace, Madison Iseman, Katie Sarife</p>
+                    <p>Possui todos eles.</p>
+                    <p>Os investigadores paranormais Ed e Lorraine Warren mantêm a boneca Annabelle trancada em uma sala de artefatos em sua casa. No entanto, em uma noite terrível, Annabelle desperta outros espíritos malignos e ameaça a jovem filha do casal e suas amigas.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="itcapitulodois" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">IT: Capítulo Dois</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/9hTiR6qD3Ow"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2019 | Terror/Suspense | 2h 49m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt7349950" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt7349950/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="IT: Capítulo Dois(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Bill Skarsgård, James McAvoy, Jessica Chastain</p>
+                    <p>Você vai flutuar novamente.</p>
+                    <p>Vinte e sete anos depois dos eventos que chocaram os adolescentes que faziam parte do Clube dos Perdedores, os amigos realizam uma reunião. No entanto, o reencontro se torna uma verdadeira e sangrenta batalha quando Pennywise, o palhaço, retorna.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="aultimapremonicao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Última Premonição</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/CM60rfpwUS8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2015 | Terror/Drama | 1h 22m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2954474" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt2954474/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Última Premonição(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Isla Fisher, Anson Mount, Gillian Jacobs</p>
+                    <p>Nunca duvide do seu instinto. A morte poderá bater na sua porta!</p>
+                    <p>Eveleigh começa a ter premonições horripilantes depois de largar a vida na cidade para viver em um vinhedo com seu marido.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ameacaprofunda" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ameaça Profunda</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/fEgQlqsMRk8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2020 | Terror/Ficção | 1h 35m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt5774060" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt5774060/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Ameaça Profunda(2020) on IMDb" /></a></span></p>
+                    <p>Elenco:  Kristen Stewart, T.J. Miller, Jessica Henwick</p>
+                    <p>11 quilômetros abaixo do mar alguma coisa acordou.</p>
+                    <p>Criaturas misteriosas aterrorizam os tripulantes de um laboratório subaquático a 11 mil metros de profundidade. Eles são obrigados a caminhar nas profundezas marítimas, com quantidade insuficiente de oxigênio, para tentar sobreviver.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="rogaipornos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Rogai por Nós</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/RPjdEYOytxw"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Terror/Mistério | 1h 39m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt9419056" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt9419056/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Rogai por Nós(2021) on IMDb" /></a></span></p>
+                    <p>Elenco:  Jeffrey Dean Morgan, Katie Aselton, William Sadler</p>
+                    <p>Cuidado a quem você suplica.</p>
+                    <p>Jornalista investiga uma jovem com deficiência auditiva que foi visitada pela Virgem Maria e, repentinamente, passa a ouvir, falar e curar os enfermos.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="jogosmortaisjigsaw" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Jogos Mortais: Jigsaw</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/ogkm9co9IM4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2017 | Terror/Suspense | 1h 32m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3348730" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt3348730/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Jogos Mortais: Jigsaw(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Matt Passmore, Tobin Bell, Callum Keith Rennie</p>
+                    <p>Você está Pronto para um Novo Jogo?</p>
+                    <p>Após uma série de assassinatos, todas as pistas levam a John Kramer, assassino mais conhecido como Jigsaw. À medida que a investigação avança, os policiais percebem que estão perseguindo o fantasma de um homem morto há mais de uma década.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="halloweenkills" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Halloween Kills: O Terror Continua</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/hL6R3HmQfPc"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Terror | 1h 45m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt10665338" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt10665338/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Halloween Kills: O Terror Continua(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Jamie Lee Curtis, Judy Greer, Andi Matichak</p>
+                    <p>O mal morre hoje.</p>
+                    <p>Laurie Strode acredita que enfim venceu a luta contra Michael Myers, mas é surpreendida pelo seu retorno. Determinada a pôr um ponto final em seus ataques, ela e outros sobreviventes decidem enfrentá-lo e acabar com o ciclo de uma vez por todas.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="carrie" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Carrie: A Estranha</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/1TaYCap3nok"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2013 | Terror/Suspense | 1h 39m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1939659" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1939659/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Carrie: A Estranha(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Chloë Grace Moretz, Julianne Moore, Judy Greer</p>
+                    <p>Você saberá o nome dela.</p>
+                    <p>Carrie é uma jovem tímida, perseguida pelos colegas, professores e impedida pela mãe de levar uma vida comum. No dia de sua formatura, descobre que possui poderes telecinéticos quando os jovens mais populares da escola a humilham diante de todos.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ahoradopesadelo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Hora do Pesadelo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/16IpwmLGHkU"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2010 | Terror/Mistério | 1h 35m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1179056" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1179056/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Hora do Pesadelo(2010) on IMDb" /></a></span></p>
+                    <p>Elenco: Jackie Earle Haley, Kyle Gallner, Rooney Mara</p>
+                    <p>Nunca durma de novo.</p>
+                    <p>Os adolescentes Nancy, Quentin, Kris, Jesse e Dean são amigos que começam a ter o mesmo pesadelo com um homem desfigurado que usa uma luva feita de facas. O homem, Freddy Krueger (Jackie Earle Haley), os aterroriza em sonhos. A única saída é acordar, mas quando um deles morre de forma violenta, os amigos percebem que o sonho é real. A saída, na verdade, é ficar acordado.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="amortedodemonio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Morte do Demônio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/GHa-yo-3U_Q"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2013 | Terror/Suspense | 1h 31m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1288558" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1288558/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Morte do Demônio(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Jane Levy, Shiloh Fernandez, Lou Taylor Pucci</p>
+                    <p>O filme mais aterrorizante que você já viu.</p>
+                    <p>Mia é uma viciada em drogas que, para vencer seus demônios pessoais, vai com seu irmão David, a namorada do irmão, Natalie, e os amigos de infância Olivia e Eric até uma cabana rústica, que pertence à família. Assim que chegam, descobrem que a cabana foi invadida e que o porão parece uma espécie de altar, rodeado por animais mumificados, onde a descoberta de um Livro dos Mortos invoca forças demoníacas. A presença do mal os possui até que apenas um é deixado a lutar pela sobrevivência.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="oexorcismodeemilyrose" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O exorcismo de Emily Rose</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/sCZIT0aKPb8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2005 | Terror/Suspense | 1h 59m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0404032" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt0404032/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O exorcismo de Emily Rose(2005) on IMDb" /></a></span></p>
+                    <p>Elenco: Laura Linney, Tom Wilkinson, Campbell Scott</p>
+                    <p>O que aconteceu com a Emily?</p>
+                    <p>A advogada Erin Bruner vê sua vida desmoronar quando representa um padre que fez um exorcismo que deu errado.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cadaver" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cadáver</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Iz-kcZujnEU"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2018 | Terror/Suspense | 1h 25m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt5734576" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt5734576/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Cadáver(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Shay Mitchell, Grey Damon, Kirby Johnson</p>
+                    <p>A morte é apenas o começo.</p>
+                    <p>A chegada de um cadáver assombrado no turno da noite transforma o trabalho de uma ex-policial em um verdadeiro pesadelo.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="naviofantasma" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Navio Fantasma</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Bp6p6xb9av4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2002 | Terror | 1h 30m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0288477" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt0288477/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Navio Fantasma(2002) on IMDb" /></a></span></p>
+                    <p>Elenco: Gabriel Byrne, Julianna Margulies, Isaiah Washington</p>
+                    <p>O terror está a bordo.</p>
+                    <p>A tripulação de um rebocador tenta recuperar um antigo navio de passageiros que flutua à deriva no Estreito de Bering e logo descobre uma presença misteriosa.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="oritual" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Ritual</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/2ATnirjIhkU"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2011 | Terror/Suspense | 1h 38m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1161864" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1161864/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Ritual(2011) on IMDb" /></a></span></p>
+                    <p>Elenco: Anthony Hopkins, Colin O'Donoghue, Alice Braga</p>
+                    <p>Você só pode derrotá-lo quando você acredita.</p>
+                    <p>Neste filme de suspense sobrenatural, um padre católico viaja a Roma para frequentar uma escola especial de exorcismo no Vaticano.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="vozesevultos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Vozes e Vultos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/sxDEHbUlSzY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Terror/Suspense | 2h 1m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt10962368" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt10962368/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Vozes e Vultos(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Amanda Seyfried, James Norton, Natalia Dyer</p>
+                    <p>Desconfie de seus sentidos.</p>
+                    <p>Depois de trocar a cidade grande pelo interior, uma mulher descobre que seu marido e sua casa nova escondem segredos sinistros.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="oalbergue3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Albergue 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/HY3nCC2fllk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2011 | Terror/Mistério | 1h 27m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1255916" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt1255916/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Albergue 3(2011) on IMDb" /></a></span></p>
+                    <p>Elenco: Kip Pardue, Brian Hallisay, John Hensley</p>
+                    <p>Você se sente com sorte?</p>
+                    <p>No terceiro lançamento desta notória sequência de terror trash, uma despedida de solteiro transforma-se em um banho de sangue para todos os convidados.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="temalguemnasuacasa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tem Alguém na sua Casa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/k1s3e_nVWuY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2021 | Terror/Suspense | 1h 36m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt8150814" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt8150814/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Tem Alguém na sua Casa(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Sydney Park, Théodore Pellerin, Asjha Cooper</p>
+                    <p>Todo mundo tem um segredo pelo qual morrer.</p>
+                    <p>Makani e seus amigos da escola tentam impedir alguém por trás de uma máscara de matar os alunos e expor seus maiores segredos.</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="hush" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Hush - A Morte Ouve</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/KL1Hk5W4Xzw"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2016 | Terror/Suspense | 1h 21m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt5022702" data-style="p3"><a
+                            href="https://www.imdb.com/title/tt5022702/?ref_=ext_shr_lnk"><img
+                                src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Hush - A Morte Ouve(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: John Gallagher Jr., Kate Siegel, Michael Trucco</p>
+                    <p>O silêncio pode ser assassino.</p>
+                    <p>A escritora Maddie prefere a solidão e é surda. Quando um homem mascarado surge em sua janela, serão desvantagens a superar em tempo recorde. Ou não?</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<footer>
+    <div class="social-link">
+        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <p>Copyright@ 2022 SUPERFLIX</p>
+</footer>
+<script src="JS/main.js"></script>
+</body>
+
+</html>
+
+
+

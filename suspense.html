@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEAFLIX - Suspense</title>
+    <link rel="icon" href="img/logo deafilx.svg" />
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/jquery-1.11.0.min.js"></script>
+    <script src="JS/jquery-migrate-1.2.1.min.js"></script>
+    <script src="JS/slick.min.js"></script>
+    <link rel="stylesheet" href="css/imdbRating.css">
+    <link rel="stylesheet" type="text/css" href="CSS/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background: rgb(27,20,100);
+        background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%);
+    }
+
+    .tabelagrid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, 150px);
+        grid-template-rows: repeat(3, 210px);
+    }
+
+    .tabelagrid>div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tabelagrid img {
+        width: 400px;
+        height: 400px;
+        padding: 30px;
+    }
+
+    h4 {
+        color: #fff;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #1B1464;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="img/logo-deafilx.png" alt="" width="200" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.html">INÍCIO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">FILMES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acao.html">AÇÃO</a></li>
+                            <li><a class="dropdown-item" href="comedia.html">COMÉDIA</a></li>
+                            <li><a class="dropdown-item" href="documentario.html">DOCUMENTÁRIOS</a></li>
+                            <li><a class="dropdown-item" href="drama.html">DRAMA</a></li>
+                            <li><a class="dropdown-item" href="ficcao.html">FICÇÃO</a></li>
+                            <li><a class="dropdown-item" href="romance.html">ROMANCE</a></li>
+                            <li><a class="dropdown-item" href="suspense.html">SUSPENSE</a></li>
+                            <li><a class="dropdown-item" href="terror.html">TERROR</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="series.html">SÉRIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="infantil.html">INFANTIL</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown">PERFIL</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="conta.html">CONTA</a></li>
+                            <li><a class="dropdown-item" href="centrodeajuda.html">CENTRAL DA AJUDA</a></li>
+                            <li><a class="dropdown-item" href="login.html">SAIR</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="icons">
+                    <div class="notification">
+                        <a href="#">
+                            <div class="notBtn" href="#">
+                                <div class="number">3</div>
+                                <i class="fas fa-bell" style="color: #fff; font-size: 40px;"></i>
+                                <div class="box">
+                                    <div class="display">
+                                        <div class="nothing">
+                                            <i class="fas fa-child stick"></i>
+                                            <div class="cont">
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/strangerthings4.png">
+                                                        </div>
+                                                        <div class="txt">Stranger Things estreia novas temporadas</div>
+                                                        <div class="txt sub">27/05 - 1 Volume e 01/07 - 2 Volume</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec new">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/batman.png">
+                                                        </div>
+                                                        <div class="txt">The Batman novo lançamento</div>
+                                                        <div class="txt sub">03/03</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/la_casa_de_papel.png">
+                                                        </div>
+                                                        <div class="txt">La Casa de Papel chegou nova temporada</div>
+                                                        <div class="txt sub">03/12</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/the-mandalorian.png">
+                                                        </div>
+                                                        <div class="txt">O Mandaloriano resgata um criança que realiza à guerra galáxia.</div>
+                                                        <div class="txt sub">12/11</div>
+                                                    </a>
+                                                </div>
+                                                <div class="sec">
+                                                    <a href="#">
+                                                        <div class="profCont">
+                                                            <img class="profile" src="img/lupin.png">
+                                                        </div>
+                                                        <div class="txt">Lupin estreie no terceiro ou quarto trimestre de 2022</div>
+                                                        <div class="txt sub">08/08</div>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="d-flex">
+                    <div class="search-input">
+                        <a href="" target="_blank" hidden></a>
+                        <input type="text" placeholder="Faça sua busca aqui">
+                        <div class="autocom-box"></div>
+                        <div class="icon"><i class="fas fa-search" style="color: #1B1464;"></i></div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="scale-down">
+        <h4 style="margin-top: 30px;">Suspense</h4>
+
+        <div class="tabelagrid">
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/inferno.jpg" data-bs-toggle="modal"
+                    data-bs-target="#inferno" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/birdbox.jpg" data-bs-toggle="modal"
+                    data-bs-target="#birdbox" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/duranteatormenta.jpg"
+                    data-bs-toggle="modal" data-bs-target="#duranteatormenta" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/conexaoperigoso.jpg" data-bs-toggle="modal"
+                    data-bs-target="#conexaoperigoso" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/zodiaco.jpg" data-bs-toggle="modal"
+                    data-bs-target="#zodiaco" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/cisnenegro.jpg" data-bs-toggle="modal"
+                    data-bs-target="#cisnenegro" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/omisteriodofarol.jpg"
+                    data-bs-toggle="modal" data-bs-target="#omisteriodofarol" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/acasa.jpg" data-bs-toggle="modal"
+                    data-bs-target="#acasa" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/umcontratempo.jpg" data-bs-toggle="modal"
+                    data-bs-target="#umcontratempo" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/garotaexemplar.jpg" data-bs-toggle="modal"
+                    data-bs-target="#garotaexemplar" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/ilhadomedo.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ilhadomedo" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/odiabdodecadadia.jpg"
+                    data-bs-toggle="modal" data-bs-target="#odiabdodecadadia" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/oculpado.jpg" data-bs-toggle="modal"
+                    data-bs-target="#oculpado" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/indecente.jpg" data-bs-toggle="modal"
+                    data-bs-target="#indecente" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/amulhernajanela.jpg" data-bs-toggle="modal"
+                    data-bs-target="#" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/eumeimporto.jpg" data-bs-toggle="modal"
+                    data-bs-target="#eumeimporto" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/sededevingança.jpg" data-bs-toggle="modal"
+                    data-bs-target="#sededevingança" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/vinganca.jpg" data-bs-toggle="modal"
+                    data-bs-target="#vinganca" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/destruicaofinal.jpg" data-bs-toggle="modal"
+                    data-bs-target="#destruicaofinal" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/anonimo.jpg" data-bs-toggle="modal"
+                    data-bs-target="#anonimo" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/obsessao.jpg" data-bs-toggle="modal"
+                    data-bs-target="#obsessao" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/fratura.jpg" data-bs-toggle="modal"
+                    data-bs-target="#fratura" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/ava.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ava" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/meufilho.jpg" data-bs-toggle="modal"
+                    data-bs-target="#meufilho" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/orecepcionista.jpg" data-bs-toggle="modal"
+                    data-bs-target="#orecepcionista" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/buscando.jpg" data-bs-toggle="modal"
+                    data-bs-target="#buscando" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/osequestro.jpg" data-bs-toggle="modal"
+                    data-bs-target="#osequestro" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/ogarotodacasaaolado.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ogarotodacasaaolado" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/furiaincontrolável.jpg" data-bs-toggle="modal"
+                    data-bs-target="#furiaincontrolável" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/janelasecreta.jpg" data-bs-toggle="modal"
+                    data-bs-target="#janelasecreta" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/parasita.jpg" data-bs-toggle="modal"
+                    data-bs-target="#parasita" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/awake.jpg" data-bs-toggle="modal"
+                    data-bs-target="#awake" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/contatosdequartograu.jpg" data-bs-toggle="modal"
+                    data-bs-target="#contatosdequartograu" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/ossuspeitos.jpg" data-bs-toggle="modal"
+                    data-bs-target="#ossuspeitos" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/agarotanotrem.jpg" data-bs-toggle="modal"
+                    data-bs-target="#agarotanotrem" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/bonecodeneve.jpg" data-bs-toggle="modal"
+                    data-bs-target="#bonecodeneve" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/terapiaderisco.jpg" data-bs-toggle="modal"
+                    data-bs-target="#terapiaderisco" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/toquedemestre.jpg" data-bs-toggle="modal"
+                    data-bs-target="#toquedemestre" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/doutorsono.jpg" data-bs-toggle="modal"
+                    data-bs-target="#doutorsono" /></div>
+                <div><img class="row__poster row__posterLarge"  src="assets/filmes/animaisnoturnos.jpg" data-bs-toggle="modal"
+                    data-bs-target="#animaisnoturnos" /></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="inferno" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">"
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Inferno</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/RH2BD49sEZI" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2016 | Suspense/Mistério | 2h 1m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3062096" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt3062096/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Inferno(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Tom Hanks, Felicity Jones, Omar Sy</p>
+                    <p>Seu maior desafio. A última esperança da humanidade.</p>
+                    <p>O simbologista Robert Langdon e uma médica viajam pela Europa para deter o plano de um lunático
+                        de disseminar um vírus mortal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="birdbox" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Caixa de Pássaros</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/JeGdtrLQoiY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2018 | Suspense | 2h 4min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2737304" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2737304/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Bird Box(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Sandra Bullock, Trevante Rhodes, John Malkovich</p>
+                    <p>Feche os olhos para sobreviver.</p>
+                    <p>Uma misteriosa presença leva as pessoas ao suicídio. Cinco anos depois, uma sobrevivente e seus
+                        dois filhos saem em busca de um abrigo seguro.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="duranteatormenta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Durante a Tormenta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/aGE2Q_l_t7I" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2018 | Suspense | 2h 9m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6908274" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt6908274/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Durante a Tormenta(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Adriana Ugarte, Chino Darín, Javier Gutiérrez</p>
+                    <p>Por quem pararia o tempo?</p>
+                    <p>Um defeito no espaço-tempo permite que Vera salve a vida de um garoto, mas isso a leva a perder a
+                        própria filha. Agora, seu único objetivo é recuperá-la.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="conexaoperigoso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Conexão Perigosa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/oNpM8dI5ntQ" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2013 | Suspense | 1h 46m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1413495" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1413495/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Conexão Perigosa(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Liam Hemsworth, Harrison Ford, Gary Oldman</p>
+                    <p>O pode está em xeque.</p>
+                    <p>Para manter o emprego, um funcionário de uma empresa de tecnologia é forçado por seu patrão a se
+                        infiltrar na companhia rival e descobrir os segredos da concorrência.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="zodiaco" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Zodiaco</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/NUdDkt179iY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2007 | Suspense/Mistério | 2h 37m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0443706" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0443706/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Zodiaco(2007) on IMDb" /></a></span></p>
+                    <p>Elenco: Jake Gyllenhaal, Mark Ruffalo, Anthony Edwards</p>
+                    <p>Existem mais de uma maneira de perder a vida para um assassino.</p>
+                    <p>Durante os anos 60 e 70, o medo aumenta em São Francisco com os ataques de um assassino maníaco
+                        chamado Zodíaco. Investigadores e jornalistas tentam descobrir a identidade do assassino e
+                        levá-lo à justiça. Enquanto isso, Zodiac provoca as autoridades com mensagens crípticas, cifras
+                        e telefonemas ameaçadores.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cisnenegro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cisne Negro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/4LxWFX5LGq0" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2010 | Terror/Thriller | 1h 48m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0947798" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0947798/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Cisne Negro(2010) on IMDb" /></a></span></p>
+                    <p>Elenco: Natalie Portman, Mila Kunis, Vincent Cassel</p>
+                    <p>Nina é uma bailarina cuja obsessão pela dança supera todas as facetas de sua vida. Quando o
+                        diretor artístico da companhia decide substituir sua prima ballerina para a produção de estreia
+                        de "O Lago dos Cisnes", Nina é sua primeira escolha. Sua concorrente é a novata Lily. Embora
+                        Nina seja perfeita para o papel do Cisne Branco, Lily personifica o Cisne Negro. A rivalidade
+                        entre as duas bailarinas se transforma em uma amizade distorcida e o lado obscuro de Nina começa
+                        a vir à tona.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="omisteriodofarol" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Mistério do Farol</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/2_66Yu-lOd8" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2018 | Terror/Suspense | 1h 47m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt4131496" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt4131496/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Mistério do Faro(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Gerard Butler, Peter Mullan, Connor Swindells</p>
+                    <p>O que resta quando a luz se apaga?</p>
+                    <p>Em uma ilha na costa da Escócia, três guardiões de farol desaparecem sem deixar rastros.
+                        Inspirado em uma história real.</p>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="acasa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Casa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Tu8aQNrhgnU" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2020 | Suspense | 1h 43m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt9345754" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt9345754/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Casa(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Javier Gutiérrez, Mario Casas, Bruna Cusí</p>
+                    <p>Um publicitário desempregado começa a perseguir os novos moradores da sua antiga casa com
+                        intenções cada vez mais sinistras.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="umcontratempo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Um Contratempo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/4DTjlmNYMEo" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2016 | Suspense/Mistério | 1h 46min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt4857264" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt4857264/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Um Contratempo(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Mario Casas, Ana Wagener, José Coronado</p>
+                    <p>Toda história tem dois lados. A verdade, apenas uma.</p>
+                    <p>Adrian desperta em um hotel, e encontra sua amante morta coberta de dinheiro. Ele recorre a
+                        melhor advogada de defesa, e eles tentam descobrir o que realmente aconteceu na noite anterior.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="garotaexemplar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Garota Exemplar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/tKwEdRC26xA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2014 | Suspense/Mistério | 2h 29m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2267998" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2267998/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Garota Exemplar(2014) on IMDb" /></a></span></p>
+                    <p>Elenco: Ben Affleck, Rosamund Pike, Neil Patrick Harris</p>
+                    <p>Com quem você é casado?</p>
+                    <p>Com seu casamento em ruínas, Nick chega em casa um dia e descobre que sua esposa desapareceu. E
+                        quando a polícia pressiona, verdades chocantes vêm à tona.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ilhadomedo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ilha do Medo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/BguUtyCzM7o" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2010 | Suspense/Mistério | 2h 18m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1130884" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1130884/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Ilha do Medo(2010) on IMDb" /></a></span></p>
+                    <p>Elenco: Leonardo DiCaprio, Mark Ruffalo, Ben Kingsley</p>
+                    <p>O medo é contagioso.</p>
+                    <p>Na década de 50, a fuga de uma assassina leva o detetive Teddy Daniels e seu parceiro a
+                        investigarem o seu desaparecimento de um quarto trancado em um hospital psiquiátrico. Lá, uma
+                        rebelião se inicia e o agente terá que enfrentar seus próprios medos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="odiabdodecadadia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Diabo de Cada Dia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/WAqWObWIvHw" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2020 | Suspense | 2h 18min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt7395114" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt7395114/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Diabo de Cada Dia(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Tom Holland, Bill Skarsgård, Riley Keough</p>
+                    <p>Todos acabam no mesmo lugar maldito.</p>
+                    <p>Em um lugar tomado por corrupção e violência, um jovem enfrenta figuras sinistras para proteger
+                        quem mais ama.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="oculpado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Culpado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Ot-mN7qgYDI"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Suspense | 1h 30m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt9421570" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt9421570/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Culpado(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Jake Gyllenhaal, Ethan Hawke, Riley Keough</p>
+                    <p>Ouça com atenção.</p>
+                    <p>Um detetive rebaixado a operador de chamadas de emergência tenta salvar uma mulher desesperada em
+                        meio a um dia frenético cheio de revelações.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="indecente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Indecente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/3t4qUFOOB-Q" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2022 | Suspense/Mistério | 1h 36min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt13978306" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt13978306/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Indecente(2022) on IMDb" /></a></span></p>
+                    <p>Elenco: Alyssa Milano, Sam Page, Emilie Ullerup</p>
+                    <p>A escritora de livros de mistério Grace Miller é famosa pelo instinto para resolver crimes – e
+                        vai precisar de todo esse talento para investigar o assassinato da irmã.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="amulhernajanela" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Mulher na Janela</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/NO78X9Eyvz0" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2021 | Suspense| 1h 41min | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6111574" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt6111574/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Mulher na Janela(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Amy Adams, Gary Oldman, Anthony Mackie</p>
+                    <p>Ver é acreditar.</p>
+                    <p>Confinada em casa devido à agorafobia, uma psicóloga fica obcecada pelos novos vizinhos – e por
+                        solucionar o crime brutal que viu da janela.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="eumeimporto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Eu me Importo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/DjovwjAVD_o" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2020 | Suspense/Drama | 1h 58m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt9893250" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt9893250/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Eu Me Importo(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Rosamund Pike, Eiza Gonzalez, Dianne Wiest</p>
+                    <p>Marla Grayson é uma renomada guardiã legal que gosta de ficar com pessoas idosas e ricas. Às custas da última, ela leva uma confortável vida de luxo. Quando ela pensa ter encontrado uma nova vítima perfeita, descobre que a mesma guarda segredos perigosos. Com base nisso, Marla vai ter que usar toda sua astúcia se quiser continuar viva.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="sededevingança" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sede de Vingança</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/KCXcbaYk7-o" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2015 | Suspense/Drama | 1h 35m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2948790" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2948790/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Sede de Vingança(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Rosamund Pike, Shiloh Fernandez, Nick Nolte</p>
+                    <p>Ela terá ele vingança.</p>
+                    <p>Ao marcar um encontro com o misterioso William, a enfermeira Miranda é brutalmente estuprada por ele. Quando William é preso, ela passa a enviar cartas para ele, querendo uma aproximação com seu agressor. A atitude de Miranda preocupa seu pai, que teme pela segurança dela quando William for solto.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="vinganca" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Vingança</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/K4ff24g7LME" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2017 | Suspense/Terror | 1h 48m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6738136" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt6738136/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt= "Vingança(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Matilda Lutz, Kevin Janssens, Vincent Colombe</p>
+                    <p>Por que as mulheres sempre têm que lutar?</p>
+                    <p>Três homens casados e ricos fazem anualmente uma espécie de caçada no deserto. Desta vez, um dos empresários decide levar sua amante, mas ela acaba sendo abandonada para morrer. Agora, eles enfrentam as consequências de uma mulher que busca vingança.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="destruicaofinal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Destruição Final: O Último Refúgio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/c4Ui6sGkn90" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2020 | Suspense/Ação | 2h | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt7737786" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt7737786/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Destruição Final: O Último Refúgioa(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Gerard Butler, Morena Baccarin, David Denman</p>
+                    <p>John Garrity, sua ex-esposa e seu filho embarcam em uma jornada perigosa para encontrar um santuário enquanto um cometa destruidor de planetas avança em direção à Terra. Em meio a relatos aterrorizantes de cidades sendo destruídas, Garrity vê o melhor e o pior da humanidade. À medida que a contagem regressiva para o apocalipse se aproxima de zero, sua incrível jornada culmina em um vôo desesperado e de última hora para um possível refúgio seguro.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="anonimo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Anônimo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/fJz5xmiVShE" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>18 | 2021 | Suspense/Ação | 1h 31m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt7888964" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt7888964/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Anônimo(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: Bob Odenkirk, Aleksey Serebryakov, Connie Nielsen</p>
+                    <p>Nunca subestime um anônimo.</p>
+                    <p>Mansell é um pacato pai e marido que sempre arca com as injustiças da vida, sem revidar. Quando dois ladrões invadem sua casa, Hutch se recusa a defender a si mesmo e sua família na esperança de evitar qualquer violência, desapontando seus familiares com sua passividade. As consequências do incidente acabam despertando uma raiva latente nele, desencadeando instintos adormecidos e impulsionando-o em um caminho brutal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="obsessao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Obsessão</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/m14qewLXs3M" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2018 | Suspense/Drama | 1h 38m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2639336" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2639336/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Obsessão(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: Isabelle Huppert, Chloë Grace Moretz, Maika Monroe</p>
+                    <p>Nunca confie em estranhos.</p>
+                    <p>Frances é uma jovem cuja mãe acabou de falecer. Ela se muda para Manhattan e, cheia de problemas com o pai, faz uma amizade improvável com Greta, viúva e bem mais velha que ela. As duas se tornam melhores amigas, mas as atenções de Greta se mostram muito mais sinistras do que Frances imaginava.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="fratura" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Fratura</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/GPmsxqiKQlA" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2019 | Suspense | 1h 40m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt4332232" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt4332232/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Fratura(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Sam Worthington, Lily Rabe, Stephen Tobolowsky</p>
+                    <p>Depois que sua esposa e filha desaparecem do pronto-socorro, um homem fica convencido de que o hospital está escondendo alguma coisa.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ava" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">AVA</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/2qDhnQTiYdY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2020 | Suspense/Ação | 1h 36m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt8784956" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt8784956/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="AVA(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Jessica Chastain, John Malkovich, Common</p>
+                    <p>Mate. Ou ser morto.</p>
+                    <p>Assassina de elite luta para proteger a si mesma e a sua família depois que uma missão dá errado.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="meufilho" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Meu Filho</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/E0HnYn-9h1k" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2021 | Suspense/Mistério | 1h 35m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt13234058" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt13234058/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Meu Filho(2021) on IMDb" /></a></span></p>
+                    <p>Elenco: James McAvoy, Claire Foy, Tom Cullen (III)</p>
+                    <p>Uma conquista inovadora no cinema, onde ator e público descobrem um mistério ao mesmo tempo.</p>
+                    <p>Após ficar três anos sem encontrar com o filho por causa das demandas de seu trabalho, um homem de negócios descobre que o menino está desaparecido. Determinado a trazer o menino de volta à segurança do lar e aos braços da mãe, ele faz tudo o que puder fazer, custe o que custar.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="orecepcionista" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/h8JjujpYnds" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2020 | Suspense/Mistério | 1h 30m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt7979142" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt7979142/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Recepcionista(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Tye Sheridan, Ana de Armas, Helen Hunt</p>
+                    <p>Alguém está sempre observando.</p>
+                    <p>Um funcionário de hotel vira o principal suspeito quando uma mulher é assassinada no seu turno. Ele faz uma conexão pessoal com um hóspede durante a investigação, mas logo percebe que deve parar o assassino antes que ela se torne a próxima vítima.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="buscando" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Buscando...</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/Ort2KqH1UjM" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2018 | Suspense/Mistério | 1h 42m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt7668870" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt7668870/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Buscando...(2018) on IMDb" /></a></span></p>
+                    <p>Elenco: John Cho, Debra Messing, Michelle La</p>
+                    <p>Para saber onde ela está, ele precisa primeiro descobrir quem ela é.</p>
+                    <p>David Kim se desespera quando sua filha de 16 anos desaparece e as investigações policiais não levam a lugar nenhum. Decidido a descobrir o paradeiro da filha, ele usa o computador da menina para vasculhar suas fotos e vídeos em busca de pistas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="osequestro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Sequestro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/HHC6NF0Sny0" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2017 | Suspense/Ação | 1h 35m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1458169" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1458169/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Sequestro(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Halle Berry, Sage Correa, Chris McGinn</p>
+                    <p>Uma mulher, que tem seu filho sequestrado em um shopping local, embarca numa corrida contra o tempo para salvá-lo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ogarotodacasaaolado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O Garoto da Casa ao Lado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/0uPa5H1YWr4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2015 | Suspense | 1h 31m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3181822" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt3181822/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="O Garoto da Casa ao Lado(2015) on IMDb" /></a></span></p>
+                    <p>Elenco: Jennifer Lopez, Ryan Guzman, Ian Nelson</p>
+                    <p>Um momento que ela não conseguiu resistir. Uma obsessão que ele não pode controlar.</p>
+                    <p>A professora de ensino médio recém-divorciada Claire Peterson se envolve com o vizinho adolescente, chamado Noah, e o relacionamento entre os dois gera consequências inimagináveis quando o rapaz mostra-se alguém obcecado e inconsequente.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="furiaincontrolável" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Fúria Incontrolável</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/5aMFAo0BxMY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2020 | Suspense | 1h 30m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt10059518" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt10059518/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Fúria Incontrolável(2020) on IMDb" /></a></span></p>
+                    <p>Elenco: Russell Crowe, Caren Pistorius, Gabriel Bateman</p>
+                    <p>Pode acontecer com qualquer um.</p>
+                    <p>Rachel é uma mãe solteira cujo dia ruim fica ainda pior quando ela irrita um outro motorista na hora do rush. Uma simples discussão no trânsito rapidamente se transforma em terror quando ela descobre o plano sinistro de vingança do psicopata.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="janelasecreta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Janela Secreta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/CVP-nCr9Xd8" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2004 | Suspense | 1h 36m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0363988" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0363988/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Janela Secreta(2004) on IMDb" /></a></span></p>
+                    <p>Elenco: Johnny Depp, Maria Bello, John Turturro</p>
+                    <p>A parte mais importante de uma história é o final.</p>
+                    <p>Durante o processo de um divórcio litigioso de sua esposa, o escritor Mort Rainey se muda para sua cabana remota em Nova York para ficar sozinho. Tentando recuperar sua saúde mental, Rainey tem a infelicidade de ser encontrado por John Shooter, um agricultor que afirma que Rainey plagiou o seu trabalho. Primeiramente, Rainey ignora as acusações, mas Shooter não desaparece e se torna cada vez pior em sua busca por vingança.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="parasita" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Parasita</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/m4jfE-TxC24" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2019 | Suspense/Drama | 2h 12m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt6111574" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt6111574/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Parasita(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Song Kang-Ho, Woo-sik Choi, Park So-Dam</p>
+                    <p>Ver é acreditar.</p>
+                    <p>Confinada em casa devido à agorafobia, uma psicóloga fica obcecada pelos novos vizinhos – e por
+                        solucionar o crime brutal que viu da janela.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="awake" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Awake - A Vida por um Fio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/j-rGA0tD2WY" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2007 | Suspense/Mistério | 1h 24m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt0211933" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt0211933/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Awake - A Vida por um Fio(2007) on IMDb" /></a></span></p>
+                    <p>Elenco: Christopher McDonald, Hayden Christensen, Jessica Alba</p>
+                    <p>Todos os anos, uma em cada 700 pessoas acorda durante a cirurgia.</p>
+                    <p>Um jovem desperta enquanto é operado, mas fica totalmente paralisado. Consequentemente, ele não consegue se comunicar com os médicos para alertá-los sobre sua condição. Enquanto isso, sua esposa luta contra seus próprios problemas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="contatosdequartograu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Contatos de 4.º Grau</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/nZdHwCCwlJM" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2009 | Suspense/Ficção | 1h 38m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1220198" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1220198/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Contatos de 4.º Grau(2009) on IMDb" /></a></span></p>
+                    <p>Elenco:  Milla Jovovich, Will Patton, Elias Koteas</p>
+                    <p>Existem quatro tipos de encontros alienígenas. O quarto tipo é a abdução.</p>
+                    <p>O desaparecimento de pessoas em uma pequena cidade do Alasca desperta a atenção de um estudioso, que acaba misteriosamente assassinado. Sua esposa, a psicóloga Abigail Tyler, passa a observar evidências de abdução alienígena por meio de filmagens obtidas durante sessões com seus pacientes. Após outro caso de morte, o xerife August passa a considerá-la suspeita, dando início a um intrigante e assustador jogo de perguntas e respostas sobre deuses e alienígenas através das sessões de hipnose.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ossuspeitos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Os Suspeitos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/1GwPisQUuL4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2013 | Suspense | 2h 33m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1392214" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1392214/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Os Suspeitos(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Song Kang-Ho, Woo-sik Choi, Park So-Dam</p>
+                    <p>Todos os momentos são importantes.</p>
+                    <p>Depois que sua filha de seis anos e uma amiga dela são sequestradas, Keller Dove, um carpinteiro de Boston, enfrenta o departamento de polícia e o jovem detetive encarregado do caso para fazer justiça com as próprias mãos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="agarotanotrem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">A Garota no Trem</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/kmQ1WcX425E" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2016 | Suspense/Mistério | 1h 52m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt3631112" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt3631112/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="A Garota no Trem(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Emily Blunt , Rebecca Ferguson , Haley Bennett</p>
+                    <p>O que ela viu?</p>
+                    <p>Arrasada por seu recente divórcio, Rachel vive fantasiando sobre um casal aparentemente perfeito que mora em uma casa pela qual seu trem passa todos os dias. Certo dia, ela presencia algo estranho e começa sua própria investigação.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="bonecodeneve" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Boneco de Neve</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/62yg7WaT4LQ" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2017 | Suspense/Mistério | 1h 59m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt1758810" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt1758810/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Boneco de Neve(2017) on IMDb" /></a></span></p>
+                    <p>Elenco: Michael Fassbender, Rebecca Ferguson, Charlotte Gainsbourg</p>
+                    <p>Logo a primeira neve virá, e então ele matará novamente.</p>
+                    <p>Uma mulher desaparece e a única pista é um cachecol rosa encontrado em um estranho boneco de neve. O detetive Harry Hole começa suas investigações e percebe que o crime parece obra de um serial killer.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="terapiaderisco" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Terapia de Risco</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/X5WgC_JthA4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>14 | 2013 | Suspense/Drama | 1h 46m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2053463" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2053463/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Terapia de Risco(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Rooney Mara, Channing Tatum, Jude Law</p>
+                    <p>Um comprimido pode mudar sua vida.</p>
+                    <p>Martin sai da prisão depois de cumprir pena por abuso de informação privilegiada. Sua volta coincide - ou talvez desencadeie - um episódio depressivo grave em sua esposa, que começa a tomar um medicamento com efeitos que vão além do esperado.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="toquedemestre" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Toque de Mestre</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/wWiapTby6CQ" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>12 | 2013 | Suspense/Mistério | 1h 30m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt2039345" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt2039345/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Toque de Mestre(2013) on IMDb" /></a></span></p>
+                    <p>Elenco: Elijah Wood, John Cusack, Kerry Bishe</p>
+                    <p>Jogue ou morra.</p>
+                    <p>Antes da apresentação que marcará seu retorno, o pianista Tom Selznick encontra um bilhete aterrorizante em suas partituras. A ameaça feita por um assassino meticuloso é que Tom deve tocar perfeitamente a composição sem errar uma única vez, caso o contrário, ele e a esposa não sairão do teatro vivos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="doutorsono" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Doutor Sono</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/4BWhV-kCRc4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2019 | Suspense | 2h 31m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt5606664" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt5606664/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Doutor Sono(2019) on IMDb" /></a></span></p>
+                    <p>Elenco: Ewan McGregor, Kyliegh Curran, Rebecca Ferguson</p>
+                    <p>Ouse voltar.</p>
+                    <p>Na infância, Danny Torrance sobreviveu a uma tentativa de homicídio por parte do pai, um escritor perturbado pelos espíritos malignos do Hotel Overlook. Já adulto, traumatizado e alcoólatra. Danny se estabelece em uma pequena cidade, onde consegue um emprego no hospital local. Sua paz, porém, está com os dias contados a partir de quando cria um vínculo telepático com Abra, uma menina com poderes tão fortes quanto aqueles que ele bloqueia dentro de si.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="animaisnoturnos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="background: rgb(27,20,100);
+            background: linear-gradient(180deg, rgba(27,20,100,1) 0%, rgba(27,20,100,1) 20%, rgba(67,67,67,1) 80%, rgba(67,67,67,1) 100%); color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Animais Noturnos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/kpvOWVNE7d4" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-body">
+                    <p>16 | 2016 | Suspense/Drama | 1h 56m | <span class="imdbRatingPlugin" data-user="ur150695547"
+                        data-title="tt4550098" data-style="p3">
+                        <a href="https://www.imdb.com/title/tt4550098/?ref_=ext_shr_lnk">
+                            <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
+                                alt="Animais Noturnos(2016) on IMDb" /></a></span></p>
+                    <p>Elenco: Amy Adams, Jake Gyllenhaal, Michael Shannon</p>
+                    <p>Quando você ama alguém, não deve por tudo a perder.</p>
+                    <p>Um escritor pede a sua ex-mulher para ler o manuscrito de seu novo romance, uma história sobre um homem de família cuja vida dá uma guinada sombria.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer>
+    <div class="social-link">
+        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <p>Copyright@ 2022 SUPERFLIX</p>
+</footer>
+<script src="JS/main.js"></script>
+</body>
+
+</html>
